@@ -8,8 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Ramayana - Simple HTML Page</title>
+    <title>StudLife: Today</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +39,7 @@ https://templatemo.com/tm-529-ramayana
             <!-- Header -->
             <header id="header">
               <div class="logo">
-                <a href="index.html">Ramayana</a>
+                <a href="index.html">StudLife</a>
               </div>
             </header>
 
@@ -47,8 +48,9 @@ https://templatemo.com/tm-529-ramayana
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-md-12">
-                    <h1>Simple Page</h1>
-                    <p><strong>Ramayana</strong> is free Bootstrap 4 CSS template from templatemo website. You can feel free to use it. Donec a scelerisque massa. Aliquam non iaculis quam. Duis arcu turpis, tincidunt id convallis nec, pretium non sem. Fusce non vehicula nibh. Nunc interdum libero non tincidunt rutrum. Nunc at feugiat quam, sed ullamcorper felis.</p>
+                    <h1>Today</h1>
+                    <pre id="date"></pre>
+                    <pre id="day"></pre>
                   </div>
                 </div>
               </div>
@@ -56,19 +58,11 @@ https://templatemo.com/tm-529-ramayana
 
             <!-- Simple Post -->
             <section class="simple-post">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="assets/images/simple-post.jpg" alt="">
-                    <div class="down-content">
-                      <p>Mauris aliquam ipsum nibh, id scelerisque leo congue vel. Vivamus ornare, eros et ornare consectetur, ipsum ipsum sollicitudin libero, at condimentum risus nulla non enim. Quisque sodales vestibulum arcu porttitor finibus. Phasellus dictum nisl id augue ornare, vel interdum nibh mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-                      <p>Phasellus vestibulum venenatis interdum. Praesent augue massa, tincidunt eget dignissim a, scelerisque vitae ante. Curabitur a arcu tellus. Donec et massa at dolor condimentum ornare nec non lorem. Maecenas non egestas metus, sed ultricies lectus. Aliquam sit amet gravida tellus. Phasellus id erat nec mi ullamcorper viverra. Quisque vitae pharetra sem. Maecenas sit amet velit ultrices, malesuada quam id, porta nisl. Cras scelerisque ex ut bibendum egestas.</p>
-                    </div>
-                  </div>
+              <div class="container right">
+                <div class="content">
+                  <h2>2017</h2>
+                  <p>Lorem ipsum..</p>
                 </div>
-                
-               
-                
               </div>
             </section>
             
@@ -185,29 +179,40 @@ https://templatemo.com/tm-529-ramayana
             <nav id="menu">
               <ul>
                 <li><a href="index.html">Homepage</a></li>
-                <li><a href="simple_page.html">Simple Page</a></li>
-                <li><a href="shortcodes.html">Shortcodes</a></li>
+                <li><a href="today.html">Today</a></li>
+                <li><a href="upcoming.html">Upcoming</a></li>
                 <li>
-                  <span class="opener">Dropdown One</span>
+                  <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
                   <ul>
-                    <li><a href="#">First Sub Menu</a></li>
-                    <li><a href="#">Second Sub Menu</a></li>
-                    <li><a href="#">Third Sub Menu</a></li>
+                    <li><a href="#">Today</a></li>
+                    <li><a href="#">This Week</a></li>
+                    <li><a href="#">This Month</a></li>
+                    <li><a href="#">Upcoming</a></li>
                   </ul>
                 </li>
                 <li>
-                  <span class="opener">Dropdown Two</span>
+                  <span class="opener"><i class = "fa fa-bookmark"></i>  Work Label</span>
                   <ul>
-                    <li><a href="#">Sub Menu #1</a></li>
-                    <li><a href="#">Sub Menu #2</a></li>
-                    <li><a href="#">Sub Menu #3</a></li>
+                    <li><a href="#">Oppointments</a></li>
+                    <li><a href="#">Phone Call</a></li>
+                    <li><a href="#">Meeting</a></li>
+                    <li><a href="#">+</a></li>
                   </ul>
                 </li>
-                <li><a href="https://www.google.com">External Link</a></li>
+                <li>
+                  <span class="opener"><i class = "fa fa-bookmark-o"></i>  Leisure Label</span>
+                  <ul>
+                    <li><a href="#">Entertaiment</a></li>
+                    <li><a href="#">Holiday</a></li>
+                    <li><a href="#">+</a></li>
+                    
+                  </ul>
+                </li>
+                <!-- <li><a href="https://www.google.com">External Link</a></li> -->
               </ul>
             </nav>
 
-            <!-- Featured Posts -->
+            <!-- Featured Posts 
             <div class="featured-posts">
               <div class="heading">
                 <h2>Featured Posts</h2>
@@ -232,12 +237,12 @@ https://templatemo.com/tm-529-ramayana
                   </div>
                 </a>
               </div>
-            </div>
+            </div>-->
 
             <!-- Footer -->
             <footer id="footer">
-              <p class="copyright">Copyright &copy; 2019 Company Name
-              <br>Designed by <a rel="nofollow" href="https://www.facebook.com/templatemo">Template Mo</a></p>
+              <p class="setting">
+              <i class = "fa fa-cog"></i>  <a rel="Setting" href="setting.html">Setting</a></p>
             </footer>
             
           </div>
@@ -255,9 +260,18 @@ https://templatemo.com/tm-529-ramayana
     <script src="assets/js/transition.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+      n =  new Date();
+      y = n.getFullYear();
+      m = n.getMonth() + 1;
+      d = n.getDate();
+      var days =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+      document.getElementById("day").innerHTML = days[n.getDay()];
+    </script>
 </body>
 
 
-  </body>
+ 
 
 </html>
