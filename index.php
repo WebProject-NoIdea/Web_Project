@@ -103,14 +103,9 @@
           </form>
 
         </div>
-
-
-      </div><!-- tab-content -->
-      
-</div> <!-- /form -->
-<!-- partial -->
+      </div>
+</div>
   <script src='vendor/jquery/jquery.min.js'></script>
   <script  src="assets/js/script.js"></script>
-
 </body>
 </html>
