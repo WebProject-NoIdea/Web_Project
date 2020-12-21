@@ -2,7 +2,7 @@
 
 $dbServername = "localhost";
 $dbUsername = "u198522155_web_project";
-$dbPassword = "8:HFMa0:o1";
+$dbPassword = "8:HFMa0:o";
 $dbDatabase = "u198522155_web_project";
 
 // Create connection
