@@ -7,7 +7,7 @@ if(isset($_POST['login'])){
 
     include('dbConnect.php');
 
-    $sql = "SELECT id FROM user WHERE email='$email' and password='$password'";
+    $sql = "SELECT user_id FROM user WHERE email='$email' and password='$password'";
 
     $result = $conn->query($sql);
 
