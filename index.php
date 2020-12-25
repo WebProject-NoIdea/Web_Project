@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
         <div id="login">   
           <h1>Welcome!</h1>
           
-          <form action="" method="post">
+          <form method="post">
           
             <div class="field-wrap">
             <label>
