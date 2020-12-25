@@ -1,7 +1,23 @@
 <?php
 
 if(isset($_POST['login'])){
-    header( "Location: home.html" );
+
+    $email = $_POST['loginEmail'];
+    $password = $_POST['loginPassword'];
+
+    include('dbConnect.php');
+
+    $sql = "SELECT id FROM user WHERE email='$email' and password='$password'";
+
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo $row['id'];
+        }
+    }
+
+    //header( "Location: home.html" );
 }
 
 ?>
