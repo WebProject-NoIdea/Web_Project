@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['submit'])){
-
+    header( "Location: home.html" );
 }
 
 ?>
@@ -42,7 +42,6 @@ if(isset($_POST['submit'])){
       </ul>
       
       <div class="tab-content">
-
 
         <div id="login">   
           <h1>Welcome!</h1>
