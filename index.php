@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['submit'])){
+if(isset($_POST['login'])){
     header( "Location: home.html" );
 }
 
@@ -52,18 +52,18 @@ if(isset($_POST['submit'])){
                 <label>
                   Email Address<span class="req">*</span>
                 </label>
-                <input type="email" required autocomplete="off"/>
+                <input type="email" name="loginEmail" required autocomplete="off"/>
               </div>
           
               <div class="field-wrap">
                 <label>
                   Password<span class="req">*</span>
                 </label>
-                <input type="password" required autocomplete="off"/>
+                <input type="password" name="loginPassword" required autocomplete="off"/>
               </div>
 
               <p class="forgot"><a href="#">Forgot Password?</a></p>
-              <button type="submit" name="submit" class="button button-block">Log In</button>
+              <button type="submit" name="login" class="button button-block">Log In</button>
           
           </form>
         </div>
