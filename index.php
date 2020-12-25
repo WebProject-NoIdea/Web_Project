@@ -45,29 +45,27 @@ if(isset($_POST['submit'])){
 
         <div id="login">   
           <h1>Welcome!</h1>
+
+            <form action="" method="post">
+
+              <div class="field-wrap">
+                <label>
+                  Email Address<span class="req">*</span>
+                </label>
+                <input type="email" required autocomplete="off"/>
+              </div>
           
-          <form method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email" required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password" required autocomplete="off"/>
-          </div>
-          
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button type="submit" class="button button-block">Log In</button>
+              <div class="field-wrap">
+                <label>
+                  Password<span class="req">*</span>
+                </label>
+                <input type="password" required autocomplete="off"/>
+              </div>
+
+              <p class="forgot"><a href="#">Forgot Password?</a></p>
+              <button type="submit" class="button button-block">Log In</button>
           
           </form>
-
         </div>
 
         <div id="signup">
