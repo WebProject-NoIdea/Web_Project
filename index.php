@@ -1,5 +1,5 @@
 <?php
-echo $_SERVER['PHP_SELF'];
+
 if(isset($_POST['login'])){
     header( "Location: home.html" );
 }

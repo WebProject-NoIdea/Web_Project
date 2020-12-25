@@ -1,6 +1,8 @@
 <?php
 session_start();
 
-if($_SESSION['webProjectLoggedIn'] == true){
-    header( "Location: home.html" );
+function checkLogin(){
+    if($_SESSION['webProjectLoggedIn'] == false){
+        header( "Location: index.php" );
+    }
 }
