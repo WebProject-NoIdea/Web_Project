@@ -3,7 +3,9 @@
 if(isset($_POST['login'])){
 
     $email = $_POST['loginEmail'];
-    $password = $_POST['loginPassword'];
+
+    $pwd64 = base64_encode($_POST['loginPassword']);
+    $password = md5($pwd64);
 
     include('dbConnect.php');
 
@@ -14,10 +16,11 @@ if(isset($_POST['login'])){
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "asda".$row['user_id'];
+            header( "Location: home.html" );
         }
     }
 
-    //header( "Location: home.html" );
+
 }
 
 ?>
