@@ -1,5 +1,9 @@
 <?php
 
+if(isset($_POST['submit'])){
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +53,7 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
@@ -61,7 +65,7 @@
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
           
-          <button class="button button-block" onclick="document.location='home.html'">Log In</button>
+          <button type="submit" class="button button-block">Log In</button>
           
           </form>
 
