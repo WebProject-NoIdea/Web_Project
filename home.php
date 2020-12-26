@@ -291,9 +291,10 @@ https://templatemo.com/tm-529-ramayana
                                       method: 'post',
                                       body: formData
                                   }).then(response => {
-                                      alert(response.text());
-                                      location.reload();
-
+                                      if(response.ok){
+                                          alert(response.text());
+                                          location.reload();
+                                      }
                                   }).catch(error => {
                                       console.log(error);
                                   });
