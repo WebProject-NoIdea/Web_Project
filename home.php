@@ -79,6 +79,7 @@ https://templatemo.com/tm-529-ramayana
                                           <td>#1</td>
                                           <td> Do registration screen</td>
                                           <td>page for registration</td>
+                                          <td>15/12/2020</td>
                                           <td>
                                               <button class="btn"><i class="fa fa-trash"></i></button>
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
