@@ -3,7 +3,7 @@
 session_start();
 
 if($_SESSION['webProjectLoggedIn']){
-    header( "Location: home.html" );
+    header( "Location: home.php" );
 }
 
 if(isset($_POST['login'])){
@@ -21,7 +21,7 @@ if(isset($_POST['login'])){
         while ($row = $result->fetch_assoc()) {
             $_SESSION["webProjectLoggedIn"] = true;
             $_SESSION["webProjectUserId"] = $row['user_id'];
-            header( "Location: home.html");
+            header( "Location: home.php");
         }
     }
 
@@ -57,7 +57,6 @@ function encrypt(String $password){
     $pwd64 = base64_encode($password);
     return md5($pwd64);
 }
-
 ?>
 
 <!DOCTYPE html>

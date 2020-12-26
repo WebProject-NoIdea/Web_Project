@@ -38,7 +38,7 @@ https://templatemo.com/tm-529-ramayana
             <!-- Header -->
             <header id="header">
               <div class="logo">
-                <a href="home.html">StudLife</a>
+                <a href="home.php">StudLife</a>
               </div>
             </header>
 
@@ -233,7 +233,7 @@ https://templatemo.com/tm-529-ramayana
             <!-- Menu -->
             <nav id="menu">
               <ul>
-                <li><a href="home.html">Homepage</a></li>
+                <li><a href="home.php">Homepage</a></li>
                 <li><a href="today.html">Today</a></li>
                 <li><a href="upcoming.html">Upcoming</a></li>
                 <li>
