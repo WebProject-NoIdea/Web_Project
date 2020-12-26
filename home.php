@@ -1,3 +1,10 @@
+<?php
+
+include("session.php");
+checkLogin();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -6,3 +6,12 @@ function checkLogin(){
         header( "Location: index.php" );
     }
 }
+
+function logout(){
+    // remove all session variables
+    session_unset();
+
+    // destroy the session
+    session_destroy();
+}
+
