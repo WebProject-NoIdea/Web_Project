@@ -23,6 +23,8 @@ checkLogin();
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 
 <!--
@@ -90,16 +92,17 @@ https://templatemo.com/tm-529-ramayana
 
                                   <script>
                                       $('#startDate').datetimepicker({
-
+                                          uiLibrary: 'bootstrap4',
                                           dateTimeFormat: "dddd, MMMM dd, yyyy hh:mm:ss tt",
-
-
+                                          width: "300px",
+                                          modal: true,
+                                          footer: true
                                       });
                                   </script>
 
                                   <script>
                                       $('#endDate').datetimepicker({
-
+                                          uiLibrary: 'bootstrap4',
                                           modal: true,
                                           footer: true
                                       });
