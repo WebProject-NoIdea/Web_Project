@@ -59,7 +59,7 @@ https://templatemo.com/tm-529-ramayana
                       <div class="row">
                         <div class="col-md-12">
                           <div class="banner-caption">
-                            <h4>Hello, welcome to <em>StudLife<?php echo getUserId();?></em>. </h4>
+                            <h4>Hello, welcome to <em>StudLife</em>. </h4>
                             <span>StudLife Makes Your Student Life Easier</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In eu mi bibendum neque egestas congue quisque egestas diam. Urna duis convallis convallis tellus id interdum velit laoreet. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. </p>
                             
@@ -271,6 +271,7 @@ https://templatemo.com/tm-529-ramayana
                     
                   </ul>
                 </li>
+                  <li><a href="logout.php">Logout</a></li>
                 <!-- <li><a href="https://www.google.com">External Link</a></li> -->
               </ul>
             </nav>
