@@ -50,7 +50,6 @@ https://templatemo.com/tm-529-ramayana
               </div>
             </header>
 
-              Copy
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                   Launch demo modal
@@ -67,7 +66,25 @@ https://templatemo.com/tm-529-ramayana
                               </button>
                           </div>
                           <div class="modal-body">
-                              ...
+                              <form>
+                                  <div class="form-group">
+                                      <label for="task">Task</label>
+                                      <input type="text" class="form-control" id="task" name="task" placeholder="Task">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="description">Description</label>
+                                      <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="subtask">Sub Task</label>
+                                      <select class="form-control" id="subtask">
+                                          <option>Default select</option>
+                                          <option>With subtask</option>
+                                          <option>Without subtask</option>
+                                      </select>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Add</button>
+                              </form>
                           </div>
                           <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -77,25 +94,7 @@ https://templatemo.com/tm-529-ramayana
                   </div>
               </div>
 
-              <form>
-                  <div class="form-group">
-                      <label for="task">Task</label>
-                      <input type="text" class="form-control" id="task" name="task" placeholder="Task">
-                  </div>
-                  <div class="form-group">
-                      <label for="description">Description</label>
-                      <input type="text" class="form-control" id="description" name="description" placeholder="Description">
-                  </div>
-                  <div class="form-group">
-                      <label for="subtask">Sub Task</label>
-                      <select class="form-control" id="subtask">
-                          <option>Default select</option>
-                          <option>With subtask</option>
-                          <option>Without subtask</option>
-                      </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Add</button>
-              </form>
+
 
 
             <!-- Banner -->
