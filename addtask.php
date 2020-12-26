@@ -3,8 +3,6 @@
 include("session.php");
 checkLogin();
 
-var_dump($_POST);
-
-if(isset($_POST['task'])){
+if(isset($_POST['task']) AND $_POST['task']!=null){
     var_dump($_POST);
 }
