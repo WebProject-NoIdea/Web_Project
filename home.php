@@ -60,7 +60,15 @@ https://templatemo.com/tm-529-ramayana
                       <label for="description">Description</label>
                       <input type="text" class="form-control" id="description" name="description" placeholder="Description">
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <div class="form-group">
+                      <label for="subtask">Sub Task</label>
+                      <select class="form-control" id="subtask">
+                          <option>Default select</option>
+                          <option>With subtask</option>
+                          <option>Without subtask</option>
+                      </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Add</button>
               </form>
 
 
