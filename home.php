@@ -291,9 +291,7 @@ https://templatemo.com/tm-529-ramayana
                                       method: 'post',
                                       body: formData
                                   }).then(response => {
-                                      console.log(response.text());
-                                      console.log(response.status);
-                                      console.log(response.ok);
+                                      alert(response.text());
                                       location.reload();
 
                                   }).catch(error => {
