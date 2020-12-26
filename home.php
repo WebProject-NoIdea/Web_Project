@@ -84,7 +84,7 @@ https://templatemo.com/tm-529-ramayana
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
 
                                           </td>
-                                          <br>
+
 
 
                                       </tr>
@@ -96,7 +96,7 @@ https://templatemo.com/tm-529-ramayana
                                               <button class="btn"><i class="fa fa-trash"></i></button>
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
                                           </td>
-                                          <br>
+
 
 
                                       </tr>
@@ -108,7 +108,7 @@ https://templatemo.com/tm-529-ramayana
                                               <button class="btn"><i class="fa fa-trash"></i></button>
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
                                           </td>
-                                          <br>
+
 
 
                                       </tr>
@@ -121,7 +121,7 @@ https://templatemo.com/tm-529-ramayana
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
 
                                           </td>
-                                          <br>
+
 
                                       </tr>
                                       <tr>
@@ -133,7 +133,7 @@ https://templatemo.com/tm-529-ramayana
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
 
                                           </td>
-                                          <br>
+
 
                                       </tr>
                                       </tbody>
