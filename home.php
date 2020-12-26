@@ -53,11 +53,11 @@ https://templatemo.com/tm-529-ramayana
 
               <form>
                   <div class="form-group">
-                      <label for="task">Email address</label>
+                      <label for="task">Task</label>
                       <input type="text" class="form-control" id="task" name="task" placeholder="Task">
                   </div>
                   <div class="form-group">
-                      <label for="description">Password</label>
+                      <label for="description">Description</label>
                       <input type="text" class="form-control" id="description" name="description" placeholder="Description">
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
