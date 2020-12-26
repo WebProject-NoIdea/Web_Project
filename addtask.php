@@ -59,7 +59,7 @@ checkLogin();
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1>Add Task</h1>
+                            <h1>Task</h1>
                             <p><strong>Activities</strong> that need to be done .</p>
                         </div>
                     </div>
