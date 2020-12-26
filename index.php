@@ -38,8 +38,8 @@ if(isset($_POST['login'])){
         $sql = "INSERT INTO user (email, password, firstname, lastname) VALUES ('$email', '$password', '$firstName', '$lastName')";
 
         if ($conn->query($sql) === TRUE) {
-            echo '<script>alert("Congratulations, your account has been successfully created.")</script>';
-            header( "Location: index.php");
+            echo '<script>alert("Congratulations, your account has been successfully created.");
+                            window.location.href="index.php";</script>';
         }
     }
 
