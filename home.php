@@ -268,24 +268,31 @@ https://templatemo.com/tm-529-ramayana
                                           footer: true
                                       });
 
-                                      let data = {
-                                          key: "value"
-                                      };
 
-                                      fetch("addtask.php", {
-                                          method: 'post',
-                                          body: JSON.stringify(data)
-                                      }).then(data => {
-                                          // data is anything returned by your API/backend code
-                                      });
+
                                   </script>
 
                               </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                  <button type="button" class="btn btn-primary" onclick="addData()">Save changes</button>
                               </div>
                           </form>
+
+                          <script>
+                              function addData(){
+                                  let data = {
+                                      key: "value"
+                                  };
+
+                                  fetch("addtask.php", {
+                                      method: 'post',
+                                      body: JSON.stringify(data)
+                                  }).then(data => {
+                                      // data is anything returned by your API/backend code
+                                  });
+                              }
+                          </script>
                       </div>
                   </div>
               </div>
