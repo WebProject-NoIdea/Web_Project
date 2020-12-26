@@ -154,7 +154,7 @@ https://templatemo.com/tm-529-ramayana
               </section>
 
               <!-- Tables -->
-              <section class="tables">
+              <section class="tables" style="margin-top: 0">
                   <div class="container-fluid">
                       <div class="row">
                           <div class="col-md-12">
