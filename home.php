@@ -271,7 +271,7 @@ https://templatemo.com/tm-529-ramayana
                     
                   </ul>
                 </li>
-                  <li><a href="logout.php" onclick="return confirm('Are you sure?')">Sign Out</a></li>
+                  <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')">Sign Out</a></li>
               </ul>
             </nav>
 
