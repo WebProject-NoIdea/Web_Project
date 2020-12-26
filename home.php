@@ -153,6 +153,103 @@ https://templatemo.com/tm-529-ramayana
                   </div>
               </section>
 
+              <!-- Tables -->
+              <section class="tables">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="section-heading">
+                                  <h2>Upcoming</h2>
+                              </div>
+                              <div class="default-table">
+                                  <table>
+                                      <thead>
+                                      <tr>
+                                          <th>No.</th>
+                                          <th>Task</th>
+                                          <th>Description</th>
+                                          <th>Due Date</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>#1</td>
+                                          <td> Do registration screen</td>
+                                          <td>page for registration</td>
+                                          <td>
+                                              <button class="btn"><i class="fa fa-trash"></i></button>
+                                              <button class="btn"><i class="fa fa-pencil"></i></button>
+
+                                          </td>
+                                          <br>
+
+
+                                      </tr>
+                                      <tr>
+                                          <td>#2</td>
+                                          <td>Assignment research</td>
+                                          <td>Assignment due date 15/12/2020</td>
+                                          <td>
+                                              <button class="btn"><i class="fa fa-trash"></i></button>
+                                              <button class="btn"><i class="fa fa-pencil"></i></button>
+                                          </td>
+                                          <br>
+
+
+                                      </tr>
+                                      <tr>
+                                          <td>#3</td>
+                                          <td></td>
+                                          <td></td>
+                                          <td>
+                                              <button class="btn"><i class="fa fa-trash"></i></button>
+                                              <button class="btn"><i class="fa fa-pencil"></i></button>
+                                          </td>
+                                          <br>
+
+
+                                      </tr>
+                                      <tr>
+                                          <td>#4</td>
+                                          <td></td>
+                                          <td></td>
+                                          <td>
+                                              <button class="btn"><i class="fa fa-trash"></i></button>
+                                              <button class="btn"><i class="fa fa-pencil"></i></button>
+
+                                          </td>
+                                          <br>
+
+                                      </tr>
+                                      <tr>
+                                          <td>#5</td>
+                                          <td></td>
+                                          <td></td>
+                                          <td>
+                                              <button class="btn"><i class="fa fa-trash"></i></button>
+                                              <button class="btn"><i class="fa fa-pencil"></i></button>
+
+                                          </td>
+                                          <br>
+
+                                      </tr>
+                                      </tbody>
+                                  </table>
+                                  <ul class="table-pagination">
+                                      <li><a href="#">Previous</a></li>
+                                      <li><a href="#">1</a></li>
+                                      <li class="active"><a href="#">2</a></li>
+                                      <li><a href="#">...</a></li>
+                                      <li><a href="#">8</a></li>
+                                      <li><a href="#">9</a></li>
+                                      <li><a href="#">Next</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                   Launch demo modal
