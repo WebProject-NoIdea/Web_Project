@@ -90,11 +90,15 @@ https://templatemo.com/tm-529-ramayana
                                       <input id="endDate" name="endDate">
                                   </div>
 
+                                  <input id="input" width="234" />
+                                  <script>
+                                      $('#input').datetimepicker({ uiLibrary: 'bootstrap4', modal: true, footer: true });
+                                  </script>
+
                                   <script>
                                       $('#startDate').datetimepicker({
                                           uiLibrary: 'bootstrap4',
                                           dateTimeFormat: "dddd, MMMM dd, yyyy hh:mm:ss tt",
-                                          width: "300px",
                                           modal: true,
                                           footer: true
                                       });
