@@ -168,72 +168,28 @@ https://templatemo.com/tm-529-ramayana
                                           <th>No.</th>
                                           <th>Task</th>
                                           <th>Description</th>
-                                          <th>Due Date</th>
+                                          <th>Start Date</th>
                                       </tr>
                                       </thead>
                                       <tbody>
-                                      <tr>
-                                          <td>#1</td>
-                                          <td> Do registration screen</td>
-                                          <td>page for registration</td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
+                                          <tr>
+                                              <td>#1</td>
+                                              <td> Do registration screen</td>
+                                              <td>page for registration</td>
+                                              <td>
+                                                  <button class="btn"><i class="fa fa-trash"></i></button>
+                                                  <button class="btn"><i class="fa fa-pencil"></i></button>
 
-                                          </td>
-                                          <br>
+                                              </td>
+                                              <br>
 
+                                          </tr>
 
-                                      </tr>
-                                      <tr>
-                                          <td>#2</td>
-                                          <td>Assignment research</td>
-                                          <td>Assignment due date 15/12/2020</td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-                                          </td>
-                                          <br>
-
-
-                                      </tr>
-                                      <tr>
-                                          <td>#3</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-                                          </td>
-                                          <br>
-
-
-                                      </tr>
-                                      <tr>
-                                          <td>#4</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                          </td>
-                                          <br>
-
-                                      </tr>
-                                      <tr>
-                                          <td>#5</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                          </td>
-                                          <br>
-
-                                      </tr>
-                                      </tbody>
+                                          <tr></tr>
+                                          <tr></tr>
+                                          <tr></tr>
+                                          <tr></tr>
+                                          </tbody>
                                   </table>
                                   <ul class="table-pagination">
                                       <li><a href="#">Previous</a></li>
