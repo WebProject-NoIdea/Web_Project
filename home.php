@@ -84,27 +84,21 @@ https://templatemo.com/tm-529-ramayana
                                   <div class="form-group">
                                       <label for="startDate">Start Date</label>
                                       <input type="text" class="form-control" id="startDate" name="startDate">
+                                      <input type="text" class="form-control" id="startDate" name="startDate">
                                   </div>
                                   <div class="form-group">
                                       <label for="endDate">End Date</label>
                                       <input id="endDate" name="endDate">
+                                      <input id="endDate" name="endDate">
                                   </div>
 
-                                  <input id="input" width="234" />
                                   <script>
-                                      $('#input').datetimepicker({ uiLibrary: 'bootstrap4', modal: true, footer: true });
-                                  </script>
-
-                                  <script>
-                                      $('#startDate').timepicker({
+                                      $('#startDate').datepicker({
                                           uiLibrary: 'bootstrap4',
-                                          dateTimeFormat: "dddd, MMMM dd, yyyy hh:mm:ss tt",
                                           modal: true,
                                           footer: true
                                       });
-                                  </script>
 
-                                  <script>
                                       $('#endDate').datetimepicker({
                                           uiLibrary: 'bootstrap4',
                                           modal: true,
