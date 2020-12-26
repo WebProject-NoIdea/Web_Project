@@ -15,3 +15,7 @@ function logout(){
     session_destroy();
 }
 
+function getUserId(){
+    return $_SESSION["webProjectUserId"];
+}
+
