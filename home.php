@@ -271,8 +271,7 @@ https://templatemo.com/tm-529-ramayana
                     
                   </ul>
                 </li>
-                  <li><a href="logout.php">Sign Out</a></li>
-                <!-- <li><a href="https://www.google.com">External Link</a></li> -->
+                  <li><a href="logout.php" onclick="return confirm('Are you sure?')">Sign Out</a></li>
               </ul>
             </nav>
 
