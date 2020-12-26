@@ -94,8 +94,8 @@ https://templatemo.com/tm-529-ramayana
                                       $('#startDate').datetimepicker({
 
                                           dateTimeFormat: "dddd, MMMM dd, yyyy hh:mm:ss tt",
-                                          modal: true,
-                                          footer: true
+
+
                                       });
                                   </script>
 
