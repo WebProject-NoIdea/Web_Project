@@ -21,12 +21,15 @@ checkLogin();
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -86,21 +89,13 @@ checkLogin();
                                       <input type="text" class="form-control" id="endDate" name="endDate">
                                   </div>
 
-                                          <div class='col-sm-6'>
-                                              <div class="form-group">
-                                                  <div class='input-group date' id='datetimepicker1'>
-                                                      <input type='text' class="form-control" />
-                                                      <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                      </span>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <script type="text/javascript">
-                                              $(function () {
-                                                  $('#datetimepicker1').datetimepicker();
-                                              });
-                                          </script>
+                                  <script>
+                                      $('#startDate').datetimepicker({
+                                          uiLibrary: 'bootstrap4',
+                                          modal: true,
+                                          footer: true
+                                      });
+                                  </script>
 
 
                               </div>
