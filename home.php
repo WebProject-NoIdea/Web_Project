@@ -65,8 +65,9 @@ https://templatemo.com/tm-529-ramayana
                                   <span aria-hidden="true">&times;</span>
                               </button>
                           </div>
-                          <div class="modal-body">
-                              <form>
+                          <form>
+                              <div class="modal-body">
+
                                   <div class="form-group">
                                       <label for="task">Task</label>
                                       <input type="text" class="form-control" id="task" name="task" placeholder="Task">
@@ -84,12 +85,13 @@ https://templatemo.com/tm-529-ramayana
                                       </select>
                                   </div>
                                   <button type="submit" class="btn btn-primary">Add</button>
-                              </form>
-                          </div>
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                          </div>
+
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                          </form>
                       </div>
                   </div>
               </div>
