@@ -3,9 +3,7 @@
 if(isset($_POST['login'])){
 
     $email = $_POST['loginEmail'];
-
-    $pwd64 = base64_encode($_POST['loginPassword']);
-    $password = md5($pwd64);
+    $password = encrypt($_POST['loginPassword']);
 
     include('dbConnect.php');
 
@@ -15,12 +13,17 @@ if(isset($_POST['login'])){
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "asda".$row['user_id'];
-            header( "Location: home.html" );
+            //echo "asda".$row['user_id'];
+            header( "Location: home.html");
         }
     }
+}else if(isset($_POST['signUp'])){
+    header( "Location: home.html");
+}
 
-
+function encrypt(String $password){
+    $pwd64 = base64_encode($password);
+    return md5($pwd64);
 }
 
 ?>
@@ -90,7 +93,7 @@ if(isset($_POST['login'])){
         <div id="signup">
           <h1>Sign Up for Free</h1>
 
-          <form action="/" method="post">
+          <form action="" method="post">
 
             <div class="top-row">
               <div class="field-wrap">
@@ -122,7 +125,7 @@ if(isset($_POST['login'])){
               <input type="password" required autocomplete="off"/>
             </div>
 
-            <button type="submit" class="button button-block">Get Started</button>
+            <button type="submit" name="signUp" class="button button-block">Get Started</button>
 
           </form>
 
