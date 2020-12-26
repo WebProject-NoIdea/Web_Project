@@ -77,12 +77,31 @@ https://templatemo.com/tm-529-ramayana
                                       <input type="text" class="form-control" id="description" name="description" placeholder="Description">
                                   </div>
                                   <div class="form-group">
-                                      <label for="subtask">Sub Task</label>
-                                      <select class="form-control" id="subtask">
-                                          <option>Default select</option>
-                                          <option>With subtask</option>
-                                          <option>Without subtask</option>
-                                      </select>
+                                      <label for="startDate">Description</label>
+                                      <input type="text" class="form-control" id="startDate" name="startDate">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="endDate">Description</label>
+                                      <input type="text" class="form-control" id="endDate" name="endDate">
+                                  </div>
+                                  <div class="container">
+                                      <div class="row">
+                                          <div class='col-sm-6'>
+                                              <div class="form-group">
+                                                  <div class='input-group date' id='datetimepicker1'>
+                                                      <input type='text' class="form-control" />
+                                                      <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                      </span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <script type="text/javascript">
+                                              $(function () {
+                                                  $('#datetimepicker1').datetimepicker();
+                                              });
+                                          </script>
+                                      </div>
                                   </div>
                               </div>
                               <div class="modal-footer">
