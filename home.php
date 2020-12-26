@@ -82,7 +82,7 @@ https://templatemo.com/tm-529-ramayana
                                           <th>No.</th>
                                           <th>Task</th>
                                           <th>Description</th>
-                                          <th>Due Date</th>
+                                          <th>End Date</th>
                                       </tr>
                                       </thead>
                                       <tbody>
@@ -266,6 +266,17 @@ https://templatemo.com/tm-529-ramayana
                                           uiLibrary: 'bootstrap4',
                                           modal: true,
                                           footer: true
+                                      });
+
+                                      let data = {
+                                          key: "value"
+                                      };
+
+                                      fetch("addtask.php", {
+                                          method: 'post',
+                                          body: JSON.stringify(data)
+                                      }).then(data => {
+                                          // data is anything returned by your API/backend code
                                       });
                                   </script>
 
