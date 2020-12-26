@@ -33,7 +33,13 @@ if(isset($_POST['login'])){
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+        echo '<script>alert("This email address already exists !")</script>';
+    }else{
+        $sql = "INSERT INTO user (email, password, firstname, lastname) VALUES ('$email', '$password', '$firstName', '$lastName')";
+
+        if ($conn->query($sql) === TRUE) {
+            header( "Location: index.php");
+        }
     }
 
     $conn->close();
