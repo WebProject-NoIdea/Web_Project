@@ -96,7 +96,7 @@ https://templatemo.com/tm-529-ramayana
                                   </script>
 
                                   <script>
-                                      $('#startDate').datetimepicker({
+                                      $('#startDate').timepicker({
                                           uiLibrary: 'bootstrap4',
                                           dateTimeFormat: "dddd, MMMM dd, yyyy hh:mm:ss tt",
                                           modal: true,
