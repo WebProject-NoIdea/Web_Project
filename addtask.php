@@ -5,6 +5,6 @@ checkLogin();
 
 var_dump($_POST);
 
-if(isset($_POST['submit'])){
+if(isset($_POST['task'])){
     var_dump($_POST);
 }
