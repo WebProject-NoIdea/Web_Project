@@ -24,7 +24,7 @@ if(isset($_POST['login'])){
     $firstName = $_POST['signUpFirstName'];
     $lastName = $_POST['signUpLastName'];
     $email = $_POST['signUpEmail'];
-    $password = $_POST['signUpPassword'];
+    $password = encrypt($_POST['signUpPassword']);
 
     include('dbConnect.php');
 
@@ -38,6 +38,7 @@ if(isset($_POST['login'])){
         $sql = "INSERT INTO user (email, password, firstname, lastname) VALUES ('$email', '$password', '$firstName', '$lastName')";
 
         if ($conn->query($sql) === TRUE) {
+            echo '<script>alert("Congratulations, your account has been successfully created.")</script>';
             header( "Location: index.php");
         }
     }
