@@ -83,13 +83,13 @@ https://templatemo.com/tm-529-ramayana
                                   </div>
                                   <div class="form-group">
                                       <label for="startDate">Start Date</label>
-                                      <input type="text" class="form-control" id="startDate" name="startDate">
-                                      <input type="text" class="form-control" id="startDate" name="startDate">
+                                      <input id="startDate" name="startDate">
+                                      <input id="startTime" name="startTime">
                                   </div>
                                   <div class="form-group">
                                       <label for="endDate">End Date</label>
                                       <input id="endDate" name="endDate">
-                                      <input id="endDate" name="endDate">
+                                      <input id="endTime" name="endTime">
                                   </div>
 
                                   <script>
@@ -99,7 +99,19 @@ https://templatemo.com/tm-529-ramayana
                                           footer: true
                                       });
 
-                                      $('#endDate').datetimepicker({
+                                      $('#endDate').datepicker({
+                                          uiLibrary: 'bootstrap4',
+                                          modal: true,
+                                          footer: true
+                                      });
+
+                                      $('#startTime').timepicker({
+                                          uiLibrary: 'bootstrap4',
+                                          modal: true,
+                                          footer: true
+                                      });
+
+                                      $('#endTime').timepicker({
                                           uiLibrary: 'bootstrap4',
                                           modal: true,
                                           footer: true
