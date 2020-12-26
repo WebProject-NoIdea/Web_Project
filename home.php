@@ -92,7 +92,7 @@ https://templatemo.com/tm-529-ramayana
 
                                   <script>
                                       $('#startDate').datetimepicker({
-                                          uiLibrary: 'bootstrap4',
+
                                           dateTimeFormat: "dddd, MMMM dd, yyyy hh:mm:ss tt",
                                           modal: true,
                                           footer: true
@@ -101,7 +101,7 @@ https://templatemo.com/tm-529-ramayana
 
                                   <script>
                                       $('#endDate').datetimepicker({
-                                          uiLibrary: 'bootstrap4',
+
                                           modal: true,
                                           footer: true
                                       });
