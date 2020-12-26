@@ -17,11 +17,16 @@ if(isset($_POST['login'])){
             header( "Location: home.html");
         }
     }
+
+    $conn->close();
+
 }else if(isset($_POST['signUp'])){
     $firstName = $_POST['signUpFirstName'];
     $lastName = $_POST['signUpLastName'];
     $email = $_POST['signUpEmail'];
     $password = $_POST['signUpPassword'];
+
+    include('dbConnect.php');
 
     $sql = "SELECT user_id FROM user WHERE email='$email'";
 
@@ -31,6 +36,7 @@ if(isset($_POST['login'])){
         echo '<script>alert("Welcome to Geeks for Geeks")</script>';
     }
 
+    $conn->close();
     //header( "Location: home.html");
 }
 
