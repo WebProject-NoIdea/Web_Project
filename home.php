@@ -84,8 +84,7 @@ https://templatemo.com/tm-529-ramayana
                                       <label for="endDate">Description</label>
                                       <input type="text" class="form-control" id="endDate" name="endDate">
                                   </div>
-                                  <div class="container">
-                                      <div class="row">
+
                                           <div class='col-sm-6'>
                                               <div class="form-group">
                                                   <div class='input-group date' id='datetimepicker1'>
@@ -101,8 +100,8 @@ https://templatemo.com/tm-529-ramayana
                                                   $('#datetimepicker1').datetimepicker();
                                               });
                                           </script>
-                                      </div>
-                                  </div>
+
+
                               </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
