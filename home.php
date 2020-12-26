@@ -294,7 +294,7 @@ https://templatemo.com/tm-529-ramayana
                                       console.log(response.text());
                                       console.log(response.status);
                                       console.log(response.ok);
-                                      location.reload();
+
                                   }).catch(error => {
                                       console.log(error);
                                   });
