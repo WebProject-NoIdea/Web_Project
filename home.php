@@ -83,13 +83,13 @@ https://templatemo.com/tm-529-ramayana
                                   </div>
                                   <div class="form-group">
                                       <label for="startDate">Start Date</label>
-                                      <input id="startDate" name="startDate">
-                                      <input id="startTime" name="startTime">
+                                      <input id="startDate" name="startDate" width="300">
+                                      <input id="startTime" name="startTime" width="200">
                                   </div>
                                   <div class="form-group">
                                       <label for="endDate">End Date</label>
-                                      <input id="endDate" name="endDate">
-                                      <input id="endTime" name="endTime">
+                                      <input id="endDate" name="endDate" width="300">
+                                      <input id="endTime" name="endTime" width="200">
                                   </div>
 
                                   <script>
