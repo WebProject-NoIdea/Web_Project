@@ -3,6 +3,7 @@
 include("session.php");
 checkLogin();
 
+echo getUserId();
 ?>
 
 <!DOCTYPE html>
