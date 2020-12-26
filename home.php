@@ -287,7 +287,7 @@ https://templatemo.com/tm-529-ramayana
                                       userId:1
                                   }
 
-                                  fetch('addtask.php', {
+                                  fetch('http://www.breakvoid.com/Web_Project/addtask.php', {
                                       method: "POST",
                                       body: JSON.stringify(_data),
                                       headers: {"Content-type": "application/json; charset=UTF-8"}
