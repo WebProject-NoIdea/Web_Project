@@ -281,15 +281,18 @@ https://templatemo.com/tm-529-ramayana
 
                           <script>
                               function addData(){
-                                  let data = {
-                                      key: "value"
-                                  };
+                                  let _data = {
+                                      title: "foo",
+                                      body: "bar",
+                                      userId:1
+                                  }
 
-                                  fetch("addtask.php", {
-                                      method: 'post',
-                                      body: JSON.stringify(data)
-                                  }).then(data => {
-                                      alert(data);
+                                  fetch('https://jsonplaceholder.typicode.com/posts', {
+                                      method: "POST",
+                                      body: JSON.stringify(_data),
+                                      headers: {"Content-type": "application/json; charset=UTF-8"}
+                                  }).then(response => {
+                                      alert(response);
                                       // data is anything returned by your API/backend code
                                   });
                               }
