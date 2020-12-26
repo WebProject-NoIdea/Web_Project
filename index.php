@@ -11,7 +11,7 @@ if(isset($_POST['login'])){
     $email = $_POST['loginEmail'];
     $password = encrypt($_POST['loginPassword']);
 
-    include('dbConnect.php');
+    include('dbconnect.php');
 
     $sql = "SELECT user_id FROM user WHERE email='$email' and password='$password'";
 
@@ -33,7 +33,7 @@ if(isset($_POST['login'])){
     $email = $_POST['signUpEmail'];
     $password = encrypt($_POST['signUpPassword']);
 
-    include('dbConnect.php');
+    include('dbconnect.php');
 
     $sql = "SELECT user_id FROM user WHERE email='$email'";
 
