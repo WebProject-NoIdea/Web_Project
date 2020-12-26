@@ -84,8 +84,6 @@ https://templatemo.com/tm-529-ramayana
                                           <option>Without subtask</option>
                                       </select>
                                   </div>
-                                  <button type="submit" class="btn btn-primary">Add</button>
-
                               </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
