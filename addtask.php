@@ -55,6 +55,16 @@ checkLogin();
                 </div>
             </header>
 
+            <div class="page-heading">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Add Task</h1>
+                            <p><strong>Activities</strong> that need to be done .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
                         <form>
@@ -91,7 +101,6 @@ checkLogin();
                                 </script>
 
 
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary">Save changes</button>
 
                         </form>
