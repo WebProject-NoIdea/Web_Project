@@ -289,6 +289,7 @@ https://templatemo.com/tm-529-ramayana
                                       method: 'post',
                                       body: JSON.stringify(data)
                                   }).then(data => {
+                                      alert("haha");
                                       // data is anything returned by your API/backend code
                                   });
                               }
