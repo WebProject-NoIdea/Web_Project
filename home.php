@@ -275,7 +275,7 @@ https://templatemo.com/tm-529-ramayana
                               </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <input type="submit" name="submit" class="btn btn-primary">Save changes</input>
+                                  <button type="submit" class="btn btn-primary">Save changes</button>
                               </div>
                           </form>
 
@@ -294,6 +294,7 @@ https://templatemo.com/tm-529-ramayana
                                       console.log(response.text());
                                       console.log(response.status);
                                       console.log(response.ok);
+                                      location.reload();
 
                                   }).catch(error => {
                                       console.log(error);
