@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if($_SESSION['webProjectLoggedIn']){
+    header( "Location: home.html" );
+}
+
 if(isset($_POST['login'])){
 
     $email = $_POST['loginEmail'];
@@ -13,7 +19,8 @@ if(isset($_POST['login'])){
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            //echo "asda".$row['user_id'];
+            $_SESSION["webProjectLoggedIn"] = true;
+            $_SESSION["webProjectUserId"] = $row['user_id'];
             header( "Location: home.html");
         }
     }
@@ -44,7 +51,6 @@ if(isset($_POST['login'])){
     }
 
     $conn->close();
-    //header( "Location: home.html");
 }
 
 function encrypt(String $password){
