@@ -62,7 +62,7 @@ https://templatemo.com/tm-529-ramayana
                       <div class="row">
                           <div class="col-md-12">
                               <div class="section-heading">
-                                  <h2>Weekly</h2>
+                                  <h2>Today</h2>
                               </div>
                               <div class="default-table">
                                   <table>
@@ -71,7 +71,7 @@ https://templatemo.com/tm-529-ramayana
                                           <th>No.</th>
                                           <th>Task</th>
                                           <th>Description</th>
-
+                                          <th>Due Date</th>
                                       </tr>
                                       </thead>
                                       <tbody>
@@ -95,7 +95,6 @@ https://templatemo.com/tm-529-ramayana
                                           <td>
                                               <button class="btn"><i class="fa fa-trash"></i></button>
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
-
                                           </td>
                                           <br>
 
@@ -108,7 +107,6 @@ https://templatemo.com/tm-529-ramayana
                                           <td>
                                               <button class="btn"><i class="fa fa-trash"></i></button>
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
-
                                           </td>
                                           <br>
 
