@@ -2,4 +2,4 @@
 
 
 
-echo "haha";
+var_dump($_POST);

@@ -235,7 +235,7 @@ https://templatemo.com/tm-529-ramayana
                                   <span aria-hidden="true">&times;</span>
                               </button>
                           </div>
-                          <form>
+                          <form id="addTaskForm">
                               <div class="modal-body">
 
                                   <div class="form-group">
@@ -275,27 +275,26 @@ https://templatemo.com/tm-529-ramayana
                               </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary" onclick="addData()">Save changes</button>
+                                  <button type="submit" class="btn btn-primary">Save changes</button>
                               </div>
                           </form>
 
                           <script>
-                              function addData(){
-                                  let _data = {
-                                      title: "foo",
-                                      body: "bar",
-                                      userId:1
-                                  }
+                              const addTaskForm = document.getElementById("addTaskForm");
 
-                                  fetch('http://www.breakvoid.com/Web_Project/addtask.php', {
-                                      method: "POST",
-                                      body: JSON.stringify(_data),
-                                      headers: {"Content-type": "application/json; charset=UTF-8"}
+                              addTaskForm.addEventListener('submit',function (e){
+                                  e.preventDefault();
+
+                                  const formData = new FormData(this);
+
+                                  fetch('addtask.php',{
+                                      method: 'post',
+                                      body: formData
                                   }).then(response => {
                                       alert(response.text());
-                                      // data is anything returned by your API/backend code
                                   });
-                              }
+                              });
+
                           </script>
                       </div>
                   </div>
