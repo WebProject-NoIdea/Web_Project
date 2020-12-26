@@ -271,7 +271,7 @@ https://templatemo.com/tm-529-ramayana
                     
                   </ul>
                 </li>
-                  <li><a href="logout.php">Logout</a></li>
+                  <li><a href="logout.php">Sign Out</a></li>
                 <!-- <li><a href="https://www.google.com">External Link</a></li> -->
               </ul>
             </nav>
