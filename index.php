@@ -18,7 +18,20 @@ if(isset($_POST['login'])){
         }
     }
 }else if(isset($_POST['signUp'])){
-    header( "Location: home.html");
+    $firstName = $_POST['signUpFirstName'];
+    $lastName = $_POST['signUpLastName'];
+    $email = $_POST['signUpEmail'];
+    $password = $_POST['signUpPassword'];
+
+    $sql = "SELECT user_id FROM user WHERE email='$email'";
+
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+    }
+
+    //header( "Location: home.html");
 }
 
 function encrypt(String $password){
@@ -100,14 +113,14 @@ function encrypt(String $password){
                 <label>
                   First Name<span class="req">*</span>
                 </label>
-                <input type="text" required autocomplete="off" />
+                <input type="text" name="signUpFirstName" required autocomplete="off" />
               </div>
 
               <div class="field-wrap">
                 <label>
                   Last Name<span class="req">*</span>
                 </label>
-                <input type="text" required autocomplete="off"/>
+                <input type="text" name="signUpLastName" required autocomplete="off"/>
               </div>
             </div>
 
@@ -115,14 +128,14 @@ function encrypt(String $password){
               <label>
                 Email Address<span class="req">*</span>
               </label>
-              <input type="email" required autocomplete="off"/>
+              <input type="email" name="signUpEmail" required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>
                 Set A Password<span class="req">*</span>
               </label>
-              <input type="password" required autocomplete="off"/>
+              <input type="password" name="signUpPassword" required autocomplete="off"/>
             </div>
 
             <button type="submit" name="signUp" class="button button-block">Get Started</button>
