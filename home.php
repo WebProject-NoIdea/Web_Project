@@ -342,8 +342,8 @@ https://templatemo.com/tm-529-ramayana
                           <li><a href="#">Upcoming</a></li>
                       </ul>
                   </li>
-                <li><a href="history.php">History</a></li>
-                <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')">Sign Out</a></li>
+                <li><a href="history.php"><i class = "fa fa-history"></i>  History</a></li>
+                <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class = "fa fa-sign-out"></i>  Sign Out</a></li>
               </ul>
             </nav>
 
