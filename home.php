@@ -102,11 +102,12 @@ https://templatemo.com/tm-529-ramayana
                                   </div>
                                   <div class="form-group">
                                       <label for="endDate">End Date</label>
-                                      <input id="endDate" name="endDate" width="300" value="27 Dec 2020 12:45 PM" required>
+                                      <input id="endDate" name="endDate" width="300" required>
                                   </div>
 
                                   <script>
                                       $('#startDate').datetimepicker({
+                                          value: '27 Dec 2020 12:45 PM',
                                           uiLibrary: 'bootstrap4',
                                           format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
@@ -114,6 +115,7 @@ https://templatemo.com/tm-529-ramayana
                                       });
 
                                       $('#endDate').datetimepicker({
+                                          value: '27 Dec 2020 12:45 PM',
                                           uiLibrary: 'bootstrap4',
                                           format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
