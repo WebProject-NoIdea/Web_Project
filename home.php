@@ -244,7 +244,7 @@ https://templatemo.com/tm-529-ramayana
                               <?php
                               include('dbconnect.php');
 
-                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE,date('Y-m-d H:i'),start_date)>0";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE,'".date('Y-m-d H:i')."',start_date)>0";
 
                               $result = $conn->query($sql);
 
