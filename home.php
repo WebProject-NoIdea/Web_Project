@@ -33,6 +33,11 @@ function diffDateInSeconds(String $datetime){
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 
+<!--
+Ramayana CSS Template
+https://templatemo.com/tm-529-ramayana
+-->
+
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
@@ -313,6 +318,182 @@ function diffDateInSeconds(String $datetime){
               </section>
 
 
+            <!-- Banner -->
+            <section class="main-banner">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="banner-content">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="banner-caption">
+                            <h4>Hello, welcome to <em>StudLife</em>. </h4>
+                            <span>StudLife Makes Your Student Life Easier</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In eu mi bibendum neque egestas congue quisque egestas diam. Urna duis convallis convallis tellus id interdum velit laoreet. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. </p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </section>
+
+            <!-- Services
+          <section class="services">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="service-item first-item">
+                      <div class="icon"></div>
+                      <h4>Web Design</h4>
+                      <p>Credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels</a> and <a rel="nofollow" href="https://www.rawpixel.com">Raw Pixel</a> for images used in this template. Thank you.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item second-item">
+                      <div class="icon"></div>
+                      <h4>Bootstrap 4</h4>
+                      <p>Proin aliquam facilisis ante interdum. Sed nulla feugiat tempus aliquam.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item third-item">
+                      <div class="icon"></div>
+                      <h4>HTML CSS</h4>
+                      <p>Proin aliquam facilisis ante interdum. Sed nulla feugiat tempus aliquam.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item fourth-item">
+                      <div class="icon"></div>
+                      <h4>Download Free</h4>
+                      <p>We have many free to use CSS web templates on our site for you.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item fivth-item">
+                      <div class="icon"></div>
+                      <h4>Get in touch</h4>
+                      <p>You can get the fastest response from <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> facebook page.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-item sixth-item">
+                      <div class="icon"></div>
+                      <h4>Spread a word</h4>
+                      <p>Please tell your friends about our website. This is very helpful.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>-->
+
+            <!-- Daily -->
+            <section class="top-image">
+              <div class="container-fluid">
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="down-content">
+                      <h4>Your Task Completed in last 7 days</h4>
+                      <img src="assets/images/daily.png" alt="">
+                      <!--<div class="chart">
+                      <div id="chartContainer1" style="height: 300px; width: 80%;"></div>-->
+                      </div>
+                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
+
+                    </div>
+                  </div>
+                </div>
+
+            </section>
+
+            <!-- Weekly -->
+            <section class="top-image">
+              <div class="container-fluid">
+
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="down-content">
+                      <h4>Your Task Completed in last 4 weeks</h4>
+                      <img src="assets/images/weekly.png" alt="">
+                      <!--<div class="chart">
+                      <div id="chartContainer1" style="height: 300px; width: 80%;"></div>-->
+                      </div>
+                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
+
+                    </div>
+                  </div>
+                </div>
+
+            </section>
+
+            <!-- Monthly -->
+            <section class="top-image">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="down-content">
+                      <h4>Your Task Completed</h4>
+                      <div class="chart">
+                      <div id="chartContainer3" style="height: 300px; width: 80%;">
+                      </div></div>
+                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- Left Image
+            <section class="left-image">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/left-image.jpg" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="right-content">
+                      <h4>Ante Interdum Raclette</h4>
+                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
+                      <div class="primary-button">
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>-->
+
+            <!-- Right Image
+            <section class="right-image">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="left-content">
+                      <h4>Ante Interdum Raclette</h4>
+                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
+                      <div class="primary-button">
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="assets/images/right-image.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </section>-->
+
+          </div>
+        </div>
+
       <!-- Sidebar -->
         <div id="sidebar">
 
@@ -385,7 +566,42 @@ function diffDateInSeconds(String $datetime){
     <script src="assets/js/transition.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
+
+    <script type="text/javascript">
+      //monthly
+      window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer3",
+        {
+
+          title:{
+          text: "Performance - per month"
+          },
+           data: [
+          {
+            type: "line",
+
+            dataPoints: [
+            { x: new Date(2012, 00, 1), y: 450 },
+            { x: new Date(2012, 01, 1), y: 414 },
+            { x: new Date(2012, 02, 1), y: 520 },
+            { x: new Date(2012, 03, 1), y: 460 },
+            { x: new Date(2012, 04, 1), y: 450 },
+            { x: new Date(2012, 05, 1), y: 500 },
+            { x: new Date(2012, 06, 1), y: 480 },
+            { x: new Date(2012, 07, 1), y: 480 },
+            { x: new Date(2012, 08, 1), y: 410 },
+            { x: new Date(2012, 09, 1), y: 500 },
+            { x: new Date(2012, 10, 1), y: 480 },
+            { x: new Date(2012, 11, 1), y: 510 }
+            ]
+          }
+          ]
+        });
+
+        chart.render();
+      }
+      </script>
+      <script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
       
 </body>
 </html>
