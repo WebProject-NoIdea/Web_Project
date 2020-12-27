@@ -316,56 +316,6 @@ https://templatemo.com/tm-529-ramayana
                       </div>
                   </div>
               </section>
-
-
-
-
-
-
-
-
-
-
-            <!-- Left Image
-            <section class="left-image">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img src="assets/images/left-image.jpg" alt="">
-                  </div>
-                  <div class="col-md-6">
-                    <div class="right-content">
-                      <h4>Ante Interdum Raclette</h4>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
-                      <div class="primary-button">
-                        <a href="#">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>-->
-
-            <!-- Right Image
-            <section class="right-image">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="left-content">
-                      <h4>Ante Interdum Raclette</h4>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
-                      <div class="primary-button">
-                        <a href="#">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="assets/images/right-image.jpg" alt="">
-                  </div>
-                </div>
-              </div>
-            </section>-->
-
           </div>
         </div>
 
@@ -442,41 +392,7 @@ https://templatemo.com/tm-529-ramayana
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/custom.js"></script>
 
-    <script type="text/javascript">
-      //monthly
-      window.onload = function () {
-        var chart = new CanvasJS.Chart("chartContainer3",
-        {
 
-          title:{
-          text: "Performance - per month"
-          },
-           data: [
-          {
-            type: "line",
-
-            dataPoints: [
-            { x: new Date(2012, 00, 1), y: 450 },
-            { x: new Date(2012, 01, 1), y: 414 },
-            { x: new Date(2012, 02, 1), y: 520 },
-            { x: new Date(2012, 03, 1), y: 460 },
-            { x: new Date(2012, 04, 1), y: 450 },
-            { x: new Date(2012, 05, 1), y: 500 },
-            { x: new Date(2012, 06, 1), y: 480 },
-            { x: new Date(2012, 07, 1), y: 480 },
-            { x: new Date(2012, 08, 1), y: 410 },
-            { x: new Date(2012, 09, 1), y: 500 },
-            { x: new Date(2012, 10, 1), y: 480 },
-            { x: new Date(2012, 11, 1), y: 510 }
-            ]
-          }
-          ]
-        });
-
-        chart.render();
-      }
-      </script>
-      <script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
       
 </body>
 </html>
