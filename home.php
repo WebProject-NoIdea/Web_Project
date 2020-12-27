@@ -199,7 +199,8 @@ https://templatemo.com/tm-529-ramayana
                                       if ($result->num_rows > 0) {
 
                                           while ($row = $result->fetch_assoc()) {
-                                              $date=date_format(date_create($row['end_date']),"d M Y\nh:i A");
+                                              $date=date_format(date_create($row['end_date']),"d M Y<br>h:i A");
+
                                               echo "<tr>
                                                         <td>#2</td>
                                                         <td>".$row['task']."</td>
