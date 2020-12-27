@@ -169,7 +169,7 @@ https://templatemo.com/tm-529-ramayana
                               <?php
                               include('dbconnect.php');
 
-                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 ORDER BY end_date";
 
                               $result = $conn->query($sql);
 
@@ -243,7 +243,7 @@ https://templatemo.com/tm-529-ramayana
 
                               include('dbconnect.php');
 
-                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0 ORDER BY start_date";
 
                               $result = $conn->query($sql);
 
