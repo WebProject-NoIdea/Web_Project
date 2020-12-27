@@ -5,7 +5,7 @@ checkLogin();
 
 date_default_timezone_set("Asia/Kuala_Lumpur");
 echo date_default_timezone_get();
-echo date();
+echo date('Y-m-d');
 ?>
 
 <!DOCTYPE html>
