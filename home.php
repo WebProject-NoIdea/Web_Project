@@ -4,9 +4,12 @@ include("session.php");
 checkLogin();
 
 date_default_timezone_set("Asia/Kuala_Lumpur");
-echo date_default_timezone_get();
-echo date("Y-m-d H:i");
-echo time();
+
+function diffDateInSeconds(String $datetime){
+    $timeFirst  = time();
+    $timeSecond = strtotime($datetime);
+    return $timeSecond - $timeFirst;
+}
 ?>
 
 <!DOCTYPE html>
@@ -199,14 +202,15 @@ https://templatemo.com/tm-529-ramayana
 
                                           while ($row = $result->fetch_assoc()) {
 
-                                              $timeFirst  = time();
-                                              $timeSecond = strtotime($row['end_date']);
-                                              $differenceInSeconds = $timeSecond - $timeFirst;
-
                                               $date = date_format(date_create($row['end_date']),"d M Y h:i A");
 
-                                              echo "<tr>
-                                                        <td>#$i</td>
+                                              if(diffDateInSeconds($row['end_date'])<0){
+                                                  echo '<tr style="background-color:red">';
+                                              }else{
+                                                  echo "<tr>";
+                                              }
+
+                                              echo "    <td>#$i</td>
                                                         <td>".$row['task']."</td>
                                                         <td>".$row['description']."</td>
                                                         <td>$date</td>
