@@ -167,6 +167,18 @@ https://templatemo.com/tm-529-ramayana
                               <div class="section-heading">
                                   <h2>Today</h2>
                               </div>
+
+                              <?php
+                              include('dbconnect.php');
+
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId();
+
+                              $result = $conn->query($sql);
+
+                              if ($result->num_rows > 0) {
+
+                              ?>
+
                               <div class="default-table">
                                   <table>
                                       <thead>
@@ -178,15 +190,8 @@ https://templatemo.com/tm-529-ramayana
                                       </tr>
                                       </thead>
                                       <tbody>
-                                      <?php
-                                      include('dbconnect.php');
 
-                                      $sql = "SELECT * FROM task WHERE user_id=".getUserId();
-
-                                      $result = $conn->query($sql);
-
-                                      if ($result->num_rows > 0) {
-
+                                        <?php
                                           $i = 1;
 
                                           while ($row = $result->fetch_assoc()) {
@@ -201,55 +206,7 @@ https://templatemo.com/tm-529-ramayana
 
                                               $i++;
                                           }
-                                      }
-
-                                      $conn->close();
                                       ?>
-                                      <tr>
-                                          <td>#2</td>
-                                          <td>Assignment research</td>
-                                          <td>Assignment due date 15/12/2020</td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>#3</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-                                          </td>
-
-
-
-                                      </tr>
-                                      <tr>
-                                          <td>#4</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                          </td>
-
-
-                                      </tr>
-                                      <tr>
-                                          <td>#5</td>
-                                          <td></td>
-                                          <td></td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                          </td>
-
-
-                                      </tr>
                                       </tbody>
                                   </table>
                                   <ul class="table-pagination">
@@ -262,6 +219,13 @@ https://templatemo.com/tm-529-ramayana
                                       <li><a href="#">Next</a></li>
                                   </ul>
                               </div>
+                              <?php
+                              }else{
+                                  echo "No Task";
+                              }
+
+                              $conn->close();
+                              ?>
                           </div>
                       </div>
                   </div>
