@@ -197,13 +197,15 @@ https://templatemo.com/tm-529-ramayana
                                       $result = $conn->query($sql);
 
                                       if ($result->num_rows > 0) {
+
                                           while ($row = $result->fetch_assoc()) {
-                                            echo "<tr>
-                                                      <td>#2</td>
-                                                      <td>".$row['task']."</td>
-                                                      <td>".$row['description']."</td>
-                                                      <td>".$row['end_date']."</td>
-                                                  </tr>";
+                                              $date=date_format(date_create($row['end_date']),"d M Y\nh:i A");
+                                              echo "<tr>
+                                                        <td>#2</td>
+                                                        <td>".$row['task']."</td>
+                                                        <td>".$row['description']."</td>
+                                                        <td>".$date."</td>
+                                                    </tr>";
                                           }
                                       }
 
