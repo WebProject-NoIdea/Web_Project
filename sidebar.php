@@ -3,7 +3,7 @@
     <div class="inner">
         <!-- Menu -->
         <nav id="menu">
-            <div>
+            <div style="margin-bottom: 30px;">
                 <h1 style="color: white">Bootstrap Sidebar</h1>
             </div>
 
