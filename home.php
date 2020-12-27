@@ -130,65 +130,7 @@ checkLogin();
         </div>
     </div>
 
-    <!-- Sidebar -->
-    <div id="sidebar">
-
-        <div class="inner">
-
-            <!-- Search Box -->
-            <section id="search" class="alt">
-                <form method="get" action="#">
-                    <input type="text" name="search" id="search" placeholder="Search..." />
-                </form>
-            </section>
-
-            <!-- Menu -->
-            <nav id="menu">
-                <ul>
-                    <li><a href="home.php">Homepage</a></li>
-                    <li><a href="today.html">Today</a></li>
-                    <li><a href="upcoming.html">Upcoming</a></li>
-                    <li>
-                        <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
-                        <ul>
-                            <li><a href="#">Today</a></li>
-                            <li><a href="#">This Week</a></li>
-                            <li><a href="#">This Month</a></li>
-                            <li><a href="#">Upcoming</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener"><i class = "fa fa-bookmark"></i>  Work Label</span>
-                        <ul>
-                            <li><a href="#">Oppointments</a></li>
-                            <li><a href="#">Phone Call</a></li>
-                            <li><a href="#">Meeting</a></li>
-                            <li><a href="#">+</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener"><i class = "fa fa-bookmark-o"></i>  Leisure Label</span>
-                        <ul>
-                            <li><a href="#">Entertaiment</a></li>
-                            <li><a href="#">Holiday</a></li>
-                            <li><a href="#">+</a></li>
-
-                        </ul>
-                    </li>
-                    <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')">Sign Out</a></li>
-                </ul>
-            </nav>
-
-
-
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="setting">
-                    <i class = "fa fa-cog"></i>  <a rel="Setting" href="setting.html">Setting</a></p>
-            </footer>
-
-        </div>
-    </div>
+    <?php include('sidebar.php');?>
 
 </div>
 
