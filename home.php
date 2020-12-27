@@ -5,7 +5,8 @@ checkLogin();
 
 date_default_timezone_set("Asia/Kuala_Lumpur");
 echo date_default_timezone_get();
-echo date('Y-m-d');
+echo date("Y-m-d H:i");
+echo time();
 ?>
 
 <!DOCTYPE html>
@@ -198,7 +199,7 @@ https://templatemo.com/tm-529-ramayana
 
                                           while ($row = $result->fetch_assoc()) {
 
-                                              $timeFirst  = strtotime('2011-05-12 18:20:20');
+                                              $timeFirst  = time();
                                               $timeSecond = strtotime($row['end_date']);
                                               $differenceInSeconds = $timeSecond - $timeFirst;
 
