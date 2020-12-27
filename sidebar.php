@@ -25,7 +25,7 @@ function username()
     <div class="inner">
         <!-- Menu -->
         <nav id="menu">
-            <div style="margin-bottom: 30px;">
+            <div style="margin-bottom: 50px;">
                 <h1 style="color: white"><?php echo username(); ?></h1>
             </div>
 
