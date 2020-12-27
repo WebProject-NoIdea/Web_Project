@@ -205,7 +205,7 @@ https://templatemo.com/tm-529-ramayana
                                               $date = date_format(date_create($row['end_date']),"d M Y h:i A");
 
                                               if(diffDateInSeconds($row['end_date'])<0){
-                                                  echo '<tr style="background-color:red">';
+                                                  echo '<tr style="background-color:#F1948A">';
                                               }else{
                                                   echo "<tr>";
                                               }
