@@ -344,11 +344,11 @@ https://templatemo.com/tm-529-ramayana
               <ul>
                   <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
                   <li>
-                      <span class="opener"><a href="task.php"><i class = "fa fa-calendar"></i>  Task</a></span>
+                      <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
                       <ul>
-                          <li><a href="#addtask">Add Task</a></li>
-                          <li><a href="#today">Today</a></li>
-                          <li><a href="#upcoming">Upcoming</a></li>
+                          <li><a href="task.php#addtask">Add Task</a></li>
+                          <li><a href="task.php#today">Today</a></li>
+                          <li><a href="task.php#upcoming">Upcoming</a></li>
                       </ul>
                   </li>
                 <li><a href="history.php"><i class = "fa fa-history fa-lg"></i>  History</a></li>
