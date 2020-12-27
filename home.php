@@ -178,17 +178,6 @@ https://templatemo.com/tm-529-ramayana
                                       </tr>
                                       </thead>
                                       <tbody>
-                                      <tr>
-                                          <td>#1</td>
-                                          <td> Do registration screen</td>
-                                          <td>page for registration</td>
-                                          <td>15/12/2020<br>11:00pm</td>
-                                          <td>
-                                              <button class="btn"><i class="fa fa-trash"></i></button>
-                                              <button class="btn"><i class="fa fa-pencil"></i></button>
-                                          </td>
-                                      </tr>
-
                                       <?php
                                       include('dbconnect.php');
 
@@ -198,15 +187,19 @@ https://templatemo.com/tm-529-ramayana
 
                                       if ($result->num_rows > 0) {
 
+                                          $i = 1;
+
                                           while ($row = $result->fetch_assoc()) {
-                                              $date=date_format(date_create($row['end_date']),"d M Y h:i A");
+                                              $date = date_format(date_create($row['end_date']),"d M Y h:i A");
 
                                               echo "<tr>
-                                                        <td>#2</td>
+                                                        <td>#$i</td>
                                                         <td>".$row['task']."</td>
                                                         <td>".$row['description']."</td>
-                                                        <td>".$date."</td>
+                                                        <td>$date</td>
                                                     </tr>";
+
+                                              $i++;
                                           }
                                       }
 
