@@ -233,12 +233,12 @@ https://templatemo.com/tm-529-ramayana
 
 
               <!-- Tables -->
-              <section class="tables">
+              <section class="tables" style="margin-top: 0;border-top: 0 !important;">
                   <div class="container-fluid">
                       <div class="row">
                           <div class="col-md-12">
                               <div class="section-heading">
-                                  <h2>Today</h2>
+                                  <h2>Upcoming</h2>
                               </div>
 
                               <?php
@@ -259,7 +259,7 @@ https://templatemo.com/tm-529-ramayana
                                               <th>No.</th>
                                               <th>Task</th>
                                               <th>Description</th>
-                                              <th>End Date</th>
+                                              <th>Start Date</th>
                                           </tr>
                                           </thead>
                                           <tbody>
@@ -268,7 +268,7 @@ https://templatemo.com/tm-529-ramayana
                                           $i = 1;
 
                                           while ($row = $result->fetch_assoc()) {
-                                              $date = date_format(date_create($row['end_date']),"d M Y h:i A");
+                                              $date = date_format(date_create($row['start_date']),"d M Y h:i A");
 
                                               echo "<tr>
                                                         <td>#$i</td>
