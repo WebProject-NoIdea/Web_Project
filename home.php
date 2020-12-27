@@ -117,7 +117,7 @@ https://templatemo.com/tm-529-ramayana
 
                                           let years = today.getFullYear();
                                           let months = monthNames[today.getMonth()];
-                                          let days = today.getDay();
+                                          let days = today.getDate();
                                           let hours = today.getHours();
                                           let minutes = today.getMinutes();
                                           const ampm = hours >= 12 ? 'PM' : 'AM';
