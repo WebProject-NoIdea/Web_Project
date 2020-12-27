@@ -318,70 +318,12 @@ https://templatemo.com/tm-529-ramayana
               </section>
 
 
-            <!-- Banner -->
-            <section class="main-banner">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="banner-content">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="banner-caption">
-                            <h4>Hello, welcome to <em>StudLife</em>. </h4>
-                            <span>StudLife Makes Your Student Life Easier</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In eu mi bibendum neque egestas congue quisque egestas diam. Urna duis convallis convallis tellus id interdum velit laoreet. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. </p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-            </section>
 
 
 
 
-            <!-- Weekly -->
-            <section class="top-image">
-              <div class="container-fluid">
 
-                <div class="row">
-                  <div class="col-md-12">
 
-                    <div class="down-content">
-                      <h4>Your Task Completed in last 4 weeks</h4>
-                      <img src="assets/images/weekly.png" alt="">
-                      <!--<div class="chart">
-                      <div id="chartContainer1" style="height: 300px; width: 80%;"></div>-->
-                      </div>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
-
-                    </div>
-                  </div>
-                </div>
-
-            </section>
-
-            <!-- Monthly -->
-            <section class="top-image">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="down-content">
-                      <h4>Your Task Completed</h4>
-                      <div class="chart">
-                      <div id="chartContainer3" style="height: 300px; width: 80%;">
-                      </div></div>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
 
 
             <!-- Left Image
