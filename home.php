@@ -59,14 +59,14 @@ https://templatemo.com/tm-529-ramayana
               <div class="page-heading">
                   <div class="container-fluid">
                       <div class="row">
-                          <div class="col-md-9">
+                          <div class="col-md-10">
                               <h1>Task</h1>
                               <p><strong>Activities</strong> that need to be done .</p>
                           </div>
-                          <div class="col-md-3">
+                          <div class="col-md-2">
                               <!-- Button trigger modal -->
                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                  <i class="fa fa-plus"></i>Add Task
+                                  <i class="fa fa-plus"></i> Add Task
                               </button>
                           </div>
 
