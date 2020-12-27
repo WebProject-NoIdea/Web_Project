@@ -2,11 +2,6 @@
 
 include("session.php");
 checkLogin();
-
-date_default_timezone_set("Asia/Kuala_Lumpur");
-echo date_default_timezone_get();
-echo date("Y-m-d H:i");
-
 ?>
 
 <!DOCTYPE html>
@@ -174,7 +169,7 @@ https://templatemo.com/tm-529-ramayana
                               <?php
                               include('dbconnect.php');
 
-                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE,NOW(),start_date)<0";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0";
 
                               $result = $conn->query($sql);
 
@@ -248,7 +243,7 @@ https://templatemo.com/tm-529-ramayana
 
                               include('dbconnect.php');
 
-                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE,'".date('Y-m-d H:i')."',start_date)>0";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0";
 
                               $result = $conn->query($sql);
 
@@ -276,7 +271,7 @@ https://templatemo.com/tm-529-ramayana
 
                                               echo "<tr>
                                                         <td>#$i</td>
-                                                        <td>".$row['task'].date('Y-m-d H:i')."</td>
+                                                        <td>".$row['task']."</td>
                                                         <td>".$row['description']."</td>
                                                         <td>$date</td>
                                                     </tr>";
