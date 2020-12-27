@@ -59,10 +59,98 @@ https://templatemo.com/tm-529-ramayana
               <div class="page-heading">
                   <div class="container-fluid">
                       <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-9">
                               <h1>Task</h1>
                               <p><strong>Activities</strong> that need to be done .</p>
                           </div>
+                          <div class="col-md-3">
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                  Launch demo modal
+                              </button>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <form id="addTaskForm">
+                              <div class="modal-body">
+
+                                  <div class="form-group">
+                                      <label for="task">Task</label>
+                                      <input type="text" class="form-control" id="task" name="task" placeholder="Task">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="description">Description</label>
+                                      <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="startDate">Start Date</label>
+                                      <input id="startDate" name="startDate" width="300">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="endDate">End Date</label>
+                                      <input id="endDate" name="endDate" width="300">
+                                  </div>
+
+                                  <script>
+                                      $('#startDate').datetimepicker({
+                                          uiLibrary: 'bootstrap4',
+                                          modal: true,
+                                          footer: true
+                                      });
+
+                                      $('#endDate').datetimepicker({
+                                          uiLibrary: 'bootstrap4',
+                                          modal: true,
+                                          footer: true
+                                      });
+
+                                  </script>
+
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="submit" id="submitBtn" class="btn btn-primary">Save changes</button>
+                              </div>
+                          </form>
+
+                          <script>
+                              const addTaskForm = document.getElementById("addTaskForm");
+
+                              addTaskForm.addEventListener('submit',function (e){
+                                  e.preventDefault();
+
+                                  document.getElementById("submitBtn").disabled = true;
+                                  document.getElementById("submitBtn").innerHTML = "Saving ...";
+
+                                  const formData = new FormData(this);
+
+                                  fetch('addtask.php',{
+                                      method: 'post',
+                                      body: formData
+                                  }).then(response => {
+                                      if(response.ok){
+                                          location.reload();
+                                      }
+                                  }).catch(error => {
+                                      console.log(error);
+                                  });
+                              });
+
+                          </script>
                       </div>
                   </div>
               </div>
@@ -220,91 +308,7 @@ https://templatemo.com/tm-529-ramayana
                   </div>
               </section>
 
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  Launch demo modal
-              </button>
 
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-
-                          <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <form id="addTaskForm">
-                              <div class="modal-body">
-
-                                  <div class="form-group">
-                                      <label for="task">Task</label>
-                                      <input type="text" class="form-control" id="task" name="task" placeholder="Task">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="description">Description</label>
-                                      <input type="text" class="form-control" id="description" name="description" placeholder="Description">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="startDate">Start Date</label>
-                                      <input id="startDate" name="startDate" width="300">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="endDate">End Date</label>
-                                      <input id="endDate" name="endDate" width="300">
-                                  </div>
-
-                                  <script>
-                                      $('#startDate').datetimepicker({
-                                          uiLibrary: 'bootstrap4',
-                                          modal: true,
-                                          footer: true
-                                      });
-
-                                      $('#endDate').datetimepicker({
-                                          uiLibrary: 'bootstrap4',
-                                          modal: true,
-                                          footer: true
-                                      });
-
-                                  </script>
-
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="submit" id="submitbtn" class="btn btn-primary" >Save changes</button>
-                              </div>
-                          </form>
-
-                          <script>
-                              const addTaskForm = document.getElementById("addTaskForm");
-
-                              addTaskForm.addEventListener('submit',function (e){
-                                  e.preventDefault();
-
-                                  document.getElementById("submitbtn").disabled = true;
-                                  document.getElementById("submitbtn").innerHTML = "Saving...";
-
-                                  const formData = new FormData(this);
-
-                                  fetch('addtask.php',{
-                                      method: 'post',
-                                      body: formData
-                                  }).then(response => {
-                                      if(response.ok){
-                                          location.reload();
-                                      }
-                                  }).catch(error => {
-                                      console.log(error);
-                                  });
-                              });
-
-                          </script>
-                      </div>
-                  </div>
-              </div>
 
 
 
