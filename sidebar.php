@@ -4,7 +4,7 @@
         <!-- Menu -->
         <nav id="menu">
             <div>
-                <h1>Bootstrap Sidebar</h1>
+                <h1 style="color: white">Bootstrap Sidebar</h1>
             </div>
 
             <ul>
