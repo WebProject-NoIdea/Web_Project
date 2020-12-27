@@ -229,6 +229,20 @@ https://templatemo.com/tm-529-ramayana
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                       <div class="modal-content">
+
+                          <div class="overlay" style="background: #FFFFFF;
+    color: #666666;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    text-align: center;
+    padding-top: 10%;
+    -ms-opacity: .80;
+    opacity: .80;">
+                              <span class="fas fa-spinner fa-spin fa-2x w-100"></span> Loading...
+                          </div>
+
                           <div class="modal-header">
                               <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -291,9 +305,8 @@ https://templatemo.com/tm-529-ramayana
                                       method: 'post',
                                       body: formData
                                   }).then(response => {
-                                      console.log(response.text());
                                       if(response.ok){
-                                          //location.reload();
+                                          location.reload();
                                       }
                                   }).catch(error => {
                                       console.log(error);
