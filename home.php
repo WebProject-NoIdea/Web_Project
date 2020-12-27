@@ -3,6 +3,8 @@
 include("session.php");
 checkLogin();
 
+date_default_timezone_set("Asia/Kuala_Lumpur");
+
 
 ?>
 
@@ -242,7 +244,6 @@ https://templatemo.com/tm-529-ramayana
                               </div>
 
                               <?php
-                              date_default_timezone_set("Asia/Kuala_Lumpur");
 
                               include('dbconnect.php');
 
