@@ -11,6 +11,8 @@ function username()
         while ($row = $result->fetch_assoc()) {
             return $row['lastname']." ".$row['firstname'];
         }
+    }else{
+        return "";
     }
 
     $conn->close();
