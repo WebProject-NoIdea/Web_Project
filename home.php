@@ -169,7 +169,7 @@ https://templatemo.com/tm-529-ramayana
                               <?php
                               include('dbconnect.php');
 
-                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 ORDER BY end_date";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 AND complete_date = '0000-00-00 00:00:00' ORDER BY end_date";
 
                               $result = $conn->query($sql);
 
@@ -243,7 +243,7 @@ https://templatemo.com/tm-529-ramayana
 
                               include('dbconnect.php');
 
-                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0 ORDER BY start_date";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0 AND complete_date = '0000-00-00 00:00:00' ORDER BY start_date";
 
                               $result = $conn->query($sql);
 
@@ -302,66 +302,6 @@ https://templatemo.com/tm-529-ramayana
                       </div>
                   </div>
               </section>
-
-              <!-- Tables -->
-              <section class="tables" style="margin-top: 0;border-top: 0 !important;">
-                  <div class="container-fluid">
-                      <div class="row">
-                          <div class="col-md-12">
-                              <div class="section-heading">
-                                  <h2>Upcoming</h2>
-                              </div>
-                              <div class="default-table">
-                                  <table>
-                                      <thead>
-                                      <tr>
-                                          <th>No.</th>
-                                          <th>Task</th>
-                                          <th>Description</th>
-                                          <th>Start Date</th>
-                                      </tr>
-                                      </thead>
-                                      <tbody>
-                                          <tr>
-                                              <td>#1</td>
-                                              <td> Do registration screen</td>
-                                              <td>page for registration</td>
-                                              <td>
-                                                  <button class="btn"><i class="fa fa-trash"></i></button>
-                                                  <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                              </td>
-                                              <br>
-
-                                          </tr>
-
-                                          <tr>
-                                              <br>
-                                          </tr>
-                                          <tr></tr>
-                                          <tr></tr>
-                                          <tr></tr>
-                                          </tbody>
-                                  </table>
-                                  <ul class="table-pagination">
-                                      <li><a href="#">Previous</a></li>
-                                      <li><a href="#">1</a></li>
-                                      <li class="active"><a href="#">2</a></li>
-                                      <li><a href="#">...</a></li>
-                                      <li><a href="#">8</a></li>
-                                      <li><a href="#">9</a></li>
-                                      <li><a href="#">Next</a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </section>
-
-
-
-
-
 
 
             <!-- Banner -->
