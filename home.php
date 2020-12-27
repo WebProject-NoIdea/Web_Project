@@ -272,7 +272,7 @@ https://templatemo.com/tm-529-ramayana
 
                                               echo "<tr>
                                                         <td>#$i</td>
-                                                        <td>".$row['task']."</td>
+                                                        <td>".$row['task'].date('Y-m-d H:i')."</td>
                                                         <td>".$row['description']."</td>
                                                         <td>$date</td>
                                                     </tr>";
