@@ -329,43 +329,7 @@ function diffDateInSeconds(String $datetime){
         </div>
     </div>
 
-    <!-- Sidebar -->
-    <div id="sidebar">
-
-        <div class="inner">
-
-            <!-- Search Box -->
-            <section id="search" class="alt">
-                <form method="get" action="#">
-                    <input type="text" name="search" id="search" placeholder="Search..." />
-                </form>
-            </section>
-
-            <!-- Menu -->
-            <nav id="menu">
-                <ul>
-                    <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
-                    <li>
-                        <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
-                        <ul>
-                            <li><a href="task.php#addtask">Add Task</a></li>
-                            <li><a href="task.php#today">Today</a></li>
-                            <li><a href="task.php#upcoming">Upcoming</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="history.php"><i class = "fa fa-history fa-lg"></i>  History</a></li>
-                    <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class = "fa fa-sign-out fa-lg"></i>  Sign Out</a></li>
-                </ul>
-            </nav>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="setting">
-                    <i class = "fa fa-cog"></i>  <a rel="Setting" href="setting.html">Setting</a></p>
-            </footer>
-
-        </div>
-    </div>
+    <?php include('sidebar.php');?>
 
 </div>
 
