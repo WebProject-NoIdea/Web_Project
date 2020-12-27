@@ -1,14 +1,10 @@
 <!-- Sidebar -->
 <div id="sidebar">
-
     <div class="inner">
-
-
-
         <!-- Menu -->
         <nav id="menu">
-            <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+            <div>
+                <h1>Bootstrap Sidebar</h1>
             </div>
 
             <ul>
@@ -31,6 +27,5 @@
             <p class="setting">
                 <i class = "fa fa-cog"></i>  <a rel="Setting" href="setting.html">Setting</a></p>
         </footer>
-
     </div>
 </div>
