@@ -107,8 +107,6 @@ https://templatemo.com/tm-529-ramayana
 
                                   <script>
 
-
-
                                       $('#startDate').datetimepicker({
                                           uiLibrary: 'bootstrap4',
                                           format: 'yyyy-mm-dd HH:MM',
@@ -138,8 +136,8 @@ https://templatemo.com/tm-529-ramayana
                               addTaskForm.addEventListener('submit',function (e){
                                   e.preventDefault();
 
-                                  //document.getElementById("submitBtn").disabled = true;
-                                  //document.getElementById("submitBtn").innerHTML = "Saving ...";
+                                  document.getElementById("submitBtn").disabled = true;
+                                  document.getElementById("submitBtn").innerHTML = "Saving ...";
 
                                   const formData = new FormData(this);
 
@@ -149,7 +147,7 @@ https://templatemo.com/tm-529-ramayana
                                   }).then(response => {
                                       console.log(response.text());
                                       if(response.ok){
-                                         // location.reload();
+                                          location.reload();
                                       }
                                   }).catch(error => {
                                       console.log(error);
