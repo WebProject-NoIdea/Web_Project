@@ -274,7 +274,7 @@ https://templatemo.com/tm-529-ramayana
                               </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="submit" id="submitbtn" class="btn btn-primary" value="Save changes"></button>
+                                  <button type="submit" id="submitbtn" class="btn btn-primary" >Save changes</button>
                               </div>
                           </form>
 
@@ -284,7 +284,7 @@ https://templatemo.com/tm-529-ramayana
                               addTaskForm.addEventListener('submit',function (e){
                                   e.preventDefault();
 
-                                  document.querySelector('#submitbtn').value = 'Hide';
+                                  document.querySelector('#ubmitbtn').innerText = 'Hide';
 
                                   const formData = new FormData(this);
 
