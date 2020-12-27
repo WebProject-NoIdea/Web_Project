@@ -102,7 +102,7 @@ https://templatemo.com/tm-529-ramayana
                                   </div>
                                   <div class="form-group">
                                       <label for="endDate">End Date</label>
-                                      <input id="endDate" name="endDate" width="300" required>
+                                      <input id="endDate" name="endDate" width="300" value="22:10 03/27/2018" required>
                                   </div>
 
                                   <script>
