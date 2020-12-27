@@ -3,13 +3,14 @@
 
     <div class="inner">
 
-        <!-- Search Box -->
-        <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
-        </div>
+
 
         <!-- Menu -->
         <nav id="menu">
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
+
             <ul>
                 <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
                 <li>
