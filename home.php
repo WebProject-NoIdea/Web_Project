@@ -339,7 +339,7 @@ https://templatemo.com/tm-529-ramayana
               <ul>
                   <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
                   <li>
-                      <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
+                      <span class="opener"><a href="home.php"><i class = "fa fa-calendar"></i>  Task</a></span>
                       <ul>
                           <li><a href="#today">Today</a></li>
                           <li><a href="#upcoming">Upcoming</a></li>
