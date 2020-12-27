@@ -186,12 +186,29 @@ https://templatemo.com/tm-529-ramayana
                                           <td>
                                               <button class="btn"><i class="fa fa-trash"></i></button>
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
-
                                           </td>
-
-
-
                                       </tr>
+
+                                      <?php
+                                      include('dbconnect.php');
+
+                                      $sql = "SELECT * FROM task WHERE user_id=".getUserId();
+
+                                      $result = $conn->query($sql);
+
+                                      if ($result->num_rows > 0) {
+                                          while ($row = $result->fetch_assoc()) {
+                                            echo "<tr>
+                                                      <td>#2</td>
+                                                      <td>".$row['task']."</td>
+                                                      <td>".$row['description']."</td>
+                                                      <td>".$row['end_date']."</td>
+                                                  </tr>";
+                                          }
+                                      }
+
+                                      $conn->close();
+                                      ?>
                                       <tr>
                                           <td>#2</td>
                                           <td>Assignment research</td>
@@ -200,9 +217,6 @@ https://templatemo.com/tm-529-ramayana
                                               <button class="btn"><i class="fa fa-trash"></i></button>
                                               <button class="btn"><i class="fa fa-pencil"></i></button>
                                           </td>
-
-
-
                                       </tr>
                                       <tr>
                                           <td>#3</td>
