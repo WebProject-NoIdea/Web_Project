@@ -7,15 +7,17 @@ function username()
 
     $result = $conn->query($sql);
 
+    $name = "";
+
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            return $row['lastname']." ".$row['firstname'];
+            $name = $row['lastname']." ".$row['firstname'];
         }
-    }else{
-        return "";
     }
 
     $conn->close();
+
+    return $name;
 }
 ?>
 <!-- Sidebar -->
