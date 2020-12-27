@@ -106,13 +106,30 @@ https://templatemo.com/tm-529-ramayana
                                   </div>
 
                                   <script>
-                                      const today = new Date();
-                                      const time = today.getHours() + ":" + today.getMinutes() ;
+
+
+                                      function today() {
+                                          const today = new Date();
+
+                                          let monthNames =["Jan","Feb","Mar","Apr",
+                                              "May","Jun","Jul","Aug",
+                                              "Sep", "Oct","Nov","Dec"];
+
+                                          let years = today.getFullYear();
+                                          let months = monthNames[today.getMonth()];
+                                          let days = today.getDay();
+                                          let hours = today.getHours();
+                                          let minutes = today.getMinutes();
+                                          const ampm = hours >= 12 ? 'PM' : 'AM';
+                                          hours = hours % 12;
+                                          minutes = minutes < 10 ? '0'+minutes : minutes;
+                                          return years +' ' + months + ' ' + days + ' ' + hours + ':' + minutes + ' ' + ampm;
+                                      }
 
                                       $('#startDate').datetimepicker({
                                           value: today,
                                           uiLibrary: 'bootstrap4',
-                                          format: 'dd mmm yyyy hh:MM TT',
+                                          format: today(),
                                           modal: true,
                                           footer: true
                                       });
