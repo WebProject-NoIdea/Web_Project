@@ -111,14 +111,14 @@ https://templatemo.com/tm-529-ramayana
 
                                       $('#startDate').datetimepicker({
                                           uiLibrary: 'bootstrap4',
-                                          format: 'yyyy-mm-dd hh:MM',
+                                          format: 'yyyy-mm-dd HH:MM',
                                           modal: true,
                                           footer: true
                                       });
 
                                       $('#endDate').datetimepicker({
                                           uiLibrary: 'bootstrap4',
-                                          format: 'yyyy-mm-dd hh:MM',
+                                          format: 'yyyy-mm-dd HH:MM',
                                           modal: true,
                                           footer: true
                                       });
