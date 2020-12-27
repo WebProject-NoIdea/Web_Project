@@ -5,13 +5,13 @@ checkLogin();
 
 if(isset($_POST['task']) AND $_POST['task']!=null){
     $task = $_POST['task'];
-    $task = $_POST['description'];
-    $task = $_POST['startDate'];
-    $task = $_POST['endDate'];
+    $description = $_POST['description'];
+    $startDate = $_POST['startDate'];
+    $endDate = $_POST['endDate'];
 
     include('dbconnect.php');
 
-    $sql = "INSERT INTO user (email, password, firstname, lastname) VALUES ('$email', '$password', '$firstName', '$lastName')";
+    $sql = "INSERT INTO task(user_id, task, description, start_date, end_date) VALUES (".getUserId().", '$task', '$description', '$startDate', '$endDate')";
 
     echo $sql;
     /*
