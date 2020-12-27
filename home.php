@@ -284,7 +284,7 @@ https://templatemo.com/tm-529-ramayana
                               addTaskForm.addEventListener('submit',function (e){
                                   e.preventDefault();
 
-                                  document.querySelector('#ubmitbtn').innerText = 'Hide';
+                                  document.getElementById("submitbtn").disabled = false;
 
                                   const formData = new FormData(this);
 
