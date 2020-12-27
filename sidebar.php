@@ -4,11 +4,9 @@
     <div class="inner">
 
         <!-- Search Box -->
-        <section id="search" class="alt">
-            <form method="get" action="#">
-                <input type="text" name="search" id="search" placeholder="Search..." />
-            </form>
-        </section>
+        <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+        </div>
 
         <!-- Menu -->
         <nav id="menu">
