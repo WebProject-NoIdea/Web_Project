@@ -110,7 +110,7 @@ https://templatemo.com/tm-529-ramayana
                                       const time = today.getHours() + ":" + today.getMinutes() ;
 
                                       $('#startDate').datetimepicker({
-                                          value: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
+                                          value: today,
                                           uiLibrary: 'bootstrap4',
                                           format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
