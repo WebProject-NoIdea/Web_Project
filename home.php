@@ -285,6 +285,7 @@ https://templatemo.com/tm-529-ramayana
                                   e.preventDefault();
 
                                   document.getElementById("submitbtn").disabled = true;
+                                  document.getElementById("submitbtn").value = "Saving...";
 
                                   const formData = new FormData(this);
 
