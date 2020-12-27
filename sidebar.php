@@ -1,8 +1,9 @@
 <?php
-
+function username()
+{
     include('dbconnect.php');
 
-    $sql = "SELECT firstname, lastname FROM user WHERE user_id=". getUserId();
+    $sql = "SELECT firstname, lastname FROM user WHERE user_id=".getUserId();
 
     $result = $conn->query($sql);
 
@@ -15,6 +16,9 @@
     }
 
     $conn->close();
+
+    return $name;
+}
 ?>
 <!-- Sidebar -->
 <div id="sidebar">
@@ -22,7 +26,7 @@
         <!-- Menu -->
         <nav id="menu">
             <div style="margin-bottom: 30px;">
-                <h1 style="color: white"><?php echo $name; ?></h1>
+                <h1 style="color: white"><?php echo username(); ?></h1>
             </div>
 
             <ul>
