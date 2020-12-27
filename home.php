@@ -230,19 +230,6 @@ https://templatemo.com/tm-529-ramayana
                   <div class="modal-dialog" role="document">
                       <div class="modal-content">
 
-                          <div class="overlay" style="background: #FFFFFF;
-    color: #666666;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 5000;
-    text-align: center;
-    padding-top: 10%;
-    -ms-opacity: .80;
-    opacity: .80;">
-                              <span class="fas fa-spinner fa-spin fa-2x w-100"></span> Loading...
-                          </div>
-
                           <div class="modal-header">
                               <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -288,6 +275,10 @@ https://templatemo.com/tm-529-ramayana
 
                               </div>
                               <div class="modal-footer">
+                                  <!-- Button trigger modal -->
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                                      Launch static backdrop modal
+                                  </button>
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                   <button type="submit" class="btn btn-primary">Save changes</button>
                               </div>
@@ -318,6 +309,28 @@ https://templatemo.com/tm-529-ramayana
                   </div>
               </div>
 
+
+
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                              ...
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Understood</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
 
 
