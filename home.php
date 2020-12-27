@@ -127,7 +127,7 @@ https://templatemo.com/tm-529-ramayana
                                       }
 
                                       $('#startDate').datetimepicker({
-                                          value: today,
+                                          value: today(),
                                           uiLibrary: 'bootstrap4',
                                           format: today(),
                                           modal: true,
