@@ -1,5 +1,4 @@
 <?php
-
 function username()
 {
     include('dbconnect.php');
