@@ -333,7 +333,7 @@ https://templatemo.com/tm-529-ramayana
               
             <!-- Menu -->
             <nav id="menu">
-              <ul class="fa-ul">
+              <ul>
                   <li><a href="home.php"><i class = "fa fa-home"></i>  Homepage</a></li>
                   <li>
                       <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
