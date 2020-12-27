@@ -242,6 +242,8 @@ https://templatemo.com/tm-529-ramayana
                               </div>
 
                               <?php
+                              date_default_timezone_set("Asia/Kuala_Lumpur");
+
                               include('dbconnect.php');
 
                               $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE,'".date('Y-m-d H:i')."',start_date)>0";
