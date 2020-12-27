@@ -334,13 +334,11 @@ https://templatemo.com/tm-529-ramayana
             <!-- Menu -->
             <nav id="menu">
               <ul>
-                  <li><a href="home.php">Homepage</a></li>
+                  <li><a href="home.php"><i class = "fa fa-home"></i>  Homepage</a></li>
                   <li>
                       <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
                       <ul>
                           <li><a href="#">Today</a></li>
-                          <li><a href="#">This Week</a></li>
-                          <li><a href="#">This Month</a></li>
                           <li><a href="#">Upcoming</a></li>
                       </ul>
                   </li>
