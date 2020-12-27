@@ -43,6 +43,12 @@ https://templatemo.com/tm-529-ramayana
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
+      <style>
+          html {
+              scroll-behavior: smooth;
+          }
+
+      </style>
   </head>
 
 <body class="is-preload">
