@@ -130,7 +130,7 @@ https://templatemo.com/tm-529-ramayana
                                       $('#startDate').datetimepicker({
                                           value: today(),
                                           uiLibrary: 'bootstrap4',
-                                          format: today(),
+                                          format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
                                           footer: true
                                       });
