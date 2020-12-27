@@ -233,6 +233,78 @@ https://templatemo.com/tm-529-ramayana
 
 
               <!-- Tables -->
+              <section class="tables">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="section-heading">
+                                  <h2>Today</h2>
+                              </div>
+
+                              <?php
+                              include('dbconnect.php');
+
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE,NOW(),start_date)>0";
+
+                              $result = $conn->query($sql);
+
+                              if ($result->num_rows > 0) {
+
+                                  ?>
+
+                                  <div class="default-table">
+                                      <table>
+                                          <thead>
+                                          <tr>
+                                              <th>No.</th>
+                                              <th>Task</th>
+                                              <th>Description</th>
+                                              <th>End Date</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+
+                                          <?php
+                                          $i = 1;
+
+                                          while ($row = $result->fetch_assoc()) {
+                                              $date = date_format(date_create($row['end_date']),"d M Y h:i A");
+
+                                              echo "<tr>
+                                                        <td>#$i</td>
+                                                        <td>".$row['task']."</td>
+                                                        <td>".$row['description']."</td>
+                                                        <td>$date</td>
+                                                    </tr>";
+
+                                              $i++;
+                                          }
+                                          ?>
+                                          </tbody>
+                                      </table>
+                                      <ul class="table-pagination">
+                                          <li><a href="#">Previous</a></li>
+                                          <li><a href="#">1</a></li>
+                                          <li class="active"><a href="#">2</a></li>
+                                          <li><a href="#">...</a></li>
+                                          <li><a href="#">8</a></li>
+                                          <li><a href="#">9</a></li>
+                                          <li><a href="#">Next</a></li>
+                                      </ul>
+                                  </div>
+                                  <?php
+                              }else{
+                                  echo "No Task";
+                              }
+
+                              $conn->close();
+                              ?>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Tables -->
               <section class="tables" style="margin-top: 0;border-top: 0 !important;">
                   <div class="container-fluid">
                       <div class="row">
