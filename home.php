@@ -108,14 +108,14 @@ https://templatemo.com/tm-529-ramayana
                                   <script>
                                       $('#startDate').datetimepicker({
                                           uiLibrary: 'bootstrap4',
-                                          format: 'dd mmmm yyyy',
+                                          format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
                                           footer: true
                                       });
 
                                       $('#endDate').datetimepicker({
                                           uiLibrary: 'bootstrap4',
-                                          format: 'dd mmmm yyyy',
+                                          format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
                                           footer: true
                                       });
