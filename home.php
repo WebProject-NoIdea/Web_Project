@@ -108,37 +108,17 @@ https://templatemo.com/tm-529-ramayana
                                   <script>
 
 
-                                      function today() {
-                                          const today = new Date();
-
-                                          let monthNames =["Jan","Feb","Mar","Apr",
-                                              "May","Jun","Jul","Aug",
-                                              "Sep", "Oct","Nov","Dec"];
-
-                                          let years = today.getFullYear();
-                                          let months = monthNames[today.getMonth()];
-                                          let days = today.getDate();
-                                          let hours = today.getHours();
-                                          let minutes = today.getMinutes();
-                                          const ampm = hours >= 12 ? 'PM' : 'AM';
-                                          hours = hours % 12;
-                                          hours = hours < 10 ? '0'+hours : hours;
-                                          minutes = minutes < 10 ? '0'+minutes : minutes;
-                                          return days +' ' + months + ' ' + years + ' ' + hours + ':' + minutes + ' ' + ampm;
-                                      }
 
                                       $('#startDate').datetimepicker({
-                                          value: today(),
                                           uiLibrary: 'bootstrap4',
-                                          format: 'dd mmm yyyy hh:MM TT',
+                                          format: 'yyyy-mm-dd hh:MM',
                                           modal: true,
                                           footer: true
                                       });
 
                                       $('#endDate').datetimepicker({
-                                          value: '27 Dec 2020 01:45 PM',
                                           uiLibrary: 'bootstrap4',
-                                          format: 'dd mmm yyyy hh:MM TT',
+                                          format: 'yyyy-mm-dd hh:MM',
                                           modal: true,
                                           footer: true
                                       });
