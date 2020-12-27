@@ -123,7 +123,7 @@ https://templatemo.com/tm-529-ramayana
                                           const ampm = hours >= 12 ? 'PM' : 'AM';
                                           hours = hours % 12;
                                           minutes = minutes < 10 ? '0'+minutes : minutes;
-                                          return years +' ' + months + ' ' + days + ' ' + hours + ':' + minutes + ' ' + ampm;
+                                          return days +' ' + months + ' ' + years + ' ' + hours + ':' + minutes + ' ' + ampm;
                                       }
 
                                       $('#startDate').datetimepicker({
