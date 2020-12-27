@@ -349,8 +349,6 @@ https://templatemo.com/tm-529-ramayana
               </ul>
             </nav>
 
-
-
             <!-- Footer -->
             <footer id="footer">
               <p class="setting">
