@@ -4,7 +4,8 @@ include("session.php");
 checkLogin();
 
 date_default_timezone_set("Asia/Kuala_Lumpur");
-
+echo date_default_timezone_get();
+echo date("Y-m-d H:i");
 
 ?>
 
