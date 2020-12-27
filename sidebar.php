@@ -1,10 +1,29 @@
+<?php
+
+function username()
+{
+    include('dbconnect.php');
+    include("session.php");
+    $sql = "SELECT firstname, lastname FROM user WHERE user_id=". getUserId();
+
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            return $row['lastname']." ".$row['firstname'];
+        }
+    }
+
+    $conn->close();
+}
+?>
 <!-- Sidebar -->
 <div id="sidebar">
     <div class="inner">
         <!-- Menu -->
         <nav id="menu">
             <div style="margin-bottom: 30px;">
-                <h1 style="color: white">Bootstrap Sidebar</h1>
+                <h1 style="color: white"><?php echo username(); ?></h1>
             </div>
 
             <ul>
