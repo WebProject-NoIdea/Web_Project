@@ -47,7 +47,6 @@ https://templatemo.com/tm-529-ramayana
           html {
               scroll-behavior: smooth;
           }
-
       </style>
   </head>
 
@@ -347,6 +346,7 @@ https://templatemo.com/tm-529-ramayana
                   <li>
                       <span class="opener"><a href="home.php"><i class = "fa fa-calendar"></i>  Task</a></span>
                       <ul>
+                          <li><a href="#addtask">Add Task</a></li>
                           <li><a href="#today">Today</a></li>
                           <li><a href="#upcoming">Upcoming</a></li>
                       </ul>
