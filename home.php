@@ -334,7 +334,7 @@ https://templatemo.com/tm-529-ramayana
             <!-- Menu -->
             <nav id="menu">
               <ul>
-                  <li><a href="home.php"><i class = "fa fa-home"></i>  Homepage</a></li>
+                  <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
                   <li>
                       <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
                       <ul>
@@ -342,8 +342,8 @@ https://templatemo.com/tm-529-ramayana
                           <li><a href="#">Upcoming</a></li>
                       </ul>
                   </li>
-                <li><a href="history.php"><i class = "fa fa-history"></i>  History</a></li>
-                <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class = "fa fa-sign-out"></i>  Sign Out</a></li>
+                <li><a href="history.php"><i class = "fa fa-history fa-lg"></i>  History</a></li>
+                <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class = "fa fa-sign-out fa-lg"></i>  Sign Out</a></li>
               </ul>
             </nav>
 
