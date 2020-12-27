@@ -59,14 +59,15 @@ function diffDateInSeconds(String $datetime){
     <div id="main">
         <div class="inner">
 
-            <!-- Header -->
-            <header id="header">
-                <div class="logo">
-                    <a href="home.php">StudLife</a>
-                </div>
-            </header>
-
             <div id="addtask">
+                <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="home.php">StudLife</a>
+                    </div>
+                </header>
+
+
                 <div class="page-heading">
                     <div class="container-fluid">
                         <div class="row">

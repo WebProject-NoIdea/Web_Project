@@ -43,11 +43,6 @@ https://templatemo.com/tm-529-ramayana
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
-      <style>
-          html {
-              scroll-behavior: smooth;
-          }
-      </style>
   </head>
 
 <body class="is-preload">
@@ -170,24 +165,103 @@ https://templatemo.com/tm-529-ramayana
                   </div>
               </div>
 
-              <div id="today">
-                  <!-- Tables -->
-                  <section class="tables">
-                      <div class="container-fluid">
-                          <div class="row">
-                              <div class="col-md-12">
-                                  <div class="section-heading">
-                                      <h2>Today</h2>
-                                  </div>
+              <!-- Tables -->
+              <section class="tables">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="section-heading">
+                                  <h2>Today</h2>
+                              </div>
 
-                                  <?php
-                                  include('dbconnect.php');
+                              <?php
+                              include('dbconnect.php');
 
-                                  $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 AND complete_date = '0000-00-00 00:00:00' ORDER BY end_date";
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 AND complete_date = '0000-00-00 00:00:00' ORDER BY end_date";
 
-                                  $result = $conn->query($sql);
+                              $result = $conn->query($sql);
 
-                                  if ($result->num_rows > 0) {
+                              if ($result->num_rows > 0) {
+
+                              ?>
+
+                              <div class="default-table">
+                                  <table>
+                                      <thead>
+                                      <tr>
+                                          <th>No.</th>
+                                          <th>Task</th>
+                                          <th>Description</th>
+                                          <th>End Date</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+
+                                        <?php
+                                          $i = 1;
+
+                                          while ($row = $result->fetch_assoc()) {
+
+                                              $date = date_format(date_create($row['end_date']),"d M Y h:i A");
+
+                                              if(diffDateInSeconds($row['end_date'])<0){
+                                                  echo '<tr style="background-color:#F1948A">';
+                                              }else{
+                                                  echo "<tr>";
+                                              }
+
+                                              echo "    <td>#$i</td>
+                                                        <td>".$row['task']."</td>
+                                                        <td>".$row['description']."</td>
+                                                        <td>$date</td>
+                                                    </tr>";
+
+                                              $i++;
+                                          }
+                                      ?>
+                                      </tbody>
+                                  </table>
+                                  <ul class="table-pagination">
+                                      <li><a href="#">Previous</a></li>
+                                      <li><a href="#">1</a></li>
+                                      <li class="active"><a href="#">2</a></li>
+                                      <li><a href="#">...</a></li>
+                                      <li><a href="#">8</a></li>
+                                      <li><a href="#">9</a></li>
+                                      <li><a href="#">Next</a></li>
+                                  </ul>
+                              </div>
+                              <?php
+                              }else{
+                                  echo "No Task";
+                              }
+
+                              $conn->close();
+                              ?>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+
+              <!-- Tables -->
+              <section class="tables" style="margin-top: 0;border-top: 0 !important;">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="section-heading">
+                                  <h2>Upcoming</h2>
+                              </div>
+
+                              <?php
+
+                              include('dbconnect.php');
+
+                              $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0 AND complete_date = '0000-00-00 00:00:00' ORDER BY start_date";
+
+                              $result = $conn->query($sql);
+
+                              if ($result->num_rows > 0) {
 
                                   ?>
 
@@ -198,32 +272,26 @@ https://templatemo.com/tm-529-ramayana
                                               <th>No.</th>
                                               <th>Task</th>
                                               <th>Description</th>
-                                              <th>End Date</th>
+                                              <th>Start Date</th>
                                           </tr>
                                           </thead>
                                           <tbody>
 
-                                            <?php
-                                              $i = 1;
+                                          <?php
+                                          $i = 1;
 
-                                              while ($row = $result->fetch_assoc()) {
+                                          while ($row = $result->fetch_assoc()) {
+                                              $date = date_format(date_create($row['start_date']),"d M Y h:i A");
 
-                                                  $date = date_format(date_create($row['end_date']),"d M Y h:i A");
+                                              echo "<tr>
+                                                        <td>#$i</td>
+                                                        <td>".$row['task']."</td>
+                                                        <td>".$row['description']."</td>
+                                                        <td>$date</td>
+                                                    </tr>";
 
-                                                  if(diffDateInSeconds($row['end_date'])<0){
-                                                      echo '<tr style="background-color:#F1948A">';
-                                                  }else{
-                                                      echo "<tr>";
-                                                  }
-
-                                                  echo "    <td>#$i</td>
-                                                            <td>".$row['task']."</td>
-                                                            <td>".$row['description']."</td>
-                                                            <td>$date</td>
-                                                        </tr>";
-
-                                                  $i++;
-                                              }
+                                              $i++;
+                                          }
                                           ?>
                                           </tbody>
                                       </table>
@@ -238,92 +306,16 @@ https://templatemo.com/tm-529-ramayana
                                       </ul>
                                   </div>
                                   <?php
-                                  }else{
-                                      echo "No Task";
-                                  }
+                              }else{
+                                  echo "No Task";
+                              }
 
-                                  $conn->close();
-                                  ?>
-                              </div>
+                              $conn->close();
+                              ?>
                           </div>
                       </div>
-                  </section>
-              </div>
-
-              <div id="upcoming">
-                  <!-- Tables -->
-                  <section class="tables" style="margin-top: 0;border-top: 0 !important;">
-                      <div class="container-fluid">
-                          <div class="row">
-                              <div class="col-md-12">
-                                  <div class="section-heading">
-                                      <h2>Upcoming</h2>
-                                  </div>
-
-                                  <?php
-
-                                  include('dbconnect.php');
-
-                                  $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0 AND complete_date = '0000-00-00 00:00:00' ORDER BY start_date";
-
-                                  $result = $conn->query($sql);
-
-                                  if ($result->num_rows > 0) {
-
-                                      ?>
-
-                                      <div class="default-table">
-                                          <table>
-                                              <thead>
-                                              <tr>
-                                                  <th>No.</th>
-                                                  <th>Task</th>
-                                                  <th>Description</th>
-                                                  <th>Start Date</th>
-                                              </tr>
-                                              </thead>
-                                              <tbody>
-
-                                              <?php
-                                              $i = 1;
-
-                                              while ($row = $result->fetch_assoc()) {
-                                                  $date = date_format(date_create($row['start_date']),"d M Y h:i A");
-
-                                                  echo "<tr>
-                                                            <td>#$i</td>
-                                                            <td>".$row['task']."</td>
-                                                            <td>".$row['description']."</td>
-                                                            <td>$date</td>
-                                                        </tr>";
-
-                                                  $i++;
-                                              }
-                                              ?>
-                                              </tbody>
-                                          </table>
-                                          <ul class="table-pagination">
-                                              <li><a href="#">Previous</a></li>
-                                              <li><a href="#">1</a></li>
-                                              <li class="active"><a href="#">2</a></li>
-                                              <li><a href="#">...</a></li>
-                                              <li><a href="#">8</a></li>
-                                              <li><a href="#">9</a></li>
-                                              <li><a href="#">Next</a></li>
-                                          </ul>
-                                      </div>
-                                      <?php
-                                  }else{
-                                      echo "No Task";
-                                  }
-
-                                  $conn->close();
-                                  ?>
-                              </div>
-                          </div>
-                      </div>
-                  </section>
-              </div>
+                  </div>
+              </section>
           </div>
         </div>
 
@@ -342,19 +334,23 @@ https://templatemo.com/tm-529-ramayana
             <!-- Menu -->
             <nav id="menu">
               <ul>
-                  <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
                   <li>
                       <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
                       <ul>
-                          <li><a href="task.php#addtask">Add Task</a></li>
-                          <li><a href="task.php#today">Today</a></li>
-                          <li><a href="task.php#upcoming">Upcoming</a></li>
+                          <li><a href="#">Today</a></li>
+                          <li><a href="#">This Week</a></li>
+                          <li><a href="#">This Month</a></li>
+                          <li><a href="#">Upcoming</a></li>
                       </ul>
                   </li>
-                <li><a href="history.php"><i class = "fa fa-history fa-lg"></i>  History</a></li>
-                <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class = "fa fa-sign-out fa-lg"></i>  Sign Out</a></li>
+                <li><a href="">History</a></li>
+                <li><a href="">performance</a></li>
+
+                  <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')">Sign Out</a></li>
               </ul>
             </nav>
+
+
 
             <!-- Footer -->
             <footer id="footer">
