@@ -158,8 +158,8 @@ https://templatemo.com/tm-529-ramayana
                               addTaskForm.addEventListener('submit',function (e){
                                   e.preventDefault();
 
-                                  document.getElementById("submitBtn").disabled = true;
-                                  document.getElementById("submitBtn").innerHTML = "Saving ...";
+                                  //document.getElementById("submitBtn").disabled = true;
+                                  //document.getElementById("submitBtn").innerHTML = "Saving ...";
 
                                   const formData = new FormData(this);
 
@@ -168,7 +168,7 @@ https://templatemo.com/tm-529-ramayana
                                       body: formData
                                   }).then(response => {
                                       if(response.ok){
-                                          location.reload();
+                                         // location.reload();
                                       }
                                   }).catch(error => {
                                       console.log(error);
