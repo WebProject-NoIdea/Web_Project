@@ -106,8 +106,11 @@ https://templatemo.com/tm-529-ramayana
                                   </div>
 
                                   <script>
+                                      const today = new Date();
+                                      const time = today.getHours() + ":" + today.getMinutes() ;
+
                                       $('#startDate').datetimepicker({
-                                          value: '27 Dec 2020 12:45 PM',
+                                          value: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
                                           uiLibrary: 'bootstrap4',
                                           format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
