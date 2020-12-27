@@ -80,7 +80,7 @@ https://templatemo.com/tm-529-ramayana
                       <div class="modal-content">
 
                           <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -90,19 +90,19 @@ https://templatemo.com/tm-529-ramayana
 
                                   <div class="form-group">
                                       <label for="task">Task</label>
-                                      <input type="text" class="form-control" id="task" name="task" placeholder="Task">
+                                      <input type="text" class="form-control" id="task" name="task" placeholder="Task" required>
                                   </div>
                                   <div class="form-group">
                                       <label for="description">Description</label>
-                                      <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                                      <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
                                   </div>
                                   <div class="form-group">
                                       <label for="startDate">Start Date</label>
-                                      <input id="startDate" name="startDate" width="300">
+                                      <input id="startDate" name="startDate" width="300" required>
                                   </div>
                                   <div class="form-group">
                                       <label for="endDate">End Date</label>
-                                      <input id="endDate" name="endDate" width="300">
+                                      <input id="endDate" name="endDate" width="300" required>
                                   </div>
 
                                   <script>
