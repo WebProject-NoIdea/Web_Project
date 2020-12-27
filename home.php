@@ -136,7 +136,7 @@ https://templatemo.com/tm-529-ramayana
                                       });
 
                                       $('#endDate').datetimepicker({
-                                          value: '27 Dec 2020 13:45 PM',
+                                          value: '22:10 03/27/2018',
                                           uiLibrary: 'bootstrap4',
                                           format: 'dd mmm yyyy hh:MM TT',
                                           modal: true,
