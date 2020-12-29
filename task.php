@@ -110,11 +110,11 @@ function diffDateInSeconds(String $datetime){
                                     </div>
                                     <div class="form-group">
                                         <label for="startDate">Start Date</label>
-                                        <input id="startDate" name="startDate" width="300" required>
+                                        <input id="startDate" name="startDate" width="300" autocomplete="off" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="endDate">End Date</label>
-                                        <input id="endDate" name="endDate" width="300" required>
+                                        <input id="endDate" name="endDate" width="300" autocomplete="off" required>
                                     </div>
 
                                     <script>
