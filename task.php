@@ -97,8 +97,8 @@ function diffDateInSeconds(String $datetime){
                                         <label for="description">Description</label>
                                         <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
+                                    <div class="row">
+                                        <div class="form-group col-sm-6">
                                             <label class="control-label" for="input-datepicker-start">Start Date</label>
                                             <div class="input-group" id="datepicker-start">
                                                 <input type="text" class="form-control" id="input-datepicker-start">
@@ -107,9 +107,7 @@ function diffDateInSeconds(String $datetime){
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label class="control-label" for="input-datepicker-end">End Date</label>
                                             <div class="input-group" id="datepicker-end">
                                                 <input type="text" class="form-control" id="input-datepicker-end">
