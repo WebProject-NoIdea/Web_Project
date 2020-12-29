@@ -26,18 +26,8 @@ function diffDateInSeconds(String $datetime){
     <title>StudLife: Home</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet"/>
+    <link href="vendor/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-
-
-    <!--
-    Ramayana CSS Template
-    https://templatemo.com/tm-529-ramayana
-    -->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -110,30 +100,42 @@ function diffDateInSeconds(String $datetime){
                                         <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="startDate">Start Date</label>
-                                        <input id="startDate" name="startDate" width="300" autocomplete="off" required>
+                                        <label class="control-label" for="input-datepicker-start">Start Date</label>
+                                        <div class="input-group" id="datepicker-start">
+                                            <input type="text" class="form-control" id="input-datepicker-start">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="endDate">End Date</label>
-                                        <input id="endDate" name="endDate" width="300" autocomplete="off" required>
+                                        <label class="control-label" for="input-datepicker-end">End Date</label>
+                                        <div class="input-group" id="datepicker-end">
+                                            <input type="text" class="form-control" id="input-datepicker-end">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
                                     </div>
 
                                     <script>
+                                        // Linked date and time picker
+                                        // start date date and time picker
+                                        $('#datepicker-start').datetimepicker();
 
-                                        $('#startDate').datetimepicker({
-                                            uiLibrary: 'bootstrap4',
-                                            format: 'yyyy-mm-dd HH:MM',
-                                            modal: true,
-                                            footer: true
+                                        // End date date and time picker
+                                        $('#datepicker-end').datetimepicker({
+                                            useCurrent: false
                                         });
 
-                                        $('#endDate').datetimepicker({
-                                            uiLibrary: 'bootstrap4',
-                                            format: 'yyyy-mm-dd HH:MM',
-                                            modal: true,
-                                            footer: true
+                                        // start date picke on chagne event [select minimun date for end date datepicker]
+                                        $("#datepicker-start").on("dp.change", function (e) {
+                                            $('#datepicker-end').data("DateTimePicker").minDate(e.date);
                                         });
-
+                                        // Start date picke on chagne event [select maxmimum date for start date datepicker]
+                                        $("#datepicker-end").on("dp.change", function (e) {
+                                            $('#datepicker-start').data("DateTimePicker").maxDate(e.date);
+                                        });
                                     </script>
 
                                 </div>
@@ -337,7 +339,7 @@ function diffDateInSeconds(String $datetime){
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/3.4.1/js/bootstrap.js"></script>
+<script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
