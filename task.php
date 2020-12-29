@@ -97,25 +97,28 @@ function diffDateInSeconds(String $datetime){
                                         <label for="description">Description</label>
                                         <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
                                     </div>
-                                    <div class="form-group col-sm-6">
-                                        <label class="control-label" for="input-datepicker-start">Start Date</label>
-                                        <div class="input-group" id="datepicker-start">
-                                            <input type="text" class="form-control" id="input-datepicker-start">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label" for="input-datepicker-start">Start Date</label>
+                                            <div class="input-group" id="datepicker-start">
+                                                <input type="text" class="form-control" id="input-datepicker-start">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group col-sm-6">
-                                        <label class="control-label" for="input-datepicker-end">End Date</label>
-                                        <div class="input-group" id="datepicker-end">
-                                            <input type="text" class="form-control" id="input-datepicker-end">
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label" for="input-datepicker-end">End Date</label>
+                                            <div class="input-group" id="datepicker-end">
+                                                <input type="text" class="form-control" id="input-datepicker-end">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-
                                     <script>
                                         // Linked date and time picker
                                         // start date date and time picker
