@@ -106,7 +106,7 @@ function diffDateInSeconds(String $datetime){
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group col-sm-6">
                                         <label class="control-label" for="input-datepicker-end">End Date</label>
                                         <div class="input-group" id="datepicker-end">
                                             <input type="text" class="form-control" id="input-datepicker-end">
