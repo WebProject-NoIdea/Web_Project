@@ -138,7 +138,7 @@ function diffDateInSeconds(String $datetime){
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                                     <button type="submit" id="submitBtn" class="btn btn-primary">Save changes</button>
                                 </div>
                             </form>
