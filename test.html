@@ -1,64 +1,63 @@
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 4 DateimePicker</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
+    <link href="vendor/bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet"/>
+    <script src="vendor/bootstrap/3.4.1/js/bootstrap.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-
 </head>
+
 <body>
+
+
 <div class="container">
-    <div class="panel panel-primary">
-        <div class="panel-heading">Schedule an Appointment</div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="control-label">First Name</label>
-                        <input type="text" class="form-control" name="fname" id="fname">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="control-label">Last Name</label>
-                        <input type="text" class="form-control" name="lname" id="lname">
-                    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label" for="input-datepicker-start">Start Date</label>
+                <div class="input-group" id="datepicker-start">
+                    <input type="text" class="form-control" id="input-datepicker-start">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="control-label">Email</label>
-                        <input type="text" class="form-control" name="email" id="email">
-                    </div>
-                </div>
-                <div class='col-md-6'>
-                    <div class="form-group">
-                        <label class="control-label">Appointment Time</label>
-                        <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control" />
-                            <span class="input-group-addon">
-                     <span class="glyphicon glyphicon-calendar"></span>
-                     </span>
-                        </div>
-                    </div>
+            <div class="form-group">
+                <label class="control-label" for="input-datepicker-end">End Date</label>
+                <div class="input-group" id="datepicker-end">
+                    <input type="text" class="form-control" id="input-datepicker-end">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
                 </div>
             </div>
-            <input type="submit" class="btn btn-primary" value="Submit">
         </div>
     </div>
 </div>
+
 <script>
-    $(function () {
-        $('#datetimepicker1').datetimepicker();
+    // Linked date and time picker
+    // start date date and time picker
+    $('#datepicker-start').datetimepicker();
+
+    // End date date and time picker
+    $('#datepicker-end').datetimepicker({
+        useCurrent: false
+    });
+
+    // start date picke on chagne event [select minimun date for end date datepicker]
+    $("#datepicker-start").on("dp.change", function (e) {
+        $('#datepicker-end').data("DateTimePicker").minDate(e.date);
+    });
+    // Start date picke on chagne event [select maxmimum date for start date datepicker]
+    $("#datepicker-end").on("dp.change", function (e) {
+        $('#datepicker-start').data("DateTimePicker").maxDate(e.date);
     });
 </script>
 </body>
+
 </html>
