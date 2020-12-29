@@ -83,7 +83,7 @@ function diffDateInSeconds(String $datetime){
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+                                <h1 class="modal-title" id="exampleModalLabel">Add Task</h1>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
