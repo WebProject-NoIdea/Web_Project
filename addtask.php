@@ -13,9 +13,11 @@ if(isset($_POST['task']) AND $_POST['task']!=null){
 
     $sql = "INSERT INTO task(user_id, task, description, start_date, end_date) VALUES (".getUserId().", '$task', '$description', '".date_format($startDate,"Y-m-d H:i:s")."', '".date_format($endDate,"Y-m-d H:i:s")."')";
 
+    echo $sql;
+    /*
     if ($conn->query($sql) === false) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
+*/
     $conn->close();
 }

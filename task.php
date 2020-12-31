@@ -168,7 +168,7 @@ function diffDateInSeconds(String $datetime){
                                     }).then(response => {
                                         console.log(response.text());
                                         if(response.ok){
-                                            location.reload();
+                                            //location.reload();
                                         }
                                     }).catch(error => {
                                         console.log(error);
