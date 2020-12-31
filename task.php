@@ -157,7 +157,7 @@ function diffDateInSeconds(String $datetime){
                                 addTaskForm.addEventListener('submit',function (e){
                                     e.preventDefault();
 
-                                    //document.getElementById("submitBtn").disabled = true;
+                                    document.getElementById("submitBtn").disabled = true;
                                     document.getElementById("submitBtn").innerHTML = "Saving ...";
 
                                     const formData = new FormData(this);
@@ -168,7 +168,7 @@ function diffDateInSeconds(String $datetime){
                                     }).then(response => {
                                         console.log(response.text());
                                         if(response.ok){
-                                            //location.reload();
+                                            location.reload();
                                         }
                                     }).catch(error => {
                                         console.log(error);
