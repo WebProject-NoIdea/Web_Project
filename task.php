@@ -219,7 +219,7 @@ function diffDateInSeconds(String $datetime){
 
                                             while ($row = $result->fetch_assoc()) {
 
-                                                $date = date_format(date_create($row['end_date']),"d M Y h:i A");
+                                                $date = date_format(date_create($row['end_date']),"D, d M Y h:i A");
 
                                                 if(diffDateInSeconds($row['end_date'])<0){
                                                     echo '<tr style="background-color:#F1948A">';
