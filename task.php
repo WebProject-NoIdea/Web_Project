@@ -232,7 +232,7 @@ function diffDateInSeconds(String $datetime){
                                                             <td>".$row['description']."</td>
                                                             <td>$date</td>
                                                             <td>
-                                                                <button class='btn'><i class='fa fa-trash'></i></button>
+                                                                <button class='btn'><i class='fa fa-check-square-o'></i></button>
                                                                 <button class='btn''><i class='fa fa-pencil'></i></button>
                                                             </td>
                                                         </tr>";
