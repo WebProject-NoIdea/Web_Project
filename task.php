@@ -272,13 +272,24 @@ function diffDateInSeconds(String $datetime){
                                             }
 
                                             <!-- Number Button -->
+                                            if((currentPage-2)>0){
+                                                document.getElementById("btn1").style.display = 'block';
+                                            }else{
+                                                document.getElementById("btn1").style.display = 'none';
+                                            }
+
+                                            if((currentPage-1)>0){
+                                                document.getElementById("btn2").style.display = 'block';
+                                            }else{
+                                                document.getElementById("btn2").style.display = 'none';
+                                            }
+
                                             document.getElementById("btn1").innerHTML = currentPage-2;
                                             document.getElementById("btn2").innerHTML = currentPage-1;
                                             document.getElementById("btn3").innerHTML = currentPage;
                                             document.getElementById("btn4").innerHTML = currentPage+1;
                                             document.getElementById("btn5").innerHTML = currentPage+2;
 
-                                            document.getElementById('btn1').style.display = 'none';
                                             <!-- More Button -->
                                             if((currentPage+3)<=totalPage){
                                                 document.getElementById('moreBtn').style.display = 'block';
