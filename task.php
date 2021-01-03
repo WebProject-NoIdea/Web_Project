@@ -245,14 +245,114 @@ function diffDateInSeconds(String $datetime){
                                             </tbody>
                                         </table>
                                         <ul class="table-pagination">
-                                            <li><a href="#">Previous</a></li>
-                                            <li><a href="#">1</a></li>
-                                            <li class="active"><a href="#">2</a></li>
-                                            <li><a href="#">...</a></li>
-                                            <li><a href="#">8</a></li>
-                                            <li><a href="#">9</a></li>
-                                            <li><a href="#">Next</a></li>
+                                            <li>Previous</li>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li class="active">3</li>
+                                            <li>4</li>
+                                            <li>...</li>
+                                            <li>Next</li>
                                         </ul>
+
+                                        <script>
+                                            let x = 1;
+                                            let y = 0;
+
+                                            reload();
+                                            show(0);
+
+                                            function prev(){
+                                                topFunction();
+                                                x = x-1;
+                                                reload();
+                                                reset();
+                                                y = y-10;
+                                                show(y);
+                                            }
+
+                                            function next(){
+                                                topFunction();
+                                                x = x+1;
+                                                reload();
+                                                reset();
+                                                y = y+10;
+                                                show(y);
+                                            }
+
+                                            function prev2(){
+                                                topFunction();
+                                                x = x-2;
+                                                reload();
+                                                reset();
+                                                y = y-20;
+                                                show(y);
+                                            }
+
+                                            function next2(){
+                                                topFunction();
+                                                x = x+2;
+                                                reload();
+                                                reset();
+                                                y = y+20;
+                                                show(y);
+                                            }
+
+                                            function reload(){
+
+                                                if(x<3){
+                                                    document.getElementById('btn2').style.display = 'none';
+                                                }else{
+                                                    document.getElementById('btn2').style.display = 'block';
+                                                }
+
+
+                                                if(x<2){
+                                                    document.getElementById('btn1').style.display = 'none';
+                                                    document.getElementById('btn3').style.display = 'none';
+                                                }else{
+                                                    document.getElementById('btn1').style.display = 'block';
+                                                    document.getElementById('btn3').style.display = 'block';
+                                                }
+
+                                                if(x><?php echo $max_page; ?>-1){
+                                                    document.getElementById('btn5').style.display = 'none';
+                                                    document.getElementById('btn7').style.display = 'none';
+                                                }else{
+                                                    document.getElementById('btn5').style.display = 'block';
+                                                    document.getElementById('btn7').style.display = 'block';
+                                                }
+
+                                                if(x><?php echo $max_page; ?>-2){
+                                                    document.getElementById('btn6').style.display = 'none';
+                                                }else{
+                                                    document.getElementById('btn6').style.display = 'block';
+                                                }
+
+
+                                                document.getElementById("btn2").innerHTML = x-2;
+                                                document.getElementById("btn3").innerHTML = x-1;
+                                                document.getElementById("btn4").innerHTML = x;
+                                                document.getElementById("btn5").innerHTML = x+1;
+                                                document.getElementById("btn6").innerHTML = x+2;
+                                            }
+
+                                            function reset(){
+                                                for (var i = 1; i < <?php echo $result->num_rows+1; ?>; i++) {
+                                                    document.getElementById('row_' + i).style.display = 'none';
+                                                }
+                                            }
+
+                                            function show(a){
+                                                for (var i = 1; i < 11; i++) {
+                                                    document.getElementById('row_' + (a+i)).style.display = 'table-row';
+                                                }
+                                            }
+
+                                            function topFunction() {
+                                                document.body.scrollTop = 300;
+                                                document.documentElement.scrollTop = 300;
+                                            }
+                                        </script>
                                     </div>
                                     <?php
                                 }else{
