@@ -337,13 +337,13 @@ function diffDateInSeconds(String $datetime){
                                             }
 
                                             function reset(){
-                                                for (var i = 1; i < <?php echo $result->num_rows+1; ?>; i++) {
+                                                for (let i = 1; i < <?php echo $result->num_rows+1; ?>; i++) {
                                                     document.getElementById('row_' + i).style.display = 'none';
                                                 }
                                             }
 
                                             function show(a){
-                                                for (var i = 1; i < 11; i++) {
+                                                for (let i = 1; i < 11; i++) {
                                                     document.getElementById('row_' + (a+i)).style.display = 'table-row';
                                                 }
                                             }
