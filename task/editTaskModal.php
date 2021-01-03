@@ -10,7 +10,7 @@ function editModal($row){
 
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Add Task</h4>
+                    <h4 class="modal-title">Edit Task</h4>
                 </div>
                 <form id="addTaskForm">
                     <div class="modal-body">
