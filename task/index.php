@@ -1,6 +1,6 @@
 <?php
 
-include("session.php");
+include("../session.php");
 checkLogin();
 
 date_default_timezone_set("Asia/Kuala_Lumpur");
