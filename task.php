@@ -262,6 +262,7 @@ function diffDateInSeconds(String $datetime){
 
                                             reload();
                                             reset();
+                                            showRow();
 
                                             function prev(page){
                                                 currentPage -= page;
@@ -271,6 +272,19 @@ function diffDateInSeconds(String $datetime){
                                             function next(page){
                                                 currentPage += page;
                                                 reload();
+                                            }
+
+                                            function showRow(){
+
+                                                for (let i = 1; i <= currentPage*5; i++) {
+                                                    document.getElementById('row_' + (startRow+i)).style.display = 'table-row';
+                                                }
+                                            }
+
+                                            function reset(){
+                                                for (let i = 1; i <= totalRow; i++) {
+                                                    document.getElementById('row_' + i).style.display = 'none';
+                                                }
                                             }
 
                                             function reload() {
@@ -357,17 +371,9 @@ function diffDateInSeconds(String $datetime){
 
 
 
-                                            function reset(){
-                                                for (let i = 1; i <= totalRow; i++) {
-                                                    document.getElementById('row_' + i).style.display = 'none';
-                                                }
-                                            }
 
-                                            function showRow(startRow,numberOfRow){
-                                                for (let i = 1; i < numberOfRow; i++) {
-                                                    document.getElementById('row_' + (startRow+i)).style.display = 'table-row';
-                                                }
-                                            }
+
+
 
                                             function topFunction() {
                                                 document.body.scrollTop = 300;
