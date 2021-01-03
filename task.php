@@ -257,17 +257,28 @@ function diffDateInSeconds(String $datetime){
 
                                         <script>
 
-                                            let currentPage = 1;
-
                                             let totalRow = <?php echo $result->num_rows; ?>;
+
+                                            let currentPage = 1;
                                             let totalPage = Math.ceil(totalRow/5);
 
-                                            document.getElementById("moreBtn").innerHTML = totalPage;
+                                            if((currentPage-1)>0){
+                                                document.getElementById('nextBtn').style.display = 'block';
+                                            }else{
+                                                document.getElementById('nextBtn').style.display = 'none';
+                                            }
+
+                                            if(totalPage>1 && currentPage!==totalPage){
+                                                document.getElementById('nextBtn').style.display = 'block';
+                                            }else{
+                                                document.getElementById('nextBtn').style.display = 'none';
+                                            }
+
 
                                             let x = 1;
                                             let y = 0;
 
-                                            reload();
+                                            //reload();
                                             show(0);
 
                                             function prev(){
@@ -331,11 +342,7 @@ function diffDateInSeconds(String $datetime){
                                                     document.getElementById('btn7').style.display = 'block';
                                                 }
 
-                                                if(x><?php echo $max_page; ?>-2){
-                                                    document.getElementById('nextBtn').style.display = 'none';
-                                                }else{
-                                                    document.getElementById('nextBtn').style.display = 'block';
-                                                }
+
 
 
                                                 document.getElementById("btn1").innerHTML = currentPage-2;
