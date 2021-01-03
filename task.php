@@ -262,12 +262,21 @@ function diffDateInSeconds(String $datetime){
                                             let currentPage = 1;
                                             let totalPage = Math.ceil(totalRow/5);
 
+                                            <!-- Previous Button -->
                                             if((currentPage-1)>0){
                                                 document.getElementById('prevBtn').style.display = 'block';
                                             }else{
                                                 document.getElementById('prevBtn').style.display = 'none';
                                             }
 
+                                            <!-- More Button -->
+                                            if((currentPage+3)<=totalPage){
+                                                document.getElementById('moreBtn').style.display = 'block';
+                                            }else{
+                                                document.getElementById('moreBtn').style.display = 'none';
+                                            }
+
+                                            <!-- Next Button -->
                                             if(totalPage>1 && currentPage!==totalPage){
                                                 document.getElementById('nextBtn').style.display = 'block';
                                             }else{
