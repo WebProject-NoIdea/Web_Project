@@ -245,16 +245,19 @@ function diffDateInSeconds(String $datetime){
                                             </tbody>
                                         </table>
                                         <ul class="table-pagination">
-                                            <li><a>Previous</a></li>
+                                            <li id="prevBtn"><a>Previous</a></li>
                                             <li><a>1</a></li>
                                             <li class="active"><a>2</a></li>
                                             <li><a>...</a></li>
                                             <li><a>8</a></li>
-                                            <li><a>9</a></li>
-                                            <li><a>Next</a></li>
+                                            <li><a>...</a></li>
+                                            <li id="nextBtn"><a>Next</a></li>
                                         </ul>
 
                                         <script>
+
+                                            document.getElementById('prevBtn').style.display = 'none';
+
                                             let x = 1;
                                             let y = 0;
 
@@ -323,9 +326,9 @@ function diffDateInSeconds(String $datetime){
                                                 }
 
                                                 if(x><?php echo $max_page; ?>-2){
-                                                    document.getElementById('btn6').style.display = 'none';
+                                                    document.getElementById('nextBtn').style.display = 'none';
                                                 }else{
-                                                    document.getElementById('btn6').style.display = 'block';
+                                                    document.getElementById('nextBtn').style.display = 'block';
                                                 }
 
 
@@ -342,9 +345,9 @@ function diffDateInSeconds(String $datetime){
                                                 }
                                             }
 
-                                            function show(a){
-                                                for (let i = 1; i < 11; i++) {
-                                                    document.getElementById('row_' + (a+i)).style.display = 'table-row';
+                                            function showRow(startRow,numberOfRow){
+                                                for (let i = 1; i < numberOfRow; i++) {
+                                                    document.getElementById('row_' + (startRow+i)).style.display = 'table-row';
                                                 }
                                             }
 
