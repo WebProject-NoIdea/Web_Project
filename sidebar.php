@@ -34,9 +34,9 @@ function username()
                 <li>
                     <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
                     <ul>
-                        <li><a href="task.php#addtask">Add Task</a></li>
-                        <li><a href="task.php#today">Today</a></li>
-                        <li><a href="task.php#upcoming">Upcoming</a></li>
+                        <li><a href="task/index.php#addtask">Add Task</a></li>
+                        <li><a href="task/index.php#today">Today</a></li>
+                        <li><a href="task/index.php#upcoming">Upcoming</a></li>
                     </ul>
                 </li>
                 <li><a href="history.php"><i class = "fa fa-history fa-lg"></i>  History</a></li>
