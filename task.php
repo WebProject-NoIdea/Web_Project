@@ -222,9 +222,9 @@ function diffDateInSeconds(String $datetime){
                                                 $date = date_format(date_create($row['end_date']),"D, d M Y h:i A");
 
                                                 if(diffDateInSeconds($row['end_date'])<0){
-                                                    echo "<tr style='background-color:#F1948A' id='row_$i'>";
+                                                    echo "<tr style='background-color:#F1948A' id='tableToday_row_$i'>";
                                                 }else{
-                                                    echo "<tr id='row_$i'>";
+                                                    echo "<tr id='tableToday_row_$i'>";
                                                 }
 
                                                 echo "    <td>#$i</td>
@@ -246,111 +246,111 @@ function diffDateInSeconds(String $datetime){
                                         <?php if($result->num_rows>5){?>
 
                                             <ul class="table-pagination">
-                                                <li onclick="prev(1)" id="prevBtn"><a>Previous</a></li>
-                                                <li onclick="prev(2)"><a id="btn1">1</a></li>
-                                                <li onclick="prev(1)"><a id="btn2">2</a></li>
-                                                <li class="active"><a id="btn3">3</a></li>
-                                                <li onclick="next(1)"><a id="btn4">4</a></li>
-                                                <li onclick="next(2)"><a id="btn5">5</a></li>
-                                                <li id="moreBtn"><a>...</a></li>
-                                                <li onclick="next(1)" id="nextBtn"><a>Next</a></li>
+                                                <li onclick="tableToday_prev(1)" id="tableToday_prevBtn"><a>Previous</a></li>
+                                                <li onclick="tableToday_prev(2)"><a id="tableToday_btn1">1</a></li>
+                                                <li onclick="tableToday_prev(1)"><a id="tableToday_btn2">2</a></li>
+                                                <li class="active"><a id="tableToday_btn3">3</a></li>
+                                                <li onclick="tableToday_next(1)"><a id="tableToday_btn4">4</a></li>
+                                                <li onclick="tableToday_next(2)"><a id="tableToday_btn5">5</a></li>
+                                                <li id="tableToday_moreBtn"><a>...</a></li>
+                                                <li onclick="tableToday_next(1)" id="tableToday_nextBtn"><a>Next</a></li>
                                             </ul>
 
                                             <script>
 
-                                                let totalRow = <?php echo $result->num_rows; ?>;
+                                                let tableToday_totalRow = <?php echo $result->num_rows; ?>;
 
-                                                let currentPage = 1;
-                                                let totalPage = Math.ceil(totalRow/5);
-
-
-                                                showRow();
+                                                let tableToday_currentPage = 1;
+                                                let tableToday_totalPage = Math.ceil(tableToday_totalRow/5);
 
 
-                                                function prev(page){
-                                                    currentPage -= page;
-                                                    showRow();
+                                                tableToday_showRow();
+
+
+                                                function tableToday_prev(page){
+                                                    tableToday_currentPage -= page;
+                                                    tableToday_showRow();
                                                 }
 
-                                                function next(page){
-                                                    currentPage += page;
-                                                    showRow();
+                                                function tableToday_next(page){
+                                                    tableToday_currentPage += page;
+                                                    tableToday_showRow();
                                                 }
 
-                                                function showRow(){
-                                                    reset();
+                                                function tableToday_showRow(){
+                                                    tableToday_reset();
 
-                                                    for (let i = (currentPage*5)-4; i <= currentPage*5; i++) {
-                                                        document.getElementById('row_' + i).style.display = 'table-row';
-                                                        if(i===totalRow){
+                                                    for (let i = (tableToday_currentPage*5)-4; i <= tableToday_currentPage*5; i++) {
+                                                        document.getElementById('tableToday_row_' + i).style.display = 'table-row';
+                                                        if(i===tableToday_totalRow){
                                                             break;
                                                         }
                                                     }
 
-                                                    reload();
+                                                    tableToday_reload();
                                                 }
 
-                                                function reset(){
-                                                    for (let i = 1; i <= totalRow; i++) {
-                                                        document.getElementById('row_' + i).style.display = 'none';
+                                                function tableToday_reset(){
+                                                    for (let i = 1; i <= tableToday_totalRow; i++) {
+                                                        document.getElementById('tableToday_row_' + i).style.display = 'none';
                                                     }
                                                 }
 
-                                                function reload() {
+                                                function tableToday_reload() {
                                                     <!-- Previous Button -->
-                                                    if ((currentPage - 1) > 0) {
-                                                        document.getElementById('prevBtn').style.display = 'block';
+                                                    if ((tableToday_currentPage - 1) > 0) {
+                                                        document.getElementById('tableToday_prevBtn').style.display = 'block';
                                                     } else {
-                                                        document.getElementById('prevBtn').style.display = 'none';
+                                                        document.getElementById('tableToday_prevBtn').style.display = 'none';
                                                     }
 
                                                     <!-- Number Button 1 -->
-                                                    document.getElementById("btn1").innerHTML = currentPage - 2;
-                                                    if ((currentPage - 2) > 0) {
-                                                        document.getElementById("btn1").style.display = 'block';
+                                                    document.getElementById("tableToday_btn1").innerHTML = tableToday_currentPage - 2;
+                                                    if ((tableToday_currentPage - 2) > 0) {
+                                                        document.getElementById("tableToday_btn1").style.display = 'block';
                                                     } else {
-                                                        document.getElementById("btn1").style.display = 'none';
+                                                        document.getElementById("tableToday_btn1").style.display = 'none';
                                                     }
 
                                                     <!-- Number Button 2 -->
-                                                    document.getElementById("btn2").innerHTML = currentPage - 1;
-                                                    if ((currentPage - 1) > 0) {
-                                                        document.getElementById("btn2").style.display = 'block';
+                                                    document.getElementById("tableToday_btn2").innerHTML = tableToday_currentPage - 1;
+                                                    if ((tableToday_currentPage - 1) > 0) {
+                                                        document.getElementById("tableToday_btn2").style.display = 'block';
                                                     } else {
-                                                        document.getElementById("btn2").style.display = 'none';
+                                                        document.getElementById("tableToday_btn2").style.display = 'none';
                                                     }
 
                                                     <!-- Number Button 3 -->
-                                                    document.getElementById("btn3").innerHTML = currentPage;
+                                                    document.getElementById("tableToday_btn3").innerHTML = tableToday_currentPage;
 
                                                     <!-- Number Button 4 -->
-                                                    document.getElementById("btn4").innerHTML = currentPage + 1;
-                                                    if ((currentPage + 1) <= totalPage) {
-                                                        document.getElementById('btn4').style.display = 'block';
+                                                    document.getElementById("tableToday_btn4").innerHTML = tableToday_currentPage + 1;
+                                                    if ((tableToday_currentPage + 1) <= tableToday_totalPage) {
+                                                        document.getElementById('tableToday_btn4').style.display = 'block';
                                                     } else {
-                                                        document.getElementById('btn4').style.display = 'none';
+                                                        document.getElementById('tableToday_btn4').style.display = 'none';
                                                     }
 
                                                     <!-- Number Button 5 -->
-                                                    document.getElementById("btn5").innerHTML = currentPage + 2;
-                                                    if ((currentPage + 2) <= totalPage) {
-                                                        document.getElementById('btn5').style.display = 'block';
+                                                    document.getElementById("tableToday_btn5").innerHTML = tableToday_currentPage + 2;
+                                                    if ((tableToday_currentPage + 2) <= tableToday_totalPage) {
+                                                        document.getElementById('tableToday_btn5').style.display = 'block';
                                                     } else {
-                                                        document.getElementById('btn5').style.display = 'none';
+                                                        document.getElementById('tableToday_btn5').style.display = 'none';
                                                     }
 
                                                     <!-- More Button -->
-                                                    if ((currentPage + 3) <= totalPage) {
-                                                        document.getElementById('moreBtn').style.display = 'block';
+                                                    if ((tableToday_currentPage + 3) <= tableToday_totalPage) {
+                                                        document.getElementById('tableToday_moreBtn').style.display = 'block';
                                                     } else {
-                                                        document.getElementById('moreBtn').style.display = 'none';
+                                                        document.getElementById('tableToday_moreBtn').style.display = 'none';
                                                     }
 
                                                     <!-- Next Button -->
-                                                    if (totalPage > 1 && currentPage !== totalPage) {
-                                                        document.getElementById('nextBtn').style.display = 'block';
+                                                    if (tableToday_totalPage > 1 && tableToday_currentPage !== tableToday_totalPage) {
+                                                        document.getElementById('tableToday_nextBtn').style.display = 'block';
                                                     } else {
-                                                        document.getElementById('nextBtn').style.display = 'none';
+                                                        document.getElementById('tableToday_nextBtn').style.display = 'none';
                                                     }
                                                 }
                                             </script>
