@@ -262,7 +262,7 @@ function diffDateInSeconds(String $datetime){
                                             let totalRow = <?php echo $result->num_rows; ?>;
                                             let totalPage = totalRow/5;
 
-                                            document.getElementById("btn1").innerHTML = totalPage;
+                                            document.getElementById("moreBtn").innerHTML = totalPage;
 
                                             let x = 1;
                                             let y = 0;
