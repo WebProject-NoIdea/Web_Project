@@ -120,7 +120,13 @@ function diffDateInSeconds(String $datetime){
                                             <?php
                                             $i = 1;
 
+
+
                                             while ($row = $result->fetch_assoc()) {
+                                                $rows[] = $row;
+                                            }
+
+                                            foreach($rows as $row) {
 
                                                 $date = date_format(date_create($row['end_date']),"D, d M Y h:i A");
 
