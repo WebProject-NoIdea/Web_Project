@@ -278,10 +278,10 @@ function diffDateInSeconds(String $datetime){
                                                 reset();
 
                                                 for (let i = (currentPage*5)-4; i <= currentPage*5; i++) {
+                                                    document.getElementById('row_' + i).style.display = 'table-row';
                                                     if(i===totalRow){
                                                         break;
                                                     }
-                                                    document.getElementById('row_' + i).style.display = 'table-row';
                                                 }
 
                                                 reload();
