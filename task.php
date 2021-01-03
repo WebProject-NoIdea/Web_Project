@@ -260,25 +260,28 @@ function diffDateInSeconds(String $datetime){
                                             let currentPage = 1;
                                             let totalPage = Math.ceil(totalRow/5);
 
-                                            reload();
-                                            reset();
+
                                             showRow();
+
 
                                             function prev(page){
                                                 currentPage -= page;
-                                                reload();
+                                                showRow();
                                             }
 
                                             function next(page){
                                                 currentPage += page;
-                                                reload();
+                                                showRow();
                                             }
 
                                             function showRow(){
+                                                reset();
 
                                                 for (let i = 1; i <= currentPage*5; i++) {
                                                     document.getElementById('row_' + i).style.display = 'table-row';
                                                 }
+
+                                                reload();
                                             }
 
                                             function reset(){
