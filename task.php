@@ -105,7 +105,7 @@ function diffDateInSeconds(String $datetime){
                                         <div class="form-group col-sm-6">
                                             <label class="control-label" for="input-datepicker-start">Start Date</label>
                                             <div class="input-group" id="datepicker-start">
-                                                <input type="text" class="form-control" name="startDate" id="input-datepicker-start">
+                                                <input type="text" class="form-control" name="startDate" id="input-datepicker-start" autocomplete="off">
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
@@ -114,7 +114,7 @@ function diffDateInSeconds(String $datetime){
                                         <div class="form-group col-sm-6">
                                             <label class="control-label" for="input-datepicker-end">End Date</label>
                                             <div class="input-group" id="datepicker-end">
-                                                <input type="text" class="form-control" name="endDate" id="input-datepicker-end">
+                                                <input type="text" class="form-control" name="endDate" id="input-datepicker-end" autocomplete="off">
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
@@ -350,44 +350,8 @@ function diffDateInSeconds(String $datetime){
                                                     document.getElementById('nextBtn').style.display = 'none';
                                                 }
                                             }
-
-
-
-
-
-                                            function prev2(){
-                                                topFunction();
-                                                x = x-2;
-                                                reload();
-                                                reset();
-                                                y = y-20;
-                                                show(y);
-                                            }
-
-                                            function next2(){
-                                                topFunction();
-                                                x = x+2;
-                                                reload();
-                                                reset();
-                                                y = y+20;
-                                                show(y);
-                                            }
-
-
-
-
-
-
-
-
-
-                                            function topFunction() {
-                                                document.body.scrollTop = 300;
-                                                document.documentElement.scrollTop = 300;
-                                            }
-
-
                                         </script>
+
                                     </div>
                                     <?php
                                 }else{
