@@ -261,6 +261,7 @@ function diffDateInSeconds(String $datetime){
                                             let totalPage = Math.ceil(totalRow/5);
 
                                             reload();
+                                            reset();
 
                                             function prev(page){
                                                 currentPage -= page;
@@ -372,6 +373,8 @@ function diffDateInSeconds(String $datetime){
                                                 document.body.scrollTop = 300;
                                                 document.documentElement.scrollTop = 300;
                                             }
+
+
                                         </script>
                                     </div>
                                     <?php
