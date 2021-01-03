@@ -192,7 +192,7 @@ function diffDateInSeconds(String $datetime){
                                 </div>
 
                                 <?php
-                                include('dbconnect.php');
+                                include('../dbconnect.php');
 
                                 $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 AND complete_date = '0000-00-00 00:00:00' ORDER BY end_date";
 
@@ -454,7 +454,7 @@ function diffDateInSeconds(String $datetime){
 
                                 <?php
 
-                                include('dbconnect.php');
+                                include('../dbconnect.php');
 
                                 $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0 AND complete_date = '0000-00-00 00:00:00' ORDER BY start_date";
 
@@ -519,7 +519,7 @@ function diffDateInSeconds(String $datetime){
         </div>
     </div>
 
-    <?php include('sidebar.php');?>
+    <?php include('../sidebar.php');?>
 
 </div>
 
