@@ -47,7 +47,6 @@ function editModal($row){
                             // Linked date and time picker
                             // start date date and time picker
                             $("#datepicker-start<?php echo $row['task_id']; ?>").datetimepicker({
-                                orientation: "auto",
                                 format:'ddd, DD MMM Y hh:mm A',
 
                             });
