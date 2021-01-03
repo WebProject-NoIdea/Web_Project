@@ -144,9 +144,6 @@ function diffDateInSeconds(String $datetime){
                                                 
                                                             </td>
                                                         </tr>";
-
-                                                editModal($row);
-
                                                 $i++;
                                             }
                                             ?>
@@ -265,6 +262,12 @@ function diffDateInSeconds(String $datetime){
                                                 }
                                             </script>
                                         <?php }?>
+
+                                        <?php
+                                            while ($row = $result->fetch_assoc()) {
+                                                editModal($row);
+                                            }
+                                        ?>
                                     </div>
                                     <?php
                                 }else{
