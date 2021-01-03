@@ -253,6 +253,15 @@ function diffDateInSeconds(String $datetime){
                                             <li>...</li>
                                             <li>Next</li>
                                         </ul>
+                                        <ul class="table-pagination">
+                                            <li><a href="#">Previous</a></li>
+                                            <li><a href="#">1</a></li>
+                                            <li class="active"><a href="#">2</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">Next</a></li>
+                                        </ul>
 
                                         <script>
                                             let x = 1;
