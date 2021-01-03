@@ -262,88 +262,79 @@ function diffDateInSeconds(String $datetime){
                                             let currentPage = 1;
                                             let totalPage = Math.ceil(totalRow/5);
 
+                                            reload();
 
-
-                                            <!-- Previous Button -->
-                                            if((currentPage-1)>0){
-                                                document.getElementById('prevBtn').style.display = 'block';
-                                            }else{
-                                                document.getElementById('prevBtn').style.display = 'none';
-                                            }
-
-                                            <!-- Number Button 1 -->
-                                            document.getElementById("btn1").innerHTML = currentPage-2;
-                                            if((currentPage-2)>0){
-                                                document.getElementById("btn1").style.display = 'block';
-                                            }else{
-                                                document.getElementById("btn1").style.display = 'none';
-                                            }
-
-                                            <!-- Number Button 2 -->
-                                            document.getElementById("btn2").innerHTML = currentPage-1;
-                                            if((currentPage-1)>0){
-                                                document.getElementById("btn2").style.display = 'block';
-                                            }else{
-                                                document.getElementById("btn2").style.display = 'none';
-                                            }
-
-                                            <!-- Number Button 3 -->
-                                            document.getElementById("btn3").innerHTML = currentPage;
-
-                                            <!-- Number Button 4 -->
-                                            document.getElementById("btn4").innerHTML = currentPage+1;
-                                            if((currentPage+1)<=totalPage){
-                                                document.getElementById('btn4').style.display = 'block';
-                                            }else{
-                                                document.getElementById('btn4').style.display = 'none';
-                                            }
-
-                                            <!-- Number Button 5 -->
-                                            document.getElementById("btn5").innerHTML = currentPage+2;
-                                            if((currentPage+2)<=totalPage){
-                                                document.getElementById('btn5').style.display = 'block';
-                                            }else{
-                                                document.getElementById('btn5').style.display = 'none';
-                                            }
-
-                                            <!-- More Button -->
-                                            if((currentPage+3)<=totalPage){
-                                                document.getElementById('moreBtn').style.display = 'block';
-                                            }else{
-                                                document.getElementById('moreBtn').style.display = 'none';
-                                            }
-
-                                            <!-- Next Button -->
-                                            if(totalPage>1 && currentPage!==totalPage){
-                                                document.getElementById('nextBtn').style.display = 'block';
-                                            }else{
-                                                document.getElementById('nextBtn').style.display = 'none';
-                                            }
-
-
-                                            let x = 1;
-                                            let y = 0;
-
-                                            //reload();
-                                            show(0);
-
-                                            function prev(){
-                                                topFunction();
-                                                x = x-1;
+                                            function next(page){
+                                                currentPage += page;
                                                 reload();
-                                                reset();
-                                                y = y-10;
-                                                show(y);
                                             }
 
-                                            function next(){
-                                                topFunction();
-                                                x = x+1;
+                                            function prev(page){
+                                                currentPage -= page;
                                                 reload();
-                                                reset();
-                                                y = y+10;
-                                                show(y);
                                             }
+
+                                            function reload() {
+                                                <!-- Previous Button -->
+                                                if ((currentPage - 1) > 0) {
+                                                    document.getElementById('prevBtn').style.display = 'block';
+                                                } else {
+                                                    document.getElementById('prevBtn').style.display = 'none';
+                                                }
+
+                                                <!-- Number Button 1 -->
+                                                document.getElementById("btn1").innerHTML = currentPage - 2;
+                                                if ((currentPage - 2) > 0) {
+                                                    document.getElementById("btn1").style.display = 'block';
+                                                } else {
+                                                    document.getElementById("btn1").style.display = 'none';
+                                                }
+
+                                                <!-- Number Button 2 -->
+                                                document.getElementById("btn2").innerHTML = currentPage - 1;
+                                                if ((currentPage - 1) > 0) {
+                                                    document.getElementById("btn2").style.display = 'block';
+                                                } else {
+                                                    document.getElementById("btn2").style.display = 'none';
+                                                }
+
+                                                <!-- Number Button 3 -->
+                                                document.getElementById("btn3").innerHTML = currentPage;
+
+                                                <!-- Number Button 4 -->
+                                                document.getElementById("btn4").innerHTML = currentPage + 1;
+                                                if ((currentPage + 1) <= totalPage) {
+                                                    document.getElementById('btn4').style.display = 'block';
+                                                } else {
+                                                    document.getElementById('btn4').style.display = 'none';
+                                                }
+
+                                                <!-- Number Button 5 -->
+                                                document.getElementById("btn5").innerHTML = currentPage + 2;
+                                                if ((currentPage + 2) <= totalPage) {
+                                                    document.getElementById('btn5').style.display = 'block';
+                                                } else {
+                                                    document.getElementById('btn5').style.display = 'none';
+                                                }
+
+                                                <!-- More Button -->
+                                                if ((currentPage + 3) <= totalPage) {
+                                                    document.getElementById('moreBtn').style.display = 'block';
+                                                } else {
+                                                    document.getElementById('moreBtn').style.display = 'none';
+                                                }
+
+                                                <!-- Next Button -->
+                                                if (totalPage > 1 && currentPage !== totalPage) {
+                                                    document.getElementById('nextBtn').style.display = 'block';
+                                                } else {
+                                                    document.getElementById('nextBtn').style.display = 'none';
+                                                }
+                                            }
+
+
+
+
 
                                             function prev2(){
                                                 topFunction();
@@ -363,36 +354,9 @@ function diffDateInSeconds(String $datetime){
                                                 show(y);
                                             }
 
-                                            function reload(){
-
-                                                if(x<3){
-                                                    document.getElementById('btn2').style.display = 'none';
-                                                }else{
-                                                    document.getElementById('btn2').style.display = 'block';
-                                                }
-
-
-                                                if(x<2){
-                                                    document.getElementById('btn1').style.display = 'none';
-                                                    document.getElementById('btn3').style.display = 'none';
-                                                }else{
-                                                    document.getElementById('btn1').style.display = 'block';
-                                                    document.getElementById('btn3').style.display = 'block';
-                                                }
-
-                                                if(x><?php echo $max_page; ?>-1){
-                                                    document.getElementById('btn5').style.display = 'none';
-                                                    document.getElementById('btn7').style.display = 'none';
-                                                }else{
-                                                    document.getElementById('btn5').style.display = 'block';
-                                                    document.getElementById('btn7').style.display = 'block';
-                                                }
 
 
 
-
-
-                                            }
 
                                             function reset(){
                                                 for (let i = 1; i < <?php echo $result->num_rows+1; ?>; i++) {
