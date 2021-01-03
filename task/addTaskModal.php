@@ -43,12 +43,20 @@
                         // start date date and time picker
                         $('#datepicker-start').datetimepicker({
                             format:'ddd, DD MMM Y hh:mm A',
+                            widgetPositioning:{
+                                horizontal: 'auto',
+                                vertical: 'bottom'
+                            }
                         });
 
                         // End date date and time picker
                         $('#datepicker-end').datetimepicker({
                             format:'ddd, DD MMM Y hh:mm A',
-                            useCurrent: false
+                            useCurrent: false,
+                            widgetPositioning:{
+                                horizontal: 'auto',
+                                vertical: 'bottom'
+                            }
                         });
 
                         // start date picke on chagne event [select minimun date for end date datepicker]

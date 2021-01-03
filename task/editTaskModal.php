@@ -58,7 +58,11 @@ function editModal($row){
                             // End date date and time picker
                             $("#datepicker-end<?php echo $row['task_id']; ?>").datetimepicker({
                                 format:'ddd, DD MMM Y hh:mm A',
-                                useCurrent: false
+                                useCurrent: false,
+                                widgetPositioning:{
+                                    horizontal: 'auto',
+                                    vertical: 'bottom'
+                                }
                             });
 
                             // start date picke on chagne event [select minimun date for end date datepicker]
