@@ -246,11 +246,11 @@ function diffDateInSeconds(String $datetime){
                                         </table>
                                         <ul class="table-pagination">
                                             <li id="prevBtn"><a>Previous</a></li>
-                                            <li id="btn1"><a>1</a></li>
-                                            <li id="btn2"><a>2</a></li>
-                                            <li id="btn3" class="active"><a>3</a></li>
-                                            <li id="btn4"><a>4</a></li>
-                                            <li id="btn5"><a>5</a></li>
+                                            <li><a id="btn1">1</a></li>
+                                            <li><a id="btn2">2</a></li>
+                                            <li class="active"><a id="btn3">3</a></li>
+                                            <li><a id="btn4">4</a></li>
+                                            <li><a id="btn5">5</a></li>
                                             <li id="moreBtn"><a>...</a></li>
                                             <li id="nextBtn"><a>Next</a></li>
                                         </ul>
