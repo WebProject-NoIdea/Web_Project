@@ -32,7 +32,11 @@ function username()
             <ul>
                 <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
                 <li>
-                    <span class="opener"><i class = "fa fa-calendar"></i>  Task<?php echo $_SERVER['REQUEST_URI']; ?></span>
+                    <span class="opener"><i class = "fa fa-calendar"></i>  Task<?php echo $_SERVER['REQUEST_URI'];
+
+                        $array = explode('/',$_SERVER['REQUEST_URI']);
+                        echo $array[count($array)-2];
+                        ?></span>
                     <ul>
                         <li><a href="task/index.php#addtask">Add Task</a></li>
                         <li><a href="task/index.php#today">Today</a></li>
