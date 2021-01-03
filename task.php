@@ -271,24 +271,40 @@ function diffDateInSeconds(String $datetime){
                                                 document.getElementById('prevBtn').style.display = 'none';
                                             }
 
-                                            <!-- Number Button -->
+                                            <!-- Number Button 1 -->
+                                            document.getElementById("btn1").innerHTML = currentPage-2;
                                             if((currentPage-2)>0){
                                                 document.getElementById("btn1").style.display = 'block';
                                             }else{
                                                 document.getElementById("btn1").style.display = 'none';
                                             }
 
+                                            <!-- Number Button 2 -->
+                                            document.getElementById("btn2").innerHTML = currentPage-1;
                                             if((currentPage-1)>0){
                                                 document.getElementById("btn2").style.display = 'block';
                                             }else{
                                                 document.getElementById("btn2").style.display = 'none';
                                             }
 
-                                            document.getElementById("btn1").innerHTML = currentPage-2;
-                                            document.getElementById("btn2").innerHTML = currentPage-1;
+                                            <!-- Number Button 3 -->
                                             document.getElementById("btn3").innerHTML = currentPage;
+
+                                            <!-- Number Button 4 -->
                                             document.getElementById("btn4").innerHTML = currentPage+1;
+                                            if((currentPage+1)<=totalPage){
+                                                document.getElementById('btn4').style.display = 'block';
+                                            }else{
+                                                document.getElementById('btn4').style.display = 'none';
+                                            }
+
+                                            <!-- Number Button 5 -->
                                             document.getElementById("btn5").innerHTML = currentPage+2;
+                                            if((currentPage+2)<=totalPage){
+                                                document.getElementById('btn5').style.display = 'block';
+                                            }else{
+                                                document.getElementById('btn5').style.display = 'none';
+                                            }
 
                                             <!-- More Button -->
                                             if((currentPage+3)<=totalPage){
