@@ -263,9 +263,9 @@ function diffDateInSeconds(String $datetime){
                                             let totalPage = Math.ceil(totalRow/5);
 
                                             if((currentPage-1)>0){
-                                                document.getElementById('nextBtn').style.display = 'block';
+                                                document.getElementById('prevBtn').style.display = 'block';
                                             }else{
-                                                document.getElementById('nextBtn').style.display = 'none';
+                                                document.getElementById('prevBtn').style.display = 'none';
                                             }
 
                                             if(totalPage>1 && currentPage!==totalPage){
