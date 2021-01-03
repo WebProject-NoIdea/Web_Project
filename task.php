@@ -262,12 +262,21 @@ function diffDateInSeconds(String $datetime){
                                             let currentPage = 1;
                                             let totalPage = Math.ceil(totalRow/5);
 
+
+
                                             <!-- Previous Button -->
                                             if((currentPage-1)>0){
                                                 document.getElementById('prevBtn').style.display = 'block';
                                             }else{
                                                 document.getElementById('prevBtn').style.display = 'none';
                                             }
+
+                                            <!-- Number Button -->
+                                            document.getElementById("btn1").innerHTML = currentPage-2;
+                                            document.getElementById("btn2").innerHTML = currentPage-1;
+                                            document.getElementById("btn3").innerHTML = currentPage;
+                                            document.getElementById("btn4").innerHTML = currentPage+1;
+                                            document.getElementById("btn5").innerHTML = currentPage+2;
 
                                             <!-- More Button -->
                                             if((currentPage+3)<=totalPage){
@@ -354,11 +363,7 @@ function diffDateInSeconds(String $datetime){
 
 
 
-                                                document.getElementById("btn1").innerHTML = currentPage-2;
-                                                document.getElementById("btn2").innerHTML = currentPage-1;
-                                                document.getElementById("btn3").innerHTML = currentPage;
-                                                document.getElementById("btn4").innerHTML = currentPage+1;
-                                                document.getElementById("btn5").innerHTML = currentPage+2;
+
                                             }
 
                                             function reset(){
