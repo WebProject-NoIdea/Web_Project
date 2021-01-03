@@ -272,7 +272,7 @@ function diffDateInSeconds(String $datetime){
                                     <?php
                                     include("editTaskModal.php");
 
-                                    while ($row = $result->fetch_assoc()) {
+                                    foreach($rows as $row) {
                                         editModal($row);
                                     }
 
