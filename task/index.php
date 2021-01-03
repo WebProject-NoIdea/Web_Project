@@ -105,8 +105,6 @@ function diffDateInSeconds(String $datetime){
 
                                 if ($result->num_rows > 0) {
 
-                                    include("editTaskModal.php");
-
                                     ?>
 
                                     <div class="default-table">
@@ -264,6 +262,8 @@ function diffDateInSeconds(String $datetime){
                                         <?php }?>
 
                                         <?php
+                                            include("editTaskModal.php");
+
                                             while ($row = $result->fetch_assoc()) {
                                                 editModal($row);
                                             }
