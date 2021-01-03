@@ -358,7 +358,7 @@ function diffDateInSeconds(String $datetime){
 
 
                                             function reset(){
-                                                for (let i = 1; i < totalRow; i++) {
+                                                for (let i = 1; i <= totalRow; i++) {
                                                     document.getElementById('row_' + i).style.display = 'none';
                                                 }
                                             }
