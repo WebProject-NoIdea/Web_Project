@@ -19,6 +19,14 @@ function username()
 
     return $name;
 }
+
+$urlExt = "";
+
+$array = explode('/',$_SERVER['REQUEST_URI']);
+if( $array[count($array)-2]!="Web_Project"){
+    $urlExt = "../";
+}
+
 ?>
 <!-- Sidebar -->
 <div id="sidebar">
@@ -30,23 +38,17 @@ function username()
             </div>
 
             <ul>
-                <li><a href="home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
+                <li><a href="<?php echo $urlExt; ?>home.php"><i class = "fa fa-home fa-lg"></i>  Homepage</a></li>
                 <li>
-                    <span class="opener"><i class = "fa fa-calendar"></i>  Task<?php
-
-                        $array = explode('/',$_SERVER['REQUEST_URI']);
-                        if( $array[count($array)-2]!="Web_Project"){
-                            echo "asda";
-                        }
-                        ?></span>
+                    <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
                     <ul>
-                        <li><a href="task/index.php#addtask">Add Task</a></li>
-                        <li><a href="task/index.php#today">Today</a></li>
-                        <li><a href="task/index.php#upcoming">Upcoming</a></li>
+                        <li><a href="<?php echo $urlExt; ?>task/index.php#addtask">Add Task</a></li>
+                        <li><a href="<?php echo $urlExt; ?>task/index.php#today">Today</a></li>
+                        <li><a href="<?php echo $urlExt; ?>task/index.php#upcoming">Upcoming</a></li>
                     </ul>
                 </li>
-                <li><a href="history.php"><i class = "fa fa-history fa-lg"></i>  History</a></li>
-                <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class = "fa fa-sign-out fa-lg"></i>  Sign Out</a></li>
+                <li><a href="<?php echo $urlExt; ?>history.php"><i class = "fa fa-history fa-lg"></i>  History</a></li>
+                <li><a href="<?php echo $urlExt; ?>logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class = "fa fa-sign-out fa-lg"></i>  Sign Out</a></li>
             </ul>
         </nav>
 
