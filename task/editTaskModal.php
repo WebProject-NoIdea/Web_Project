@@ -12,7 +12,7 @@ function editModal($tableName,$row){
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Edit Task</h4>
                 </div>
-                <form id="addTaskForm">
+                <form id="editTaskForm<?php echo $tableName.$row['task_id']; ?>">
                     <div class="modal-body">
 
                         <div class="form-group">
@@ -83,9 +83,9 @@ function editModal($tableName,$row){
                 </form>
 
                 <script>
-                    const addTaskForm = document.getElementById("addTaskForm<?php echo $tableName.$row['task_id']; ?>");
+                    const editTaskForm<?php echo $tableName.$row['task_id']; ?> = document.getElementById("editTaskForm<?php echo $tableName.$row['task_id']; ?>");
 
-                    addTaskForm.addEventListener('submit',function (e){
+                    editTaskForm<?php echo $tableName.$row['task_id']; ?>.addEventListener('submit',function (e){
                         e.preventDefault();
 
                         document.getElementById("submitBtn<?php echo $tableName.$row['task_id']; ?>").disabled = true;
