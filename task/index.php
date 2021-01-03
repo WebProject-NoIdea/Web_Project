@@ -81,10 +81,10 @@ function diffDateInSeconds(String $datetime){
                     </div>
                 </div>
 
-
+                <?php include("addTaskModal.php"); ?>
             </div>
 
-            <?php include("addTaskModal.php"); ?>
+
 
             <div id="today">
                 <!-- Tables -->
