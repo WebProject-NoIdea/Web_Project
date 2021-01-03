@@ -246,17 +246,23 @@ function diffDateInSeconds(String $datetime){
                                         </table>
                                         <ul class="table-pagination">
                                             <li id="prevBtn"><a>Previous</a></li>
-                                            <li><a>1</a></li>
-                                            <li class="active"><a>2</a></li>
-                                            <li><a>...</a></li>
-                                            <li><a>8</a></li>
-                                            <li><a>...</a></li>
+                                            <li id="btn1"><a>1</a></li>
+                                            <li id="btn2"><a>2</a></li>
+                                            <li id="btn3" class="active"><a>3</a></li>
+                                            <li id="btn4"><a>4</a></li>
+                                            <li id="btn5"><a>5</a></li>
+                                            <li id="moreBtn"><a>...</a></li>
                                             <li id="nextBtn"><a>Next</a></li>
                                         </ul>
 
                                         <script>
 
-                                            document.getElementById('prevBtn').style.display = 'none';
+                                            let currentPage = 1;
+
+                                            let totalRow = <?php echo $result->num_rows; ?>;
+                                            let totalPage = totalRow/5;
+
+                                            document.getElementById("btn1").innerHTML = totalPage;
 
                                             let x = 1;
                                             let y = 0;
@@ -332,11 +338,11 @@ function diffDateInSeconds(String $datetime){
                                                 }
 
 
-                                                document.getElementById("btn2").innerHTML = x-2;
-                                                document.getElementById("btn3").innerHTML = x-1;
-                                                document.getElementById("btn4").innerHTML = x;
-                                                document.getElementById("btn5").innerHTML = x+1;
-                                                document.getElementById("btn6").innerHTML = x+2;
+                                                document.getElementById("btn1").innerHTML = currentPage-2;
+                                                document.getElementById("btn2").innerHTML = currentPage-1;
+                                                document.getElementById("btn3").innerHTML = currentPage;
+                                                document.getElementById("btn4").innerHTML = currentPage+1;
+                                                document.getElementById("btn5").innerHTML = currentPage+2;
                                             }
 
                                             function reset(){
