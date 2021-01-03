@@ -260,7 +260,7 @@ function diffDateInSeconds(String $datetime){
                                             let currentPage = 1;
 
                                             let totalRow = <?php echo $result->num_rows; ?>;
-                                            let totalPage = totalRow/5;
+                                            let totalPage = Math.ceil(totalRow/5);
 
                                             document.getElementById("moreBtn").innerHTML = totalPage;
 
