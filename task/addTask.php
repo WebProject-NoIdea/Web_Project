@@ -1,6 +1,6 @@
 <?php
 
-include("session.php");
+include("../session.php");
 checkLogin();
 
 if(isset($_POST['task']) AND $_POST['task']!=null){
