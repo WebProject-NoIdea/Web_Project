@@ -222,7 +222,7 @@ function diffDateInSeconds(String $datetime){
                                                 $date = date_format(date_create($row['end_date']),"D, d M Y h:i A");
 
                                                 if(diffDateInSeconds($row['end_date'])<0){
-                                                    echo '<tr style="background-color:#F1948A">';
+                                                    echo "<tr style='background-color:#F1948A' id='row_$i'>";
                                                 }else{
                                                     echo "<tr id='row_$i'>";
                                                 }
@@ -236,8 +236,6 @@ function diffDateInSeconds(String $datetime){
                                                                 <button class='btn''><i class='fa fa-pencil'></i></button>
                                                             </td>
                                                         </tr>";
-
-
 
                                                 $i++;
                                             }
