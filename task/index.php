@@ -145,7 +145,7 @@ function diffDateInSeconds(String $datetime){
                                                             </td>
                                                         </tr>";
 
-                                                editModal($row);
+                                                editModal("today",$row);
 
                                                 $i++;
                                             }
