@@ -242,116 +242,119 @@ function diffDateInSeconds(String $datetime){
                                             ?>
                                             </tbody>
                                         </table>
-                                        <ul class="table-pagination">
-                                            <li onclick="prev(1)" id="prevBtn"><a>Previous</a></li>
-                                            <li onclick="prev(2)"><a id="btn1">1</a></li>
-                                            <li onclick="prev(1)"><a id="btn2">2</a></li>
-                                            <li class="active"><a id="btn3">3</a></li>
-                                            <li onclick="next(1)"><a id="btn4">4</a></li>
-                                            <li onclick="next(2)"><a id="btn5">5</a></li>
-                                            <li id="moreBtn"><a>...</a></li>
-                                            <li onclick="next(1)" id="nextBtn"><a>Next</a></li>
-                                        </ul>
 
-                                        <script>
+                                        <?php if($result->num_rows>5){?>
 
-                                            let totalRow = <?php echo $result->num_rows; ?>;
+                                            <ul class="table-pagination">
+                                                <li onclick="prev(1)" id="prevBtn"><a>Previous</a></li>
+                                                <li onclick="prev(2)"><a id="btn1">1</a></li>
+                                                <li onclick="prev(1)"><a id="btn2">2</a></li>
+                                                <li class="active"><a id="btn3">3</a></li>
+                                                <li onclick="next(1)"><a id="btn4">4</a></li>
+                                                <li onclick="next(2)"><a id="btn5">5</a></li>
+                                                <li id="moreBtn"><a>...</a></li>
+                                                <li onclick="next(1)" id="nextBtn"><a>Next</a></li>
+                                            </ul>
 
-                                            let currentPage = 1;
-                                            let totalPage = Math.ceil(totalRow/5);
+                                            <script>
+
+                                                let totalRow = <?php echo $result->num_rows; ?>;
+
+                                                let currentPage = 1;
+                                                let totalPage = Math.ceil(totalRow/5);
 
 
-                                            showRow();
-
-
-                                            function prev(page){
-                                                currentPage -= page;
                                                 showRow();
-                                            }
 
-                                            function next(page){
-                                                currentPage += page;
-                                                showRow();
-                                            }
 
-                                            function showRow(){
-                                                reset();
+                                                function prev(page){
+                                                    currentPage -= page;
+                                                    showRow();
+                                                }
 
-                                                for (let i = (currentPage*5)-4; i <= currentPage*5; i++) {
-                                                    document.getElementById('row_' + i).style.display = 'table-row';
-                                                    if(i===totalRow){
-                                                        break;
+                                                function next(page){
+                                                    currentPage += page;
+                                                    showRow();
+                                                }
+
+                                                function showRow(){
+                                                    reset();
+
+                                                    for (let i = (currentPage*5)-4; i <= currentPage*5; i++) {
+                                                        document.getElementById('row_' + i).style.display = 'table-row';
+                                                        if(i===totalRow){
+                                                            break;
+                                                        }
+                                                    }
+
+                                                    reload();
+                                                }
+
+                                                function reset(){
+                                                    for (let i = 1; i <= totalRow; i++) {
+                                                        document.getElementById('row_' + i).style.display = 'none';
                                                     }
                                                 }
 
-                                                reload();
-                                            }
+                                                function reload() {
+                                                    <!-- Previous Button -->
+                                                    if ((currentPage - 1) > 0) {
+                                                        document.getElementById('prevBtn').style.display = 'block';
+                                                    } else {
+                                                        document.getElementById('prevBtn').style.display = 'none';
+                                                    }
 
-                                            function reset(){
-                                                for (let i = 1; i <= totalRow; i++) {
-                                                    document.getElementById('row_' + i).style.display = 'none';
+                                                    <!-- Number Button 1 -->
+                                                    document.getElementById("btn1").innerHTML = currentPage - 2;
+                                                    if ((currentPage - 2) > 0) {
+                                                        document.getElementById("btn1").style.display = 'block';
+                                                    } else {
+                                                        document.getElementById("btn1").style.display = 'none';
+                                                    }
+
+                                                    <!-- Number Button 2 -->
+                                                    document.getElementById("btn2").innerHTML = currentPage - 1;
+                                                    if ((currentPage - 1) > 0) {
+                                                        document.getElementById("btn2").style.display = 'block';
+                                                    } else {
+                                                        document.getElementById("btn2").style.display = 'none';
+                                                    }
+
+                                                    <!-- Number Button 3 -->
+                                                    document.getElementById("btn3").innerHTML = currentPage;
+
+                                                    <!-- Number Button 4 -->
+                                                    document.getElementById("btn4").innerHTML = currentPage + 1;
+                                                    if ((currentPage + 1) <= totalPage) {
+                                                        document.getElementById('btn4').style.display = 'block';
+                                                    } else {
+                                                        document.getElementById('btn4').style.display = 'none';
+                                                    }
+
+                                                    <!-- Number Button 5 -->
+                                                    document.getElementById("btn5").innerHTML = currentPage + 2;
+                                                    if ((currentPage + 2) <= totalPage) {
+                                                        document.getElementById('btn5').style.display = 'block';
+                                                    } else {
+                                                        document.getElementById('btn5').style.display = 'none';
+                                                    }
+
+                                                    <!-- More Button -->
+                                                    if ((currentPage + 3) <= totalPage) {
+                                                        document.getElementById('moreBtn').style.display = 'block';
+                                                    } else {
+                                                        document.getElementById('moreBtn').style.display = 'none';
+                                                    }
+
+                                                    <!-- Next Button -->
+                                                    if (totalPage > 1 && currentPage !== totalPage) {
+                                                        document.getElementById('nextBtn').style.display = 'block';
+                                                    } else {
+                                                        document.getElementById('nextBtn').style.display = 'none';
+                                                    }
                                                 }
-                                            }
-
-                                            function reload() {
-                                                <!-- Previous Button -->
-                                                if ((currentPage - 1) > 0) {
-                                                    document.getElementById('prevBtn').style.display = 'block';
-                                                } else {
-                                                    document.getElementById('prevBtn').style.display = 'none';
-                                                }
-
-                                                <!-- Number Button 1 -->
-                                                document.getElementById("btn1").innerHTML = currentPage - 2;
-                                                if ((currentPage - 2) > 0) {
-                                                    document.getElementById("btn1").style.display = 'block';
-                                                } else {
-                                                    document.getElementById("btn1").style.display = 'none';
-                                                }
-
-                                                <!-- Number Button 2 -->
-                                                document.getElementById("btn2").innerHTML = currentPage - 1;
-                                                if ((currentPage - 1) > 0) {
-                                                    document.getElementById("btn2").style.display = 'block';
-                                                } else {
-                                                    document.getElementById("btn2").style.display = 'none';
-                                                }
-
-                                                <!-- Number Button 3 -->
-                                                document.getElementById("btn3").innerHTML = currentPage;
-
-                                                <!-- Number Button 4 -->
-                                                document.getElementById("btn4").innerHTML = currentPage + 1;
-                                                if ((currentPage + 1) <= totalPage) {
-                                                    document.getElementById('btn4').style.display = 'block';
-                                                } else {
-                                                    document.getElementById('btn4').style.display = 'none';
-                                                }
-
-                                                <!-- Number Button 5 -->
-                                                document.getElementById("btn5").innerHTML = currentPage + 2;
-                                                if ((currentPage + 2) <= totalPage) {
-                                                    document.getElementById('btn5').style.display = 'block';
-                                                } else {
-                                                    document.getElementById('btn5').style.display = 'none';
-                                                }
-
-                                                <!-- More Button -->
-                                                if ((currentPage + 3) <= totalPage) {
-                                                    document.getElementById('moreBtn').style.display = 'block';
-                                                } else {
-                                                    document.getElementById('moreBtn').style.display = 'none';
-                                                }
-
-                                                <!-- Next Button -->
-                                                if (totalPage > 1 && currentPage !== totalPage) {
-                                                    document.getElementById('nextBtn').style.display = 'block';
-                                                } else {
-                                                    document.getElementById('nextBtn').style.display = 'none';
-                                                }
-                                            }
-                                        </script>
-
+                                            </script>
+                                        <?php }?>
                                     </div>
                                     <?php
                                 }else{
