@@ -277,7 +277,7 @@ function diffDateInSeconds(String $datetime){
                                             function showRow(){
 
                                                 for (let i = 1; i <= currentPage*5; i++) {
-                                                    document.getElementById('row_' + (startRow+i)).style.display = 'table-row';
+                                                    document.getElementById('row_' + i).style.display = 'table-row';
                                                 }
                                             }
 
