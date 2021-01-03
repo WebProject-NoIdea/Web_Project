@@ -278,6 +278,7 @@ function diffDateInSeconds(String $datetime){
                                             document.getElementById("btn4").innerHTML = currentPage+1;
                                             document.getElementById("btn5").innerHTML = currentPage+2;
 
+                                            document.getElementById('btn1').style.display = 'none';
                                             <!-- More Button -->
                                             if((currentPage+3)<=totalPage){
                                                 document.getElementById('moreBtn').style.display = 'block';
