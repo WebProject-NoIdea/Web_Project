@@ -245,14 +245,14 @@ function diffDateInSeconds(String $datetime){
                                             </tbody>
                                         </table>
                                         <ul class="table-pagination">
-                                            <li id="prevBtn"><a>Previous</a></li>
-                                            <li><a id="btn1">1</a></li>
-                                            <li><a id="btn2">2</a></li>
+                                            <li onclick="prev(1)" id="prevBtn"><a>Previous</a></li>
+                                            <li onclick="prev(2)"><a id="btn1">1</a></li>
+                                            <li onclick="prev(1)"><a id="btn2">2</a></li>
                                             <li class="active"><a id="btn3">3</a></li>
-                                            <li><a id="btn4">4</a></li>
-                                            <li><a id="btn5">5</a></li>
+                                            <li onclick="next(1)"><a id="btn4">4</a></li>
+                                            <li onclick="next(2)"><a id="btn5">5</a></li>
                                             <li id="moreBtn"><a>...</a></li>
-                                            <li id="nextBtn"><a>Next</a></li>
+                                            <li onclick="next(1)" id="nextBtn"><a>Next</a></li>
                                         </ul>
 
                                         <script>
@@ -264,13 +264,13 @@ function diffDateInSeconds(String $datetime){
 
                                             reload();
 
-                                            function next(page){
-                                                currentPage += page;
+                                            function prev(page){
+                                                currentPage -= page;
                                                 reload();
                                             }
 
-                                            function prev(page){
-                                                currentPage -= page;
+                                            function next(page){
+                                                currentPage += page;
                                                 reload();
                                             }
 
