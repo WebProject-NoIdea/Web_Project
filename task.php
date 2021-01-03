@@ -224,7 +224,7 @@ function diffDateInSeconds(String $datetime){
                                                 if(diffDateInSeconds($row['end_date'])<0){
                                                     echo '<tr style="background-color:#F1948A">';
                                                 }else{
-                                                    echo "<tr>";
+                                                    echo "<tr id='row_$i'>";
                                                 }
 
                                                 echo "    <td>#$i</td>
@@ -359,7 +359,7 @@ function diffDateInSeconds(String $datetime){
 
 
                                             function reset(){
-                                                for (let i = 1; i < <?php echo $result->num_rows+1; ?>; i++) {
+                                                for (let i = 1; i < totalRow; i++) {
                                                     document.getElementById('row_' + i).style.display = 'none';
                                                 }
                                             }
