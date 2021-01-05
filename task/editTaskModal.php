@@ -20,7 +20,7 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            <label class="control-label" for="input-datepicker-start">Start Date</label>
+                            <label class="control-label" for="editInput-datepicker-start">Start Date</label>
                             <div class="input-group" id="editDatepicker-start">
                                 <input type="text" class="form-control" name="startDate" id="editInput-datepicker-start" autocomplete="off">
                                 <span class="input-group-addon">
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="form-group col-sm-6">
-                            <label class="control-label" for="input-datepicker-end">End Date</label>
+                            <label class="control-label" for="editInput-datepicker-end">End Date</label>
                             <div class="input-group" id="editDatepicker-end">
                                 <input type="text" class="form-control" name="endDate" id="editInput-datepicker-end" autocomplete="off">
                                 <span class="input-group-addon">
@@ -70,6 +70,8 @@
                         });
                     </script>
 
+                    <input type="hidden" name="taskId" id="editTaskId">
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -83,10 +85,10 @@
 
                     document.getElementById("editTask").value = row['task'];
                     document.getElementById("editDescription").value = row['description'];
-                    document.getElementById("editInput-datepicker-start").value = "row['start_date']";
+                    document.getElementById("editInput-datepicker-start").value = row['start_date'];
                     document.getElementById("editInput-datepicker-end").value = row['end_date'];
+                    document.getElementById("editTaskId").value = row['end_date'];
                     $("#editModal").modal();
-                    console.log(row);
                 }
 
 
