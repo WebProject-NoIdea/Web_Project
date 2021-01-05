@@ -80,6 +80,8 @@ function taskTable($id,$conn){
 
                                         $row['start_date'] = date_format(date_create($row['start_date']),"D, d M Y h:i A");
                                         $row['end_date'] = date_format(date_create($row['end_date']),"D, d M Y h:i A");
+                                        $row['complete_date'] = date_format(date_create($row['complete_date']),"D, d M Y h:i A");
+
 
                                         if(diffDateInSeconds($row['end_date'])<0){
                                             echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
