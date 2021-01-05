@@ -28,6 +28,15 @@ function taskTable($id){
                     ORDER BY start_date";
             break;
 
+        case "history":
+            $tableName = "History";
+
+            $sql = "SELECT task_id, task, description, start_date, end_date
+                    FROM task 
+                    WHERE user_id=".getUserId()." AND complete_date != '0000-00-00 00:00:00' 
+                    ORDER BY start_date";
+            break;
+
         default:
             $tableName="";
             $sql="";
