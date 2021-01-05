@@ -117,7 +117,7 @@ function taskTable($id){
                                         let table<?php echo $id; ?> = document.getElementById("table_<?php echo $id; ?>");
 
 
-                                        let <?php echo $id; ?>_totalRow = table.rows.length;
+                                        let <?php echo $id; ?>_totalRow = table.tBodies[0].rows.length;
 
                                         let <?php echo $id; ?>_currentPage = 1;
                                         let <?php echo $id; ?>_totalPage = Math.ceil(<?php echo $id; ?>_totalRow/5);
