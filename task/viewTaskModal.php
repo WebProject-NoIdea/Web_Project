@@ -26,7 +26,7 @@
                         <label for="viewInput-datepicker-end">End Date</label>
                         <p id="viewInput-datepicker-end" style="padding-left: 10px"></p>
                     </div>
-                    <div class="form-group">
+                    <div id="completeDate" style="display: none" class="form-group">
                         <label for="viewInput-datepicker-complete">Complete Date</label>
                         <p id="viewInput-datepicker-complete" style="padding-left: 10px"></p>
                     </div>
@@ -39,12 +39,17 @@
 
             <script>
 
-                function view(row){
+                function view(id,row){
                     document.getElementById("viewTask").innerHTML = row['task'];
                     document.getElementById("viewDescription").innerText = row['description'];
                     document.getElementById("viewInput-datepicker-start").innerText = row['start_date'];
                     document.getElementById("viewInput-datepicker-end").innerText = row['end_date'];
-                    document.getElementById("viewInput-datepicker-complete").innerText = row['complete_date'];
+
+                    if(id==="history"){
+                        document.getElementById("viewInput-datepicker-complete").innerText = row['complete_date'];
+                        document.getElementById("completeDate").style.display = "block";
+                    }
+
 
                     $("#viewModal").modal();
                 }
