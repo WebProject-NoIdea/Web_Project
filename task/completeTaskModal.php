@@ -41,6 +41,7 @@
 
                         $("#completeDatepicker-complete").datetimepicker({
                             format:'ddd, DD MMM Y hh:mm A',
+                            maxDateNow: true,
                             widgetPositioning:{
                                 horizontal: 'auto',
                                 vertical: 'bottom',
