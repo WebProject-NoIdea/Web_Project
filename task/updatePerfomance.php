@@ -15,6 +15,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<br>".print_r($row);
+        calPerformance($row['start_date'],$row['end_date'],$row['complete_date']);
     }
 }
 
@@ -31,4 +32,15 @@ function updatePerformance($conn,$taskId){
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
     */
+}
+
+function calPerformance(String $startDate,String $endDate,String $completeDate){
+
+    $timeStartDate  = strtotime($startDate);
+    $timeEndDate = strtotime($endDate);
+    $timeCompleteDate = strtotime($completeDate);
+
+    echo $startDate." - ".$timeStartDate."<br>".$endDate." - ".$timeEndDate."<br>".$completeDate." - ".$completeDate;
+
+
 }
