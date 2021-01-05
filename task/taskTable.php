@@ -53,7 +53,7 @@ function taskTable($id){
                         if ($result->num_rows > 0) { ?>
 
                             <div class="default-table">
-                                <table id="tableId">
+                                <table id="table_<?php echo $id; ?>">
                                     <thead>
                                     <tr>
                                         <th>No.</th>
@@ -114,7 +114,10 @@ function taskTable($id){
 
                                     <script>
 
-                                        let <?php echo $id; ?>_totalRow = <?php echo $result->num_rows; ?>;
+                                        let table<?php echo $id; ?> = document.getElementById("table_<?php echo $id; ?>");
+
+
+                                        let <?php echo $id; ?>_totalRow = table.rows.length;
 
                                         let <?php echo $id; ?>_currentPage = 1;
                                         let <?php echo $id; ?>_totalPage = Math.ceil(<?php echo $id; ?>_totalRow/5);
