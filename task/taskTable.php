@@ -97,6 +97,7 @@ function taskTable($id,$conn){
                                             case "today":
                                                 echo "<td>".$row['end_date']."</td>";
                                                 break;
+
                                             case "upcoming":
                                                 echo "<td>".$row['start_date']."</td>";
                                                 break;
