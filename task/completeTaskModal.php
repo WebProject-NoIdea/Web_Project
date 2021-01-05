@@ -28,7 +28,7 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            <label class="control-label" for="completeInput-datepicker-complete">End Date</label>
+                            <label class="control-label" for="completeInput-datepicker-complete">Complete Date</label>
                             <div class="input-group" id="completeDatepicker-complete">
                                 <input type="text" class="form-control" name="endDate" id="completeInput-datepicker-complete" autocomplete="off">
                                 <span class="input-group-addon">
@@ -53,7 +53,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                    <button type="button" id="completeDeleteBtn" class="btn btn-danger" onclick="deleteTask()" data-dismiss="modal">Delete</button>
                     <button type="submit" id="completeSubmitBtn" class="btn btn-primary">Save changes</button>
                 </div>
             </form>
@@ -65,7 +64,7 @@
                     document.getElementById("completeDescription").innerText = "&nbsp;&nbsp;"+row['description'];
                     document.getElementById("completeInput-datepicker-start").innerText = "&nbsp;&nbsp;"+row['start_date'];
                     document.getElementById("completeInput-datepicker-end").innerText = "&nbsp;&nbsp;"+row['end_date'];
-                    $("#completeDatepicker-complete").data("DateTimePicker").maxDate(row['start_date']);
+                    $("#completeDatepicker-complete").data("DateTimePicker").minDate(row['start_date']);
                     document.getElementById("completeTaskId").value = row['task_id'];
                     $("#completeModal").modal();
                 }
