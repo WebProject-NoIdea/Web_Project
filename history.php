@@ -2,8 +2,6 @@
 
 include("session.php");
 checkLogin();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +17,24 @@ checkLogin();
     <link rel="stylesheet" href="vendor/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>StudLife: Home</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="vendor/jquery/2.2.4/jquery.min.js"></script>
+    <script src="vendor/moment/2.13.0/moment.js"></script>
+    <link href="vendor/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="vendor/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+    <script src="vendor/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -38,94 +46,45 @@ checkLogin();
     <div id="main">
         <div class="inner">
 
-            <!-- Header -->
-            <header id="header">
-                <div class="logo">
-                    <a href="home.php">StudLife</a>
-                </div>
-            </header>
-
-            <!-- Banner -->
-            <section class="main-banner">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="banner-content">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="banner-caption">
-                                            <h4>Hello, welcome to <em>StudLife</em>. </h4>
-                                            <span>StudLife Makes Your Student Life Easier</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In eu mi bibendum neque egestas congue quisque egestas diam. Urna duis convallis convallis tellus id interdum velit laoreet. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div id="addtask">
+                <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="home.php">StudLife</a>
                     </div>
-                </div>
+                </header>
 
-            </section>
 
-            <!-- Daily -->
-            <section class="top-image">
-                <div class="container-fluid">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="down-content">
-                                <h4>Your Task Completed in last 7 days</h4>
-                                <img src="assets/images/daily.png" alt="">
-                                <!--<div class="chart">
-                                <div id="chartContainer1" style="height: 300px; width: 80%;"></div>-->
+                <div class="page-heading">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h1>Task</h1>
+                                <p><strong>Activities</strong> that need to be done .</p>
                             </div>
-                            <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
+                            <div class="col-md-2">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    <i class="fa fa-plus"></i> Add Task
+                                </button>
+                            </div>
 
                         </div>
                     </div>
                 </div>
 
-            </section>
+                <?php include("task/addTaskModal.php"); ?>
+            </div>
 
-            <!-- Weekly -->
-            <section class="top-image">
-                <div class="container-fluid">
 
-                    <div class="row">
-                        <div class="col-md-12">
+            <?php include("task/taskTable.php");
 
-                            <div class="down-content">
-                                <h4>Your Task Completed in last 4 weeks</h4>
-                                <img src="assets/images/weekly.png" alt="">
-                                <!--<div class="chart">
-                                <div id="chartContainer1" style="height: 300px; width: 80%;"></div>-->
-                            </div>
-                            <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
+            include('dbconnect.php');
+            taskTable("history");
 
-                        </div>
-                    </div>
-                </div>
+            include("task/editTaskModal.php");
 
-            </section>
-
-            <!-- Monthly -->
-            <section class="top-image">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="down-content">
-                                <h4>Your Task Completed</h4>
-                                <div class="chart">
-                                    <div id="chartContainer3" style="height: 300px; width: 80%;">
-                                    </div></div>
-                                <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            ?>
 
         </div>
     </div>
@@ -134,52 +93,12 @@ checkLogin();
 
 </div>
 
-<!-- Scripts -->
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/transition.js"></script>
 <script src="assets/js/owl-carousel.js"></script>
 <script src="assets/js/custom.js"></script>
-
-<script type="text/javascript">
-    //monthly
-    window.onload = function () {
-        var chart = new CanvasJS.Chart("chartContainer3",
-            {
-
-                title:{
-                    text: "Performance - per month"
-                },
-                data: [
-                    {
-                        type: "line",
-
-                        dataPoints: [
-                            { x: new Date(2012, 00, 1), y: 450 },
-                            { x: new Date(2012, 01, 1), y: 414 },
-                            { x: new Date(2012, 02, 1), y: 520 },
-                            { x: new Date(2012, 03, 1), y: 460 },
-                            { x: new Date(2012, 04, 1), y: 450 },
-                            { x: new Date(2012, 05, 1), y: 500 },
-                            { x: new Date(2012, 06, 1), y: 480 },
-                            { x: new Date(2012, 07, 1), y: 480 },
-                            { x: new Date(2012, 08, 1), y: 410 },
-        { x: new Date(2012, 09, 1), y: 500 },
-        { x: new Date(2012, 10, 1), y: 480 },
-        { x: new Date(2012, 11, 1), y: 510 }
-    ]
-    }
-    ]
-    });
-
-        chart.render();
-    }
-</script>
-<script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
 
 </body>
 </html>
