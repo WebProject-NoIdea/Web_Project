@@ -79,7 +79,7 @@ checkLogin();
 
             <?php include("task/taskTable.php");
 
-            //taskTable("history");
+            taskTable("history");
 
             include("task/editTaskModal.php");
 
