@@ -269,7 +269,7 @@ function diffDateInSeconds(String $datetime){
 
                                         <script>
                                             function test(row){
-                                                console.log(row);
+                                                console.log(row['task']);
                                             }
                                         </script>
 
