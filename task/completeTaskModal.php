@@ -49,7 +49,7 @@ date_default_timezone_set("Asia/Kuala_Lumpur");
                                 horizontal: 'auto',
                                 vertical: 'bottom',
                             }
-                        }).data("DateTimePicker").maxDate(<?php echo date("D, d M Y h:i A");?>);
+                        }).data("DateTimePicker").maxDate('<?php echo date("D, d M Y h:i A");?>');
                     </script>
 
                     <input type="hidden" name="taskId" id="completeTaskId">
