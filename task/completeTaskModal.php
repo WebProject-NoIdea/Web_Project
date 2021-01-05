@@ -12,7 +12,7 @@
 
                     <div class="form-group">
                         <label for="completeTask">Task</label>
-                        <p id="completeTask"></p>
+                        <p id="completeTask">4545</p>
                     </div>
                     <div class="form-group">
                         <label for="completeDescription">Description</label>
