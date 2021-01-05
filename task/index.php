@@ -99,7 +99,7 @@ function diffDateInSeconds(String $datetime){
                                 <?php
                                 include('../dbconnect.php');
 
-                                $sql = "SELECT * FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 AND complete_date = '0000-00-00 00:00:00' ORDER BY end_date";
+                                $sql = "SELECT task_id, task, description, start_date, end_date FROM task WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 AND complete_date = '0000-00-00 00:00:00' ORDER BY end_date";
 
                                 $result = $conn->query($sql);
 
