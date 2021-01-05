@@ -80,7 +80,7 @@ checkLogin();
             <?php include("task/taskTable.php");
 
 
-                taskTable("today");
+                taskTable("history");
 
 
 
