@@ -136,7 +136,7 @@ function diffDateInSeconds(String $datetime){
                                                             <td>$date</td>
                                                             <td>
                                                                 <button class='btn')'><i class='fa fa-check-square-o'></i></button>
-                                                                <button class='btn' onclick='edit(".json_encode($row)."><i class='fa fa-pencil'></i></button>
+                                                                <button class='btn' onclick='edit(".json_encode($row)."'><i class='fa fa-pencil'></i></button>
                                                 
                                                             </td>
                                                         </tr>";
