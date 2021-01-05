@@ -99,7 +99,7 @@
                         const deleteFormData = new FormData();
                         deleteFormData.append('taskId', document.getElementById("editTaskId").value);
 
-                        fetch('deleteTask.php',{
+                        fetch('http://www.breakvoid.com/Web_Project/task/deleteTask.php',{
                             method: 'post',
                             body: deleteFormData
                         }).then(response => {
