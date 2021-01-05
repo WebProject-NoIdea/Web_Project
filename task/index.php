@@ -81,10 +81,12 @@ checkLogin();
 
                 taskTable("today");
 
+                include("editTaskModal.php");
+
                 taskTable("upcoming");
 
-                include("editTaskModal.php");
             ?>
+
 
     <?php include('../sidebar.php');?>
 
