@@ -10,8 +10,6 @@ function diffDateInSeconds(String $datetime){
 
 function taskTable($id){
 
-    echo "asdad".getUserId();
-
     switch ($id) {
         case "today":
             $tableName = "Today";
@@ -44,8 +42,6 @@ function taskTable($id){
             $sql="";
     }
 
-    echo "asdad".$sql;
-
 ?>
 
     <div id="<?php echo $id; ?>">
@@ -60,6 +56,8 @@ function taskTable($id){
 
                         <?php
                         include('../dbconnect.php');
+
+                        echo "Asssssssssssssssssssss".$conn;
 
                         $result = $conn->query($sql);
 
