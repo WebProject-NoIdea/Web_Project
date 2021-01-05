@@ -88,7 +88,7 @@
             <script>
 
                 function complete(row){
-                    document.getElementById("completeTask").innerHTML = row['task'];
+                    document.getElementById("completeTask").innerHTML = "&nbsp;&nbsp;"+row['task'];
                     document.getElementById("completeDescription").innerText = row['description'];
                     document.getElementById("completeInput-datepicker-start").innerText = row['start_date'];
                     document.getElementById("completeInput-datepicker-end").innerText = row['end_date'];
