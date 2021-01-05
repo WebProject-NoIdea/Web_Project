@@ -31,7 +31,7 @@ function taskTable($id,$conn){
         case "history":
             $tableName = "History";
             $thirdColumn = "Complete Date";
-            $sql = "SELECT task_id, task, description, start_date, end_date
+            $sql = "SELECT task_id, task, description, start_date, end_date, complete_date
                     FROM task 
                     WHERE user_id=".getUserId()." AND complete_date != '0000-00-00 00:00:00' 
                     ORDER BY complete_date DESC";
