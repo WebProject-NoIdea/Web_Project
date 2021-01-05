@@ -6,4 +6,5 @@ $dbPassword = "8:HFMa0:o";
 $dbDatabase = "u198522155_web_project";
 
 // Create connection
-return new mysqli($dbServername, $dbUsername, $dbPassword, $dbDatabase);
+$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbDatabase);
+?>
