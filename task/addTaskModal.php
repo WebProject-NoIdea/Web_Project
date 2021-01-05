@@ -22,7 +22,7 @@
                         <div class="form-group col-sm-6">
                             <label class="control-label" for="input-datepicker-start">Start Date</label>
                             <div class="input-group" id="datepicker-start">
-                                <input type="text" class="form-control" name="startDate" id="input-datepicker-start" autocomplete="off">
+                                <input type="text" class="form-control" name="startDate" id="input-datepicker-start" autocomplete="off" required>
                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
@@ -31,7 +31,7 @@
                         <div class="form-group col-sm-6">
                             <label class="control-label" for="input-datepicker-end">End Date</label>
                             <div class="input-group" id="datepicker-end">
-                                <input type="text" class="form-control" name="endDate" id="input-datepicker-end" autocomplete="off">
+                                <input type="text" class="form-control" name="endDate" id="input-datepicker-end" autocomplete="off" required>
                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
