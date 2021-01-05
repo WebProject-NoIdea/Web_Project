@@ -110,15 +110,15 @@ function taskTable($id,$conn){
 
                                         switch ($id) {
                                             case "today":
-                                                echo "<td>".$row['end_date']."</td>";
+                                                echo "<td onclick='view($id,".json_encode($row).")'>".$row['end_date']."</td>";
                                                 break;
 
                                             case "upcoming":
-                                                echo "<td>".$row['start_date']."</td>";
+                                                echo "<td onclick='view($id,".json_encode($row).")'>".$row['start_date']."</td>";
                                                 break;
 
                                             case "history":
-                                                echo "<td>".$row['complete_date']."</td>";
+                                                echo "<td onclick='view($id,".json_encode($row).")'>".$row['complete_date']."</td>";
                                                 break;
 
                                             default:
