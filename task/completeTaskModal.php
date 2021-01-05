@@ -28,18 +28,9 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
-                            <label class="control-label" for="completeInput-datepicker-start">Start Date</label>
-                            <div class="input-group" id="completeDatepicker-start">
-                                <input type="text" class="form-control" name="startDate" id="completeInput-datepicker-start" autocomplete="off">
-                                <span class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label class="control-label" for="completeInput-datepicker-end">End Date</label>
-                            <div class="input-group" id="completeDatepicker-end">
-                                <input type="text" class="form-control" name="endDate" id="completeInput-datepicker-end" autocomplete="off">
+                            <label class="control-label" for="completeInput-datepicker-complete">End Date</label>
+                            <div class="input-group" id="completeDatepicker-complete">
+                                <input type="text" class="form-control" name="endDate" id="completeInput-datepicker-complete" autocomplete="off">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -49,15 +40,12 @@
                     <script>
                         // Linked date and time picker
                         // start date date and time picker
-                        $("#completeDatepicker-start").datetimepicker({
+                        $("#completeDatepicker-complete").datetimepicker({
                             format:'ddd, DD MMM Y hh:mm A',
                             widgetPositioning:{
                                 horizontal: 'auto',
-                                vertical: 'bottom'
+                                vertical: 'bottom',
                             }
-                        }).on("dp.change", function (e) {
-                            // start date picke on chagne event [select minimun date for end date datepicker]
-                            $("#completeDatepicker-end").data("DateTimePicker").minDate(e.date);
                         });
 
                         // End date date and time picker
@@ -89,9 +77,9 @@
 
                 function complete(row){
                     document.getElementById("completeTask").innerHTML = "&nbsp;&nbsp;"+row['task'];
-                    document.getElementById("completeDescription").innerText = row['description'];
-                    document.getElementById("completeInput-datepicker-start").innerText = row['start_date'];
-                    document.getElementById("completeInput-datepicker-end").innerText = row['end_date'];
+                    document.getElementById("completeDescription").innerText = "&nbsp;&nbsp;"+row['description'];
+                    document.getElementById("completeInput-datepicker-start").innerText = "&nbsp;&nbsp;"+row['start_date'];
+                    document.getElementById("completeInput-datepicker-end").innerText = "&nbsp;&nbsp;"+row['end_date'];
                     document.getElementById("completeTaskId").value = row['task_id'];
                     $("#completeModal").modal();
                 }
