@@ -81,7 +81,7 @@ checkLogin();
 
                 taskTable("today");
 
-                taskTable("upcoming");
+               // taskTable("upcoming");
 
                 include("editTaskModal.php");
             ?>
