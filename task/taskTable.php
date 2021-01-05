@@ -229,6 +229,6 @@ function taskTable($id){
     <script>
         var table = document.getElementById("tableId");
         var totalRowCount = table.rows.length; // 5
-        var tbodyRowCount = table.tBodies[0].rows[0].style.display = 'none';
+        var tbodyRowCount = table.rows[0].style.display = 'none';
     </script>
 <?php } ?>
