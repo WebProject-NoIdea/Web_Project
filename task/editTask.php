@@ -10,7 +10,7 @@ if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
     $startDate =  date_create($_POST['startDate']);
     $endDate = date_create($_POST['endDate']);
 
-    include('../dbConnect.php');
+    $conn = include('../dbConnect.php');
 
     $sql = "UPDATE task
                 SET task='$task',

@@ -7,7 +7,7 @@ if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
     $taskId = $_POST['taskId'];
     $completeDate = date_create($_POST['completeDate']);
 
-    include('../dbConnect.php');
+    $conn = include('../dbConnect.php');
 
     $sql = "UPDATE task
                 SET complete_date='".date_format($completeDate,"Y-m-d H:i:s")."'
