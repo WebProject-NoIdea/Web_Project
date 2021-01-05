@@ -12,11 +12,19 @@
 
                     <div class="form-group">
                         <label for="completeTask">Task</label>
-                        <p id="completeTask">4545</p>
+                        <p id="completeTask"></p>
                     </div>
                     <div class="form-group">
                         <label for="completeDescription">Description</label>
                         <p id="completeDescription"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="completeInput-datepicker-start">Start Date</label>
+                        <p id="completeInput-datepicker-start"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="completeInput-datepicker-end">End Date</label>
+                        <p id="completeInput-datepicker-end"></p>
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
