@@ -53,7 +53,7 @@ function taskTable($id){
                         if ($result->num_rows > 0) { ?>
 
                             <div class="default-table">
-                                <table>
+                                <table id="tableId">
                                     <thead>
                                     <tr>
                                         <th>No.</th>
@@ -226,4 +226,8 @@ function taskTable($id){
         </section>
     </div>
 
+    <script>
+        var totalRowCount = table.rows.length; // 5
+        var tbodyRowCount = table.tBodies[0].rows.length;
+    </script>
 <?php } ?>
