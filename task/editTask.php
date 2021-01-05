@@ -19,10 +19,11 @@ if(isset($_POST['task_id']) AND $_POST['task_id']!=null){
                     end_date='".date_format($endDate,"Y-m-d H:i:s")."'
             WHERE task_id=$task_id";
 
-
+/*
     if ($conn->query($sql) === false) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
+*/
+    echo $sql;
     $conn->close();
 }
