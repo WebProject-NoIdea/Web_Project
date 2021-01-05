@@ -40,7 +40,11 @@ function calPerformance(String $startDate,String $endDate,String $completeDate){
     $timeEndDate = strtotime($endDate);
     $timeCompleteDate = strtotime($completeDate);
 
-    echo $startDate." - ".$timeStartDate."<br>".$endDate." - ".$timeEndDate."<br>".$completeDate." - ".$completeDate;
+    echo $startDate." - ".$timeStartDate."<br>".$endDate." - ".$timeEndDate."<br>".$completeDate." - ".$timeCompleteDate;
+
+    echo ($timeEndDate - $timeStartDate);
+    echo ($timeCompleteDate - $timeStartDate);
+    echo ($timeEndDate - $timeStartDate)/($timeCompleteDate - $timeStartDate)*100;
 
 
 }
