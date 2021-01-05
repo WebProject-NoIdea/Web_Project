@@ -1,7 +1,7 @@
 <?php
 function username()
 {
-    include('dbconnect.php');
+    $conn = include('dbConnect.php');
 
     $sql = "SELECT firstname, lastname FROM user WHERE user_id=".getUserId();
 

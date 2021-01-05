@@ -6,7 +6,7 @@ checkLogin();
 if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
     $taskId = $_POST['taskId'];
 
-    include('../dbconnect.php');
+    include('../dbConnect.php');
 
     $sql = "DELETE FROM task
             WHERE task_id=$taskId AND user_id=".getUserId();
