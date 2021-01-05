@@ -104,7 +104,7 @@ function taskTable($id,$conn){
                                         }
 
 
-                                        $row['tableType'];
+                                        $row['tableType'] = $id;
 
                                         echo "<td onclick='view(".json_encode($row).")'>#$i</td>
                                               <td onclick='view(".json_encode($row).")'>".$row['task']."</td>
