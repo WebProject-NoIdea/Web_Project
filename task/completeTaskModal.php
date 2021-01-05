@@ -30,7 +30,7 @@
                         <div class="form-group col-sm-6">
                             <label class="control-label" for="completeInput-datepicker-complete">Complete Date</label>
                             <div class="input-group" id="completeDatepicker-complete">
-                                <input type="text" class="form-control" name="endDate" id="completeInput-datepicker-complete" autocomplete="off">
+                                <input type="text" class="form-control" name="completeDate" id="completeInput-datepicker-complete" autocomplete="off">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -65,6 +65,7 @@
                     document.getElementById("completeInput-datepicker-start").innerText = row['start_date'];
                     document.getElementById("completeInput-datepicker-end").innerText = row['end_date'];
                     $("#completeDatepicker-complete").data("DateTimePicker").minDate(row['start_date']);
+
                     document.getElementById("completeTaskId").value = row['task_id'];
                     $("#completeModal").modal();
                 }
