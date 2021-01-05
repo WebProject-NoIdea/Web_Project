@@ -104,21 +104,23 @@ function taskTable($id,$conn){
                                         }
 
 
-                                        echo "<td onclick='view(".$id.",".json_encode($row).")'>#$i</td>
-                                              <td onclick='view($id,".json_encode($row).")'>".$row['task']."</td>
-                                              <td onclick='view($id,".json_encode($row).")'>".$row['description']."</td>";
+                                        $row['tableType'];
+
+                                        echo "<td onclick='view(".json_encode($row).")'>#$i</td>
+                                              <td onclick='view(".json_encode($row).")'>".$row['task']."</td>
+                                              <td onclick='view(".json_encode($row).")'>".$row['description']."</td>";
 
                                         switch ($id) {
                                             case "today":
-                                                echo "<td onclick='view($id,".json_encode($row).")'>".$row['end_date']."</td>";
+                                                echo "<td onclick='view(".json_encode($row).")'>".$row['end_date']."</td>";
                                                 break;
 
                                             case "upcoming":
-                                                echo "<td onclick='view($id,".json_encode($row).")'>".$row['start_date']."</td>";
+                                                echo "<td onclick='view(".json_encode($row).")'>".$row['start_date']."</td>";
                                                 break;
 
                                             case "history":
-                                                echo "<td onclick='view($id,".json_encode($row).")'>".$row['complete_date']."</td>";
+                                                echo "<td onclick='view(".json_encode($row).")'>".$row['complete_date']."</td>";
                                                 break;
 
                                             default:

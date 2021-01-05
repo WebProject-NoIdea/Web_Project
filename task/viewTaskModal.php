@@ -39,16 +39,13 @@
 
             <script>
 
-                function view(id,row){
+                function view(row){
                     document.getElementById("viewTask").innerHTML = row['task'];
                     document.getElementById("viewDescription").innerText = row['description'];
                     document.getElementById("viewInput-datepicker-start").innerText = row['start_date'];
                     document.getElementById("viewInput-datepicker-end").innerText = row['end_date'];
 
-                    document.getElementById("completeDate").style.display = "block";
-
-                    document.getElementById("viewInput-datepicker-complete").innerText = id;
-                    if(id==="history"){
+                    if(row['tableType']==="history"){
                         document.getElementById("viewInput-datepicker-complete").innerText = row['complete_date'];
                         document.getElementById("completeDate").style.display = "block";
                     }
