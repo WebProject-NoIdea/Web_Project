@@ -139,7 +139,7 @@ function diffDateInSeconds(String $datetime){
                                                             <td>".$row['description']."</td>
                                                             <td>$date</td>
                                                             <td>
-                                                                <button class='btn' onclick='test($row)'><i class='fa fa-check-square-o'></i></button>
+                                                                <button class='btn' onclick='test(".json_encode($row).")'><i class='fa fa-check-square-o'></i></button>
                                                                 <button class='btn' data-toggle='modal' data-target='#exampleModal"."Today".$row['task_id']."'><i class='fa fa-pencil'></i></button>
                                                 
                                                             </td>
@@ -269,7 +269,7 @@ function diffDateInSeconds(String $datetime){
 
                                         <script>
                                             function test(row){
-                                                console.log(row['task']);
+                                                console.log(row);
                                             }
                                         </script>
 
