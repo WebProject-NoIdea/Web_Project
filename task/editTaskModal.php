@@ -88,7 +88,7 @@
                     document.getElementById("editTask").value = row['task'];
                     document.getElementById("editDescription").value = row['description'];
                     $("#editModal").modal();
-                    console.log(row['task_id']);
+                    console.log(row);
                 }
 
 
