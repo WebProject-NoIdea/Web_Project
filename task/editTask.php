@@ -17,7 +17,7 @@ if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
                     description='$description',
                     start_date='".date_format($startDate,"Y-m-d H:i:s")."',
                     end_date='".date_format($endDate,"Y-m-d H:i:s")."'
-            WHERE task_id=$taskId";
+            WHERE task_id=$taskId AND user_id=".getUserId();
 
     if ($conn->query($sql) === false) {
         echo "Error: " . $sql . "<br>" . $conn->error;
