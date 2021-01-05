@@ -84,6 +84,7 @@ checkLogin();
                 taskTable("upcoming",$conn);
             $conn->close();
 
+                include("viewTaskModal.php");
                 include("editTaskModal.php");
                 include("completeTaskModal.php");
 

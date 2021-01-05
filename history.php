@@ -75,6 +75,7 @@ checkLogin();
                 taskTable("history",$conn);
             $conn->close();
 
+            include("task/viewTaskModal.php");
             include("task/editTaskModal.php");
 
             ?>
