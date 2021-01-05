@@ -1,3 +1,7 @@
+<?php
+date_default_timezone_set("Asia/Kuala_Lumpur");
+?>
+
 <!-- Modal -->
 <div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -45,7 +49,7 @@
                                 horizontal: 'auto',
                                 vertical: 'bottom',
                             }
-                        });
+                        }).data("DateTimePicker").maxDate(<?php echo date("D, d M Y h:i A");?>);
                     </script>
 
                     <input type="hidden" name="taskId" id="completeTaskId">
