@@ -59,21 +59,13 @@ checkLogin();
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-10">
-                                <h1>Task</h1>
-                                <p><strong>Activities</strong> that need to be done .</p>
+                                <h1>History</h1>
+                                <p><strong>Activities</strong> that has been completed.</p>
                             </div>
-                            <div class="col-md-2">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                    <i class="fa fa-plus"></i> Add Task
-                                </button>
-                            </div>
-
                         </div>
                     </div>
                 </div>
 
-                <?php include("task/addTaskModal.php"); ?>
             </div>
 
 
