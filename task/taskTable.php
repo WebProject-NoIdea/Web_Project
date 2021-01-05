@@ -91,22 +91,22 @@ function taskTable($id,$conn){
 
                                         if($id=="history"){
                                             if(diffTwoDateInSeconds($row['end_date'],$row['complete_date'])>0){
-                                                echo "<tr style='background-color:#F1948A' id='".$id."_row_$i' onclick='view($id,".json_encode($row).")'>";
+                                                echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
                                             }else{
-                                                echo "<tr style='background-color:#80ff80' id='".$id."_row_$i' onclick='view($id,".json_encode($row).")'>";
+                                                echo "<tr style='background-color:#80ff80' id='".$id."_row_$i'>";
                                             }
                                         }else{
                                             if(diffDateInSeconds($row['end_date'])<0){
-                                                echo "<tr style='background-color:#F1948A' id='".$id."_row_$i' onclick='view($id,".json_encode($row).")'>";
+                                                echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
                                             }else{
-                                                echo "<tr id='".$id."_row_$i' onclick='view($id,".json_encode($row).")'>";
+                                                echo "<tr id='".$id."_row_$i'>";
                                             }
                                         }
 
 
-                                        echo "    <td>#$i</td>
-                                                            <td>".$row['task']."</td>
-                                                            <td>".$row['description']."</td>";
+                                        echo "    <td onclick='view($id,".json_encode($row).")'>#$i</td>
+                                                  <td onclick='view($id,".json_encode($row).")'>".$row['task']."</td>
+                                                  <td onclick='view($id,".json_encode($row).")'>".$row['description']."</td>";
 
                                         switch ($id) {
                                             case "today":
