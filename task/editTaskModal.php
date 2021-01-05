@@ -87,7 +87,7 @@
                     document.getElementById("editDescription").value = row['description'];
                     document.getElementById("editInput-datepicker-start").value = row['start_date'];
                     document.getElementById("editInput-datepicker-end").value = row['end_date'];
-                    document.getElementById("editTaskId").value = row['end_date'];
+                    document.getElementById("editTaskId").value = row['task_id'];
                     $("#editModal").modal();
                 }
 
