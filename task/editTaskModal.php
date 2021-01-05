@@ -99,7 +99,15 @@
                         const deleteFormData = new FormData();
                         deleteFormData.append('taskId', document.getElementById("editTaskId").value);
 
-                        fetch('http://www.breakvoid.com/Web_Project/task/deleteTask.php',{
+                        <?php
+                            $urlExt = "";
+
+                            $array = explode('/',$_SERVER['REQUEST_URI']);
+                            if( $array[count($array)-2]!="task"){
+                                $urlExt = "task/";
+                            }
+                        ?>
+                        fetch('<?php echo $urlExt; ?>deleteTask.php',{
                             method: 'post',
                             body: deleteFormData
                         }).then(response => {
@@ -124,7 +132,7 @@
 
                     const formData = new FormData(this);
 
-                    fetch('http://www.breakvoid.com/Web_Project/task/editTask.php',{
+                    fetch('<?php echo $urlExt; ?>editTask.php',{
                         method: 'post',
                         body: formData
                     }).then(response => {
