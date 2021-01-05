@@ -124,7 +124,7 @@
 
                     const formData = new FormData(this);
 
-                    fetch('editTask.php',{
+                    fetch('http://www.breakvoid.com/Web_Project/task/editTask.php',{
                         method: 'post',
                         body: formData
                     }).then(response => {
