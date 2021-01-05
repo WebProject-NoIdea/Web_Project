@@ -44,6 +44,8 @@ function taskTable($id){
             $sql="";
     }
 
+    echo "asdad".$sql;
+
 ?>
 
     <div id="<?php echo $id; ?>">
