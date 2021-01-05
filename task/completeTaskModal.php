@@ -12,11 +12,11 @@
 
                     <div class="form-group">
                         <label for="completeTask">Task</label>
-                        <input type="text" class="form-control" id="completeTask" name="task" placeholder="Task" required>
+                        <p id="completeTask"></p>
                     </div>
                     <div class="form-group">
                         <label for="completeDescription">Description</label>
-                        <input type="text" class="form-control" id="completeDescription" name="description" placeholder="Description" required>
+                        <p id="completeDescription"></p>
                     </div>
                     <div class="row">
                         <div class="form-group col-sm-6">
