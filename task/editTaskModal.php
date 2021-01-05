@@ -83,7 +83,6 @@
             <script>
 
                 function edit(row){
-
                     document.getElementById("editTask").value = row['task'];
                     document.getElementById("editDescription").value = row['description'];
                     document.getElementById("editInput-datepicker-start").value = row['start_date'];
