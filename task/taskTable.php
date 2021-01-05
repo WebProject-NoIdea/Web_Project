@@ -57,8 +57,6 @@ function taskTable($id){
                         <?php
                         include('../dbconnect.php');
 
-                        echo "Asssssssssssssssssssss".$conn;
-
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) { ?>
