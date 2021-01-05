@@ -8,7 +8,7 @@ function diffDateInSeconds(String $datetime){
     return $timeSecond - $timeFirst;
 }
 
-function taskTable($id){
+function taskTable($id,$conn){
 
     switch ($id) {
         case "today":
