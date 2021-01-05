@@ -10,6 +10,8 @@ function diffDateInSeconds(String $datetime){
 
 function taskTable($id){
 
+    echo "asdad".getUserId();
+
     switch ($id) {
         case "today":
             $tableName = "Today";
