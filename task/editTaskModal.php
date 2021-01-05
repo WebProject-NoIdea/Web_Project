@@ -89,27 +89,28 @@
                 }
 
                 function deleteTask(){
-                    confirm('Are you sure you want to delete this task?');
+                    const result = confirm('Are you sure you want to delete this task?');
 
-                    document.getElementById("editDeleteBtn").disabled = true;
-                    document.getElementById("editDeleteBtn").innerHTML = "Deleting ...";
-                    document.getElementById("editSubmitBtn").disabled = true;
+                    if (result) {
+                        document.getElementById("editDeleteBtn").disabled = true;
+                        document.getElementById("editDeleteBtn").innerHTML = "Deleting ...";
+                        document.getElementById("editSubmitBtn").disabled = true;
 
-                    const deleteFormData = new FormData();
-                    deleteFormData.append('taskId', document.getElementById("editTaskId").value);
+                        const deleteFormData = new FormData();
+                        deleteFormData.append('taskId', document.getElementById("editTaskId").value);
 
-                    fetch('deleteTask.php',{
-                        method: 'post',
-                        body: deleteFormData
-                    }).then(response => {
-                        console.log(response.text());
-                        if(response.ok){
-                            location.reload();
-                        }
-                    }).catch(error => {
-                        console.log(error);
-                    });
-
+                        fetch('deleteTask.php',{
+                            method: 'post',
+                            body: deleteFormData
+                        }).then(response => {
+                            console.log(response.text());
+                            if(response.ok){
+                                location.reload();
+                            }
+                        }).catch(error => {
+                            console.log(error);
+                        });
+                    }
                 }
 
 
