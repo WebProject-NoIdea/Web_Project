@@ -84,7 +84,7 @@ function taskTable($id){
                                                             <td>".$row['end_date']."</td>
                                                             <td>";
 
-                                                            if($id=="upcoming"){
+                                                            if($id=="today"){
                                                                 echo "<button class='btn'><i class='fa fa-check-square-o'></i></button>";
                                                             }
                                         echo "                  <button class='btn' onclick='edit(".json_encode($row).")'><i class='fa fa-pencil'></i></button>
