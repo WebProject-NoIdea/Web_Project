@@ -13,7 +13,7 @@ function taskTable($id,$conn){
     switch ($id) {
         case "today":
             $tableName = "Today";
-
+            $thirdColumn = "End Date";
             $sql = "SELECT task_id, task, description, start_date, end_date
                     FROM task 
                     WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)<0 AND complete_date = '0000-00-00 00:00:00' 
@@ -21,7 +21,7 @@ function taskTable($id,$conn){
             break;
         case "upcoming":
             $tableName = "Upcoming";
-
+            $thirdColumn = "Start Date";
             $sql = "SELECT task_id, task, description, start_date, end_date
                     FROM task 
                     WHERE user_id=".getUserId()." AND TIMESTAMPDIFF(MINUTE, DATE_ADD(NOW(), INTERVAL 8 HOUR),start_date)>0 AND complete_date = '0000-00-00 00:00:00' 
@@ -30,15 +30,16 @@ function taskTable($id,$conn){
 
         case "history":
             $tableName = "History";
-
+            $thirdColumn = "Complete Date";
             $sql = "SELECT task_id, task, description, start_date, end_date
                     FROM task 
                     WHERE user_id=".getUserId()." AND complete_date != '0000-00-00 00:00:00' 
-                    ORDER BY start_date";
+                    ORDER BY complete_date";
             break;
 
         default:
             $tableName="";
+            $thirdColumn="";
             $sql="";
     }
 
@@ -67,7 +68,7 @@ function taskTable($id,$conn){
                                         <th>No.</th>
                                         <th>Task</th>
                                         <th>Description</th>
-                                        <th>End Date</th>
+                                        <th><?php echo $thirdColumn; ?></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -88,9 +89,25 @@ function taskTable($id,$conn){
 
                                         echo "    <td>#$i</td>
                                                             <td>".$row['task']."</td>
-                                                            <td>".$row['description']."</td>
-                                                            <td>".$row['end_date']."</td>
-                                                            <td>";
+                                                            <td>".$row['description']."</td>";
+
+                                        switch ($id) {
+                                            case "today":
+                                                echo "<td>".$row['end_date']."</td>";
+                                                break;
+                                            case "upcoming":
+                                                echo "<td>".$row['start_date']."</td>";
+                                                break;
+
+                                            case "history":
+                                                echo "<td>".$row['complete_date']."</td>";
+                                                break;
+
+                                            default:
+                                                echo "<td></td>";
+                                        }
+
+                                                           echo "<td>";
 
                                                             if($id=="today"){
                                                                 echo "<button class='btn' onclick='complete(".json_encode($row).")'><i class='fa fa-check-square-o'></i></button>";
