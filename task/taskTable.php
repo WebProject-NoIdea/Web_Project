@@ -1,6 +1,5 @@
 <?php
 
-
 date_default_timezone_set("Asia/Kuala_Lumpur");
 
 function diffDateInSeconds(String $datetime){
@@ -38,7 +37,7 @@ function taskTable($id){
 
     <div id="<?php echo $id; ?>">
         <!-- Tables -->
-        <section class="tables">
+        <section class="tables" <?php if($id=="upcoming"){echo 'style="margin-top: 0;border-top: 0 !important;"';} ?>>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -76,9 +75,9 @@ function taskTable($id){
                                         $row['end_date'] = date_format(date_create($row['end_date']),"D, d M Y h:i A");
 
                                         if(diffDateInSeconds($row['end_date'])<0){
-                                            echo "<tr style='background-color:#F1948A' id='tableToday_row_$i'>";
+                                            echo "<tr style='background-color:#F1948A' id='<?php echo $id; ?>_row_$i'>";
                                         }else{
-                                            echo "<tr id='tableToday_row_$i'>";
+                                            echo "<tr id='<?php echo $id; ?>_row_$i'>";
                                         }
 
                                         echo "    <td>#$i</td>
@@ -102,111 +101,111 @@ function taskTable($id){
                                 <?php if($result->num_rows>5){?>
 
                                     <ul class="table-pagination">
-                                        <li onclick="tableToday_prev(1)" id="tableToday_prevBtn"><a>Previous</a></li>
-                                        <li onclick="tableToday_prev(2)"><a id="tableToday_btn1">1</a></li>
-                                        <li onclick="tableToday_prev(1)"><a id="tableToday_btn2">2</a></li>
-                                        <li class="active"><a id="tableToday_btn3">3</a></li>
-                                        <li onclick="tableToday_next(1)"><a id="tableToday_btn4">4</a></li>
-                                        <li onclick="tableToday_next(2)"><a id="tableToday_btn5">5</a></li>
-                                        <li id="tableToday_moreBtn"><a>...</a></li>
-                                        <li onclick="tableToday_next(1)" id="tableToday_nextBtn"><a>Next</a></li>
+                                        <li onclick="<?php echo $id; ?>_prev(1)" id="<?php echo $id; ?>_prevBtn"><a>Previous</a></li>
+                                        <li onclick="<?php echo $id; ?>_prev(2)"><a id="<?php echo $id; ?>_btn1">1</a></li>
+                                        <li onclick="<?php echo $id; ?>_prev(1)"><a id="<?php echo $id; ?>_btn2">2</a></li>
+                                        <li class="active"><a id="<?php echo $id; ?>_btn3">3</a></li>
+                                        <li onclick="<?php echo $id; ?>_next(1)"><a id="<?php echo $id; ?>_btn4">4</a></li>
+                                        <li onclick="<?php echo $id; ?>_next(2)"><a id="<?php echo $id; ?>_btn5">5</a></li>
+                                        <li id="<?php echo $id; ?>_moreBtn"><a>...</a></li>
+                                        <li onclick="<?php echo $id; ?>_next(1)" id="<?php echo $id; ?>_nextBtn"><a>Next</a></li>
                                     </ul>
 
                                     <script>
 
-                                        let tableToday_totalRow = <?php echo $result->num_rows; ?>;
+                                        let <?php echo $id; ?>_totalRow = <?php echo $result->num_rows; ?>;
 
-                                        let tableToday_currentPage = 1;
-                                        let tableToday_totalPage = Math.ceil(tableToday_totalRow/5);
-
-
-                                        tableToday_showRow();
+                                        let <?php echo $id; ?>_currentPage = 1;
+                                        let <?php echo $id; ?>_totalPage = Math.ceil(<?php echo $id; ?>_totalRow/5);
 
 
-                                        function tableToday_prev(page){
-                                            tableToday_currentPage -= page;
-                                            tableToday_showRow();
+                                        <?php echo $id; ?>_showRow();
+
+
+                                        function <?php echo $id; ?>_prev(page){
+                                            <?php echo $id; ?>_currentPage -= page;
+                                            <?php echo $id; ?>_showRow();
                                         }
 
-                                        function tableToday_next(page){
-                                            tableToday_currentPage += page;
-                                            tableToday_showRow();
+                                        function <?php echo $id; ?>_next(page){
+                                            <?php echo $id; ?>_currentPage += page;
+                                            <?php echo $id; ?>_showRow();
                                         }
 
-                                        function tableToday_showRow(){
-                                            tableToday_reset();
+                                        function <?php echo $id; ?>_showRow(){
+                                            <?php echo $id; ?>_reset();
 
-                                            for (let i = (tableToday_currentPage*5)-4; i <= tableToday_currentPage*5; i++) {
-                                                document.getElementById('tableToday_row_' + i).style.display = 'table-row';
-                                                if(i===tableToday_totalRow){
+                                            for (let i = (<?php echo $id; ?>_currentPage*5)-4; i <= <?php echo $id; ?>_currentPage*5; i++) {
+                                                document.getElementById('<?php echo $id; ?>_row_' + i).style.display = 'table-row';
+                                                if(i===<?php echo $id; ?>_totalRow){
                                                     break;
                                                 }
                                             }
 
-                                            tableToday_reload();
+                                            <?php echo $id; ?>_reload();
                                         }
 
-                                        function tableToday_reset(){
-                                            for (let i = 1; i <= tableToday_totalRow; i++) {
-                                                document.getElementById('tableToday_row_' + i).style.display = 'none';
+                                        function <?php echo $id; ?>_reset(){
+                                            for (let i = 1; i <= <?php echo $id; ?>_totalRow; i++) {
+                                                document.getElementById('<?php echo $id; ?>_row_' + i).style.display = 'none';
                                             }
                                         }
 
-                                        function tableToday_reload() {
+                                        function <?php echo $id; ?>_reload() {
                                             <!-- Previous Button -->
-                                            if ((tableToday_currentPage - 1) > 0) {
-                                                document.getElementById('tableToday_prevBtn').style.display = 'block';
+                                            if ((<?php echo $id; ?>_currentPage - 1) > 0) {
+                                                document.getElementById('<?php echo $id; ?>_prevBtn').style.display = 'block';
                                             } else {
-                                                document.getElementById('tableToday_prevBtn').style.display = 'none';
+                                                document.getElementById('<?php echo $id; ?>_prevBtn').style.display = 'none';
                                             }
 
                                             <!-- Number Button 1 -->
-                                            document.getElementById("tableToday_btn1").innerHTML = tableToday_currentPage - 2;
-                                            if ((tableToday_currentPage - 2) > 0) {
-                                                document.getElementById("tableToday_btn1").style.display = 'block';
+                                            document.getElementById("<?php echo $id; ?>_btn1").innerHTML = <?php echo $id; ?>_currentPage - 2;
+                                            if ((<?php echo $id; ?>_currentPage - 2) > 0) {
+                                                document.getElementById("<?php echo $id; ?>_btn1").style.display = 'block';
                                             } else {
-                                                document.getElementById("tableToday_btn1").style.display = 'none';
+                                                document.getElementById("<?php echo $id; ?>_btn1").style.display = 'none';
                                             }
 
                                             <!-- Number Button 2 -->
-                                            document.getElementById("tableToday_btn2").innerHTML = tableToday_currentPage - 1;
-                                            if ((tableToday_currentPage - 1) > 0) {
-                                                document.getElementById("tableToday_btn2").style.display = 'block';
+                                            document.getElementById("<?php echo $id; ?>_btn2").innerHTML = <?php echo $id; ?>_currentPage - 1;
+                                            if ((<?php echo $id; ?>_currentPage - 1) > 0) {
+                                                document.getElementById("<?php echo $id; ?>_btn2").style.display = 'block';
                                             } else {
-                                                document.getElementById("tableToday_btn2").style.display = 'none';
+                                                document.getElementById("<?php echo $id; ?>_btn2").style.display = 'none';
                                             }
 
                                             <!-- Number Button 3 -->
-                                            document.getElementById("tableToday_btn3").innerHTML = tableToday_currentPage;
+                                            document.getElementById("<?php echo $id; ?>_btn3").innerHTML = <?php echo $id; ?>_currentPage;
 
                                             <!-- Number Button 4 -->
-                                            document.getElementById("tableToday_btn4").innerHTML = tableToday_currentPage + 1;
-                                            if ((tableToday_currentPage + 1) <= tableToday_totalPage) {
-                                                document.getElementById('tableToday_btn4').style.display = 'block';
+                                            document.getElementById("<?php echo $id; ?>_btn4").innerHTML = <?php echo $id; ?>_currentPage + 1;
+                                            if ((<?php echo $id; ?>_currentPage + 1) <= <?php echo $id; ?>_totalPage) {
+                                                document.getElementById('<?php echo $id; ?>_btn4').style.display = 'block';
                                             } else {
-                                                document.getElementById('tableToday_btn4').style.display = 'none';
+                                                document.getElementById('<?php echo $id; ?>_btn4').style.display = 'none';
                                             }
 
                                             <!-- Number Button 5 -->
-                                            document.getElementById("tableToday_btn5").innerHTML = tableToday_currentPage + 2;
-                                            if ((tableToday_currentPage + 2) <= tableToday_totalPage) {
-                                                document.getElementById('tableToday_btn5').style.display = 'block';
+                                            document.getElementById("<?php echo $id; ?>_btn5").innerHTML = <?php echo $id; ?>_currentPage + 2;
+                                            if ((<?php echo $id; ?>_currentPage + 2) <= <?php echo $id; ?>_totalPage) {
+                                                document.getElementById('<?php echo $id; ?>_btn5').style.display = 'block';
                                             } else {
-                                                document.getElementById('tableToday_btn5').style.display = 'none';
+                                                document.getElementById('<?php echo $id; ?>_btn5').style.display = 'none';
                                             }
 
                                             <!-- More Button -->
-                                            if ((tableToday_currentPage + 3) <= tableToday_totalPage) {
-                                                document.getElementById('tableToday_moreBtn').style.display = 'block';
+                                            if ((<?php echo $id; ?>_currentPage + 3) <= <?php echo $id; ?>_totalPage) {
+                                                document.getElementById('<?php echo $id; ?>_moreBtn').style.display = 'block';
                                             } else {
-                                                document.getElementById('tableToday_moreBtn').style.display = 'none';
+                                                document.getElementById('<?php echo $id; ?>_moreBtn').style.display = 'none';
                                             }
 
                                             <!-- Next Button -->
-                                            if (tableToday_totalPage > 1 && tableToday_currentPage !== tableToday_totalPage) {
-                                                document.getElementById('tableToday_nextBtn').style.display = 'block';
+                                            if (<?php echo $id; ?>_totalPage > 1 && <?php echo $id; ?>_currentPage !== <?php echo $id; ?>_totalPage) {
+                                                document.getElementById('<?php echo $id; ?>_nextBtn').style.display = 'block';
                                             } else {
-                                                document.getElementById('tableToday_nextBtn').style.display = 'none';
+                                                document.getElementById('<?php echo $id; ?>_nextBtn').style.display = 'none';
                                             }
                                         }
                                     </script>

@@ -78,14 +78,18 @@ checkLogin();
 
 
             <?php include("taskTable.php");
-                taskTable("today","Today");
-            ?>
 
-            <?php include("editTaskModal.php"); ?>
+                taskTable("today");
+
+                include("editTaskModal.php");
+
+                taskTable("upcoming");
+
+            ?>
 
             <div id="upcoming">
                 <!-- Tables -->
-                <section class="tables" style="margin-top: 0;border-top: 0 !important;">
+                <section class="tables" >
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
