@@ -38,8 +38,7 @@
                         </div>
                     </div>
                     <script>
-                        // Linked date and time picker
-                        // start date date and time picker
+
                         $("#completeDatepicker-complete").datetimepicker({
                             format:'ddd, DD MMM Y hh:mm A',
                             widgetPositioning:{
@@ -47,20 +46,6 @@
                                 vertical: 'bottom',
                             }
                         });
-
-                        // End date date and time picker
-                        $("#completeDatepicker-end").datetimepicker({
-                            format:'ddd, DD MMM Y hh:mm A',
-                            useCurrent: false,
-                            widgetPositioning:{
-                                horizontal: 'auto',
-                                vertical: 'bottom'
-                            }
-                        }).on("dp.change", function (e) {
-                            // Start date picke on chagne event [select maxmimum date for start date datepicker]
-                            $("#completeDatepicker-start").data("DateTimePicker").maxDate(e.date);
-                        });
-
                     </script>
 
                     <input type="hidden" name="taskId" id="completeTaskId">
@@ -80,6 +65,7 @@
                     document.getElementById("completeDescription").innerText = "&nbsp;&nbsp;"+row['description'];
                     document.getElementById("completeInput-datepicker-start").innerText = "&nbsp;&nbsp;"+row['start_date'];
                     document.getElementById("completeInput-datepicker-end").innerText = "&nbsp;&nbsp;"+row['end_date'];
+                    $("#completeDatepicker-complete").data("DateTimePicker").maxDate(row['start_date']);
                     document.getElementById("completeTaskId").value = row['task_id'];
                     $("#completeModal").modal();
                 }
