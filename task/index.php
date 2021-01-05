@@ -80,10 +80,9 @@ checkLogin();
             <?php include("taskTable.php");
 
                 taskTable("today");
+                taskTable("upcoming");
 
                 include("editTaskModal.php");
-
-                taskTable("upcoming");
 
             ?>
 
