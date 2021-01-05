@@ -139,13 +139,14 @@ function diffDateInSeconds(String $datetime){
                                                             <td>".$row['description']."</td>
                                                             <td>$date</td>
                                                             <td>
-                                                                <button class='btn'><i class='fa fa-check-square-o'></i></button>
+                                                                <button class='btn' onclick='test($row)'><i class='fa fa-check-square-o'></i></button>
                                                                 <button class='btn' data-toggle='modal' data-target='#exampleModal"."Today".$row['task_id']."'><i class='fa fa-pencil'></i></button>
                                                 
                                                             </td>
                                                         </tr>";
 
-                                                editModal("Today",$row);
+                                                //editModal("Today",$row);
+
 
                                                 $i++;
                                             }
@@ -265,6 +266,12 @@ function diffDateInSeconds(String $datetime){
                                                 }
                                             </script>
                                         <?php }?>
+
+                                        <script>
+                                            function test(row){
+
+                                            }
+                                        </script>
 
                                     </div>
                                     <?php
