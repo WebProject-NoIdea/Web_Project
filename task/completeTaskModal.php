@@ -60,10 +60,10 @@
             <script>
 
                 function complete(row){
-                    document.getElementById("completeTask").innerHTML = "&nbsp;&nbsp;"+row['task'];
-                    document.getElementById("completeDescription").innerText = "&nbsp;&nbsp;"+row['description'];
-                    document.getElementById("completeInput-datepicker-start").innerText = "&nbsp;&nbsp;"+row['start_date'];
-                    document.getElementById("completeInput-datepicker-end").innerText = "&nbsp;&nbsp;"+row['end_date'];
+                    document.getElementById("completeTask").innerHTML = "  "+row['task'];
+                    document.getElementById("completeDescription").innerText = "  "+row['description'];
+                    document.getElementById("completeInput-datepicker-start").innerText = "  "+row['start_date'];
+                    document.getElementById("completeInput-datepicker-end").innerText = "  "+row['end_date'];
                     $("#completeDatepicker-complete").data("DateTimePicker").minDate(row['start_date']);
                     document.getElementById("completeTaskId").value = row['task_id'];
                     $("#completeModal").modal();
