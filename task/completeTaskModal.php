@@ -40,7 +40,6 @@
                     <script>
 
                         $("#completeDatepicker-complete").datetimepicker({
-                            maxDate:new Date();
                             format:'ddd, DD MMM Y hh:mm A',
                             widgetPositioning:{
                                 horizontal: 'auto',
