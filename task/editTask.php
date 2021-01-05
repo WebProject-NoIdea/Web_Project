@@ -3,8 +3,6 @@
 include("../session.php");
 checkLogin();
 
-echo print_r($_POST);
-/*
 if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
     $taskId = $_POST['taskId'];
     $task = $_POST['task'];
@@ -26,4 +24,4 @@ if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
     }
 
     $conn->close();
-}*/
+}
