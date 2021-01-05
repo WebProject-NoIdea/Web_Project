@@ -84,9 +84,10 @@
             <script>
 
                 function edit(row){
-                    $("#editModal").modal();
+
                     document.getElementById("editTask").innerHTML = row['task_id'];
                     document.getElementById("editDescription").innerHTML = row['description'];
+                    $("#editModal").modal();
                     console.log(row['task_id']);
                 }
 
