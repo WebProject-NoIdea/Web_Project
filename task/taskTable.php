@@ -75,9 +75,9 @@ function taskTable($id){
                                         $row['end_date'] = date_format(date_create($row['end_date']),"D, d M Y h:i A");
 
                                         if(diffDateInSeconds($row['end_date'])<0){
-                                            echo "<tr style='background-color:#F1948A' id='<?php echo $id; ?>_row_$i'>";
+                                            echo "<tr style='background-color:#F1948A' id='".$id."_row_".$i."'>";
                                         }else{
-                                            echo "<tr id='<?php echo $id; ?>_row_$i'>";
+                                            echo "<tr id='".$id."_row_".$i."'>";
                                         }
 
                                         echo "    <td>#$i</td>
