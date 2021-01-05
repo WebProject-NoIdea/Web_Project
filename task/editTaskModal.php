@@ -83,7 +83,7 @@
 
                     document.getElementById("editTask").value = row['task'];
                     document.getElementById("editDescription").value = row['description'];
-                    document.getElementById("input-datepicker-start").value = row['start_date'];
+                    document.getElementById("input-datepicker-start").value = "Tue, 05 Jan 2021 12:00 AM";
                     document.getElementById("input-datepicker-end").value = row['end_date'];
                     $("#editModal").modal();
                     console.log(row);
