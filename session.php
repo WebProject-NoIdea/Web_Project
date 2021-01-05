@@ -13,7 +13,7 @@ function logout(){
     // destroy the session
     session_destroy();
 
-    header( "Location: index.php" );
+    header( "Location: http://www.breakvoid.com/Web_Project/index.php" );
 }
 
 function getUserId(){
