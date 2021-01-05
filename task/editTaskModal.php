@@ -47,6 +47,9 @@
                                 horizontal: 'auto',
                                 vertical: 'bottom'
                             }
+                        }).on("dp.change", function (e) {
+                            // start date picke on chagne event [select minimun date for end date datepicker]
+                            $("#editDatepicker-end").data("DateTimePicker").minDate(e.date);
                         });
 
                         // End date date and time picker
@@ -57,16 +60,15 @@
                                 horizontal: 'auto',
                                 vertical: 'bottom'
                             }
-                        });
-
-                        // start date picke on chagne event [select minimun date for end date datepicker]
-                        $("#editDatepicker-start").on("dp.change", function (e) {
-                            $("#editDatepicker-end").data("DateTimePicker").minDate(e.date);
-                        });
-                        // Start date picke on chagne event [select maxmimum date for start date datepicker]
-                        $("#editDatepicker-end").on("dp.change", function (e) {
+                        }).on("dp.change", function (e) {
+                            // Start date picke on chagne event [select maxmimum date for start date datepicker]
                             $("#editDatepicker-start").data("DateTimePicker").maxDate(e.date);
                         });
+
+
+
+
+
                     </script>
 
                     <input type="hidden" name="taskId" id="editTaskId">
