@@ -3,7 +3,7 @@ session_start();
 
 function checkLogin(){
     if($_SESSION['webProjectLoggedIn'] == false){
-        header( "Location: index.php" );
+        header( "Location: http://www.breakvoid.com/Web_Project/index.php" );
     }
 }
 
