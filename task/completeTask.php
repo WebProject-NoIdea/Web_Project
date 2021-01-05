@@ -13,9 +13,11 @@ if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
                 SET complete_date='".date_format($completeDate,"Y-m-d H:i:s")."'
             WHERE task_id=$taskId AND user_id=".getUserId();
 
-    if ($conn->query($sql) === false) {
+   /* if ($conn->query($sql) === false) {
         echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    }*/
+
+    echo $sql;
 
     $conn->close();
 }
