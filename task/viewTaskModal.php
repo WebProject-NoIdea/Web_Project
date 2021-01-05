@@ -48,6 +48,7 @@
                     document.getElementById("viewInput-datepicker-complete").innerText = row['complete_date'];
                     document.getElementById("completeDate").style.display = "block";
 
+                    document.getElementById("viewInput-datepicker-complete").innerText = id;
                     if(id==="history"){
                         document.getElementById("viewInput-datepicker-complete").innerText = row['complete_date'];
                         document.getElementById("completeDate").style.display = "block";
