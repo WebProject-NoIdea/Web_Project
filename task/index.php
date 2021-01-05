@@ -122,7 +122,8 @@ function diffDateInSeconds(String $datetime){
 
                                             while ($row = $result->fetch_assoc()) {
 
-                                                $date = date_format(date_create($row['end_date']),"D, d M Y h:i A");
+                                                $row['start_date'] = date_format(date_create($row['start_date']),"D, d M Y h:i A");
+                                                $row['end_date'] = date_format(date_create($row['end_date']),"D, d M Y h:i A");
 
                                                 if(diffDateInSeconds($row['end_date'])<0){
                                                     echo "<tr style='background-color:#F1948A' id='tableToday_row_$i'>";
@@ -133,7 +134,7 @@ function diffDateInSeconds(String $datetime){
                                                 echo "    <td>#$i</td>
                                                             <td>".$row['task']."</td>
                                                             <td>".$row['description']."</td>
-                                                            <td>$date</td>
+                                                            <td>".$row['end_date']."</td>
                                                             <td>
                                                                 <button class='btn'><i class='fa fa-check-square-o'></i></button>
                                                                 <button class='btn' onclick='edit(".json_encode($row).")'><i class='fa fa-pencil'></i></button>

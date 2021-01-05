@@ -1,7 +1,3 @@
-<?php
-    //$startDate = date_format(date_create($row['start_date']),"D, d M Y h:i A");
-    //$endDate = date_format(date_create($row['end_date']),"D, d M Y h:i A");
-?>
 <!-- Modal -->
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
