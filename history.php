@@ -79,10 +79,9 @@ checkLogin();
 
             <?php include("task/taskTable.php");
 
-
-                taskTable("history");
-
-
+            $conn = include("../dbconnect.php");
+                taskTable("history",$conn);
+            $conn->close();
 
             include("task/editTaskModal.php");
 

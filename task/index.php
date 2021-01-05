@@ -80,10 +80,8 @@ checkLogin();
             <?php include("taskTable.php");
 
             $conn = include("../dbconnect.php");
-
                 taskTable("today",$conn);
                 taskTable("upcoming",$conn);
-
             $conn->close();
 
                 include("editTaskModal.php");
