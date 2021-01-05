@@ -82,9 +82,12 @@ function taskTable($id){
                                                             <td>".$row['task']."</td>
                                                             <td>".$row['description']."</td>
                                                             <td>".$row['end_date']."</td>
-                                                            <td>
-                                                                <button class='btn'><i class='fa fa-check-square-o'></i></button>
-                                                                <button class='btn' onclick='edit(".json_encode($row).")'><i class='fa fa-pencil'></i></button>
+                                                            <td>";
+
+                                                            if($id=="upcoming"){
+                                                                echo "<button class='btn'><i class='fa fa-check-square-o'></i></button>";
+                                                            }
+                                        echo "                  <button class='btn' onclick='edit(".json_encode($row).")'><i class='fa fa-pencil'></i></button>
                                                 
                                                             </td>
                                                         </tr>";
