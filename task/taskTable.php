@@ -8,6 +8,12 @@ function diffDateInSeconds(String $datetime){
     return $timeSecond - $timeFirst;
 }
 
+function diffTwoDateInSeconds(String $datetime1,String $datetime2){
+    $timeFirst  = strtotime($datetime1);
+    $timeSecond = strtotime($datetime2);
+    return $timeSecond - $timeFirst;
+}
+
 function taskTable($id,$conn){
 
     switch ($id) {
@@ -83,11 +89,20 @@ function taskTable($id,$conn){
                                         $row['complete_date'] = date_format(date_create($row['complete_date']),"D, d M Y h:i A");
 
 
-                                        if(diffDateInSeconds($row['end_date'])<0){
-                                            echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
+                                        if($id=="upcoming"){
+                                            if(diffTwoDateInSeconds($row['end_date'],$row['complete_date'])<0){
+                                                echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
+                                            }else{
+                                                echo "<tr id='".$id."_row_$i'>";
+                                            }
                                         }else{
-                                            echo "<tr id='".$id."_row_$i'>";
+                                            if(diffDateInSeconds($row['end_date'])<0){
+                                                echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
+                                            }else{
+                                                echo "<tr id='".$id."_row_$i'>";
+                                            }
                                         }
+
 
                                         echo "    <td>#$i</td>
                                                             <td>".$row['task']."</td>
