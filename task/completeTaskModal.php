@@ -90,8 +90,8 @@
                 function complete(row){
                     document.getElementById("completeTask").innerHTML = row['task'];
                     document.getElementById("completeDescription").innerText = row['description'];
-                    document.getElementById("completeInput-datepicker-start").value = row['start_date'];
-                    document.getElementById("completeInput-datepicker-end").value = row['end_date'];
+                    document.getElementById("completeInput-datepicker-start").innerText = row['start_date'];
+                    document.getElementById("completeInput-datepicker-end").innerText = row['end_date'];
                     document.getElementById("completeTaskId").value = row['task_id'];
                     $("#completeModal").modal();
                 }
