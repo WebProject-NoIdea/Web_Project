@@ -55,7 +55,6 @@ function taskTable($id){
                         </div>
 
                         <?php
-                        include('../dbconnect.php');
 
                         $result = $conn->query($sql);
 
@@ -226,8 +225,6 @@ function taskTable($id){
                         }else{
                             echo "No Task";
                         }
-
-                        $conn->close();
                         ?>
                     </div>
                 </div>

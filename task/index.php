@@ -79,11 +79,16 @@ checkLogin();
 
             <?php include("taskTable.php");
 
+            include('../dbconnect.php');
+
                 taskTable("today");
                 taskTable("upcoming");
 
+            $conn->close();
+
                 include("editTaskModal.php");
                 include("completeTaskModal.php");
+
 
             ?>
 
