@@ -262,8 +262,6 @@ function diffDateInSeconds(String $datetime){
                                             </script>
                                         <?php }?>
 
-                                        <?php include("editTaskModal.php"); ?>
-
                                     </div>
                                     <?php
                                 }else{
@@ -277,6 +275,8 @@ function diffDateInSeconds(String $datetime){
                     </div>
                 </section>
             </div>
+
+            <?php include("editTaskModal.php"); ?>
 
             <div id="upcoming">
                 <!-- Tables -->

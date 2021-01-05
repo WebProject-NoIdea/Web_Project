@@ -65,10 +65,6 @@
                             $("#editDatepicker-start").data("DateTimePicker").maxDate(e.date);
                         });
 
-
-
-
-
                     </script>
 
                     <input type="hidden" name="taskId" id="editTaskId">
