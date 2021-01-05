@@ -1,5 +1,9 @@
 <?php
+echo date('h:i:s') . "<br>";
 
-$pwd64 = base64_encode("12345678");
-$password = md5($pwd64);
-echo $password;
+//sleep for 3 seconds
+sleep(3);
+
+//start again
+echo date('h:i:s');
+?>
