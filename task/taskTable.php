@@ -89,7 +89,7 @@ function taskTable($id,$conn){
                                         $row['complete_date'] = date_format(date_create($row['complete_date']),"D, d M Y h:i A");
 
 
-                                        if($id=="upcoming"){
+                                        if($id=="history"){
                                             if(diffTwoDateInSeconds($row['end_date'],$row['complete_date'])<0){
                                                 echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
                                             }else{
