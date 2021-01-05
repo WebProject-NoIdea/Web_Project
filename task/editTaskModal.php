@@ -72,6 +72,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteTask()" data-dismiss="modal">Delete</button>
                     <button type="submit" id="editSubmitBtn" class="btn btn-primary">Save changes</button>
                 </div>
             </form>
@@ -85,6 +86,27 @@
                     document.getElementById("editInput-datepicker-end").value = row['end_date'];
                     document.getElementById("editTaskId").value = row['task_id'];
                     $("#editModal").modal();
+                }
+
+                function deleteTask(){
+                    document.getElementById("editSubmitBtn").disabled = true;
+                    document.getElementById("editSubmitBtn").innerHTML = "Saving ...";
+
+                    const deleteFormData = new FormData();
+                    deleteFormData.append('taskId', document.getElementById("editTaskId").value);
+
+                    fetch('deleteTask.php',{
+                        method: 'post',
+                        body: deleteFormData
+                    }).then(response => {
+                        console.log(response.text());
+                        if(response.ok){
+                            location.reload();
+                        }
+                    }).catch(error => {
+                        console.log(error);
+                    });
+
                 }
 
 
