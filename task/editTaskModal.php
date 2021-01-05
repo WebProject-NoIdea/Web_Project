@@ -72,7 +72,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger" onclick="deleteTask()" data-dismiss="modal">Delete</button>
+                    <button type="button" id="editDeleteBtn" class="btn btn-danger" onclick="deleteTask()" data-dismiss="modal">Delete</button>
                     <button type="submit" id="editSubmitBtn" class="btn btn-primary">Save changes</button>
                 </div>
             </form>
@@ -89,6 +89,7 @@
                 }
 
                 function deleteTask(){
+                    document.getElementById("editDeleteBtn").disabled = true;
                     document.getElementById("editSubmitBtn").disabled = true;
                     document.getElementById("editSubmitBtn").innerHTML = "Saving ...";
 
