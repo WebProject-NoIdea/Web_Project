@@ -88,7 +88,7 @@ checkLogin();
             $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbDatabase);
 
                 taskTable("today");
-                taskTable("upcoming");
+                //taskTable("upcoming");
 
             $conn->close();
 
