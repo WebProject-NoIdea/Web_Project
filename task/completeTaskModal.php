@@ -30,7 +30,7 @@
                         <div class="form-group col-sm-6">
                             <label class="control-label" for="completeInput-datepicker-complete">Complete Date</label>
                             <div class="input-group" id="completeDatepicker-complete">
-                                <input type="text" class="form-control" name="completeDate" id="completeInput-datepicker-complete" autocomplete="off">
+                                <input type="text" class="form-control" name="completeDate" id="completeInput-datepicker-complete" autocomplete="off" required>
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
