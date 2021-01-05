@@ -90,7 +90,7 @@ function taskTable($id,$conn){
 
 
                                         if($id=="history"){
-                                            if(diffTwoDateInSeconds($row['end_date'],$row['complete_date'])<0){
+                                            if(diffTwoDateInSeconds($row['end_date'],$row['complete_date'])>0){
                                                 echo "<tr style='background-color:#F1948A' id='".$id."_row_$i'>";
                                             }else{
                                                 echo "<tr id='".$id."_row_$i'>";
