@@ -89,9 +89,11 @@
                 }
 
                 function deleteTask(){
+                    confirm('Are you sure you want to delete this task?');
+
                     document.getElementById("editDeleteBtn").disabled = true;
+                    document.getElementById("editDeleteBtn").innerHTML = "Deleting ...";
                     document.getElementById("editSubmitBtn").disabled = true;
-                    document.getElementById("editSubmitBtn").innerHTML = "Saving ...";
 
                     const deleteFormData = new FormData();
                     deleteFormData.append('taskId', document.getElementById("editTaskId").value);
