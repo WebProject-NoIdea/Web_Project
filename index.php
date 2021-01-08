@@ -78,7 +78,9 @@ function encrypt(String $password){
   </style>
 </head>
 <body>
-
+<div class="title">
+    <h1>StudLife</h1>
+</div>
 <!-- partial:index.partial.html -->
 <div
   class="form"
