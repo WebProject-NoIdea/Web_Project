@@ -63,7 +63,7 @@ function encrypt(String $password){
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Sign-Up/Login Form</title>
+  <title>StudLife - Sign-Up or Login </title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="vendor/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
