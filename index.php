@@ -80,7 +80,7 @@ function encrypt(String $password){
 <body>
 <!-- partial:index.partial.html -->
  <div class="title">
-     <h1>StudLife</h1>
+     <img src="assets/images/logo.png" alt="logo"
     </div>
 <div
   class="form"
@@ -90,15 +90,15 @@ function encrypt(String $password){
     left: 50%;
     width: 600px;
     transform: translate(-50%, -50%);">
-      
+
       <ul class="tab-group">
         <li class="tab active"><a href="#login">Log In</a></li>
         <li class="tab"><a href="#signup">Sign Up</a></li>
       </ul>
-      
+
       <div class="tab-content">
 
-        <div id="login">   
+        <div id="login">
           <h1>Welcome to StudLife!</h1>
 
             <form action="" method="post">
@@ -109,7 +109,7 @@ function encrypt(String $password){
                 </label>
                 <input type="email" name="loginEmail" required autocomplete="off"/>
               </div>
-          
+
               <div class="field-wrap">
                 <label>
                   Password<span class="req">*</span>
@@ -119,7 +119,7 @@ function encrypt(String $password){
 
               <p class="forgot"><a href="#">Forgot Password?</a></p>
               <button type="submit" name="login" class="button button-block">Log In</button>
-          
+
           </form>
         </div>
 

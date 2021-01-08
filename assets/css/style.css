@@ -5,16 +5,16 @@
 html {
   overflow-y: scroll;
 }
-.title h1 {
+.title {
   width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  color: #111;
+  margin-bottom: 5px;
 }
-.title h1 {
-  font-weight: 600;
-  font-size: 30px;
+.title img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 200px;
+  display: block;
 }
 body {
   background: #c1bdba;
