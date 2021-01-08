@@ -5,14 +5,17 @@
 html {
   overflow-y: scroll;
 }
-.title {
+.title h1 {
   width: 100%;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 30px;
   color: #111;
 }
-
+.title h1 {
+  font-weight: 600;
+  font-size: 30px;
+}
 body {
   background: #c1bdba;
   font-family: 'Titillium Web', sans-serif;
