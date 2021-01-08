@@ -7,10 +7,10 @@ html {
 }
 .title {
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 0px;
 }
 .title img {
+  margin-top: 10px;
+  margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
   width: 500px;
