@@ -5,6 +5,13 @@
 html {
   overflow-y: scroll;
 }
+.title{
+  width:100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #111;
+}
 
 body {
   background: #c1bdba;
