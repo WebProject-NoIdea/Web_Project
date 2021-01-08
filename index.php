@@ -80,7 +80,7 @@ function encrypt(String $password){
 <body>
 <!-- partial:index.partial.html -->
  <div class="title">
-     <h3>StudLife</h3>
+     <h1>StudLife</h1>
     </div>
 <div
   class="form"
