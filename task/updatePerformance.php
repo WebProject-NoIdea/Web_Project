@@ -1,7 +1,7 @@
 <?php
 
 function updatePerformance($conn,$taskId){
-    $sql = "SELECT task_id, task, description, start_date, end_date, complete_date,performance
+    $sql = "SELECT start_date, end_date, complete_date
                     FROM task 
                     WHERE task_id=$taskId AND user_id=".getUserId();
 
