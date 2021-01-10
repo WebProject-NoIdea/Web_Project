@@ -181,7 +181,7 @@ checkLogin();
         chart.render();
     }
 </script>
-<script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>
 </html>
