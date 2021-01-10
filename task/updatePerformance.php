@@ -1,11 +1,6 @@
 <?php
 class updatePerformance{
 
-    function __construct() {
-        include("../session.php");
-        checkLogin();
-    }
-
     public function update($conn,$taskId){
         $sql = "SELECT start_date, end_date, complete_date
                     FROM task
