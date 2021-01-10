@@ -2,10 +2,10 @@
 <script>
 
     window.onload = function(){
-        showDoughnutChart();
+        showDoughnutChart("all");
     }
 
-    function showDoughnutChart() {
+    function showDoughnutChart(type) {
 
         let doughnutChartDataPoints = [];
 
