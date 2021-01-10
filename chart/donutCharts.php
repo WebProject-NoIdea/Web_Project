@@ -16,7 +16,7 @@
                 toolTipContent: "<b>{name}:</b> {y} (#percent%)",
                 dataPoints: [
                     { y: 10, name: "Completed", color: "#689F38" },
-                    { y: 0, name: "In Progress", color: "#E7823A" },
+                    { y: 1, name: "In Progress", color: "#E7823A" },
                     { y: 1, name: "Overdue", color: "#D32F2F" }
                 ]
             }]
