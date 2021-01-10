@@ -16,6 +16,7 @@ if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
     if ($conn->query($sql) === false) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }else{
+        include('updatePerformance.php');
         (new updatePerformance)->update($conn,$taskId);
     }
 
