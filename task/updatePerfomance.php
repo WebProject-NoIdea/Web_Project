@@ -51,8 +51,8 @@ function calPerformance(String $startDate,String $endDate,String $completeDate){
 
 
     if($usedTime>$targetTime){
-        echo 100-(($usedTime-$targetTime)/$targetTime*100);
+        echo round(100-(($usedTime-$targetTime)/$targetTime*100),2);
     }else{
-        echo 200-($usedTime/$targetTime*100);
+        echo round(200-($usedTime/$targetTime*100),2);
     }
 }
