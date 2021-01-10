@@ -49,24 +49,12 @@ checkLogin();
                 </div>
             </header>
 
-            <div class="page-heading">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h1>History</h1>
-                            <p><strong>Activities</strong> that has been completed.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="row">
                 <div class="col-md-6">
-                    <h1>History</h1>
                     <?php include("chart/donutCharts.php"); ?>
                 </div>
                 <div class="col-md-6">
-                    <h1>History</h1>
+
                 </div>
             </div>
 

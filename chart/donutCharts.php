@@ -5,7 +5,7 @@
         const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
             animationEnabled: true,
             title: {
-                text: "Email Categories",
+                text: "This Week",
                 horizontalAlign: "left"
             },
             data: [{
@@ -15,9 +15,9 @@
                 indexLabel: "{name} - #percent%",
                 toolTipContent: "<b>{name}:</b> {y} (#percent%)",
                 dataPoints: [
-                    { y: 363040, name: "Completed", color: "#689F38" },
-                    { y: 519960, name: "In Progress", color: "#E7823A" },
-                    { y: 3630, name: "Overdue", color: "#D32F2F" }
+                    { y: 0, name: "Completed", color: "#689F38" },
+                    { y: 0, name: "In Progress", color: "#E7823A" },
+                    { y: 0, name: "Overdue", color: "#D32F2F" }
                 ]
             }]
         });
