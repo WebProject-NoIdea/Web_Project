@@ -30,6 +30,8 @@ checkLogin();
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
+    <link rel="stylesheet" href="assets/css/circle.css">
+
 </head>
 
 <body class="is-preload">
@@ -65,7 +67,13 @@ checkLogin();
                     <?php include("chart/donutCharts.php"); ?>
                 </div>
                 <div class="col-md-6">
-
+                    <div class="c100 p80 big">
+                        <span>80%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

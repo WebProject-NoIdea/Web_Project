@@ -1,36 +1,19 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <script>
-        window.onload = function () {
 
-            const chart = new CanvasJS.Chart("chartContainer", {
-                animationEnabled: true,
-                title: {
-                    text: "Email Categories",
-                    horizontalAlign: "left"
-                },
-                data: [{
-                    type: "doughnut",
-                    startAngle: 60, //innerRadius: 60,
-                    indexLabelFontSize: 17,
-                    indexLabel: "{name} - #percent%",
-                    toolTipContent: "<b>{name}:</b> {y} (#percent%)",
-                    dataPoints: [
-                        { y: 5, name: "Completed", color: "#689F38" },
-                        { y: 4, name: "In Progress", color: "#E7823A" },
-                        { y: 2, name: "Overdue", color: "#D32F2F" }
-                    ]
-                }]
-            });
-            chart.render();
-
-        }
-    </script>
+<link rel="stylesheet" href="assets/css/circle.css">
 </head>
 <body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<div class="c100 p80 big">
+    <span>80%</span>
+    <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+    </div>
+</div>
+
 </body>
 </html>
 <!--
