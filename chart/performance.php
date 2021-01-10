@@ -11,7 +11,7 @@ $sql = "SELECT AVG(performance)
 $result = $conn->query($sql);
 
 while ($row = $result->fetch_assoc()) {
-    echo json_encode($row);
+    echo json_encode(round($row["performance"],2));
 }
 
 $conn->close();
