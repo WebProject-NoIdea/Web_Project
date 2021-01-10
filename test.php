@@ -1,14 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-</head>
-<body>
-<?php include("chart/donutCharts.php"); ?>
-
-<script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
-</body>
-</html>
-
 <?php
 
 include("session.php");
@@ -41,11 +30,6 @@ checkLogin();
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body class="is-preload">
