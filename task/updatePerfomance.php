@@ -15,14 +15,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<br>".print_r($row);
-        calPerformance($row['start_date'],$row['end_date'],$row['complete_date']);
+        echo calPerformance($row['start_date'],$row['end_date'],$row['complete_date']);
     }
 }
 
 $conn->close();
 
 function updatePerformance($conn,$taskId,$performance){
-
 
     $sql = "UPDATE task
                 SET performance=$performance
@@ -38,18 +37,8 @@ function calPerformance(String $startDate,String $endDate,String $completeDate){
     $timeStartDate  = strtotime($startDate);
     $timeEndDate = strtotime($endDate);
     $timeCompleteDate = strtotime($completeDate);
-
-    echo $startDate." - ".$timeStartDate."<br>".$endDate." - ".$timeEndDate."<br>".$completeDate." - ".$timeCompleteDate;
-    echo "<br>";
-
     $targetTime = $timeEndDate - $timeStartDate;
     $usedTime = $timeCompleteDate - $timeStartDate;
-
-    echo "targetTime ".$targetTime;
-    echo "<br>";
-    echo "usedTime ".$usedTime;
-    echo "<br>";
-
 
     if($usedTime>$targetTime){
         $performance = round(100-(($usedTime-$targetTime)/$targetTime*100),2);
@@ -61,5 +50,5 @@ function calPerformance(String $startDate,String $endDate,String $completeDate){
         $performance = 0;
     }
 
-    echo "performance ".$performance."<br>";
+    return $performance;
 }
