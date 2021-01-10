@@ -46,7 +46,7 @@ checkLogin();
     <div id="main">
         <div class="inner">
 
-            <div id="addtask">
+            <div>
                 <!-- Header -->
                 <header id="header">
                     <div class="logo">
