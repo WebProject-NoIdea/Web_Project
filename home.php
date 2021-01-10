@@ -45,9 +45,6 @@ checkLogin();
                 </div>
             </header>
 
-
-            <?php include("chart/donutCharts.php"); ?>
-
             <!-- Banner -->
             <section class="main-banner">
                 <div class="container-fluid">
