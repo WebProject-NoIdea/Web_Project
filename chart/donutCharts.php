@@ -21,14 +21,25 @@
         });
 
         function doughnutChartAddData(data) {
-            doughnutChartDataPoints = [
-                { y: data.completed, name: "Completed", color: "#689F38" },
-                { y: data.in_progress, name: "In Progress", color: "#E7823A" },
-                { y: data.overdue, name: "Overdue", color: "#D32F2F" }
-            ]
+            doughnutChartDataPoints.push({
+                y: data.completed,
+                name: "Completed",
+                color: "#689F38"
+            });
+            doughnutChartDataPoints.push({
+                y: data.in_progress,
+                name: "In Progress",
+                color: "#E7823A"
+            });
+            doughnutChartDataPoints.push({
+                y: data.overdue,
+                name: "Overdue",
+                color: "#D32F2F"
+            });
+
             doughnutChart.render();
         }
 
-        $.getJSON("http://www.breakvoid.com/Web_Project/chart/statistics.php", doughnutChartAddData);
+        $.getJSON("chart/statistics.php", doughnutChartAddData);
     }
 </script>
