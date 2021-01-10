@@ -2,7 +2,7 @@
 <script>
     window.onload = function () {
 
-        const doughnutChart = new CanvasJS.Chart("chartContainer", {
+        const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
             animationEnabled: true,
             title: {
                 text: "Email Categories",
