@@ -61,5 +61,5 @@ function calPerformance(String $startDate,String $endDate,String $completeDate){
         $performance = 0;
     }
 
-    echo "asd  ".$performance."<br>";
+    echo "performance ".$performance."<br>";
 }
