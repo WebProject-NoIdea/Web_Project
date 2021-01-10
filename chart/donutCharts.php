@@ -13,7 +13,7 @@
             data: [{
                 type: "doughnut",
                 startAngle: 60, //innerRadius: 60,
-                indexLabelFontSize: 12,
+                indexLabelFontSize: 16,
                 indexLabel: "{name} #percent%",
                 toolTipContent: "<b>{name}:</b> {y} (#percent%)",
                 dataPoints: doughnutChartDataPoints
