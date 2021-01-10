@@ -57,26 +57,23 @@ checkLogin();
     <div id="main">
         <div class="inner">
 
-            <div>
-                <!-- Header -->
-                <header id="header">
-                    <div class="logo">
-                        <a href="home.php">StudLife</a>
-                    </div>
-                </header>
 
+            <!-- Header -->
+            <header id="header">
+                <div class="logo">
+                    <a href="home.php">StudLife</a>
+                </div>
+            </header>
 
-                <div class="page-heading">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-10">
-                                <h1>History</h1>
-                                <p><strong>Activities</strong> that has been completed.</p>
-                            </div>
+            <div class="page-heading">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h1>History</h1>
+                            <p><strong>Activities</strong> that has been completed.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <?php include("chart/donutCharts.php"); ?>
