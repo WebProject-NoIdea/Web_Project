@@ -1,4 +1,4 @@
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
 <script>
     window.onload = function () {
 
@@ -25,3 +25,4 @@
 
     }
 </script>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
