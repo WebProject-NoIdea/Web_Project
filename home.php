@@ -31,6 +31,8 @@ checkLogin();
 
 <body class="is-preload">
 
+<?php include("chart/donutCharts.php"); ?>
+
 <!-- Wrapper -->
 <div id="wrapper">
 
