@@ -31,8 +31,6 @@ checkLogin();
 
 <body class="is-preload">
 
-<?php include("chart/donutCharts.php"); ?>
-
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -46,6 +44,9 @@ checkLogin();
                     <a href="home.php">StudLife</a>
                 </div>
             </header>
+
+
+            <?php include("chart/donutCharts.php"); ?>
 
             <!-- Banner -->
             <section class="main-banner">
