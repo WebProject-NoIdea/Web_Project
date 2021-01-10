@@ -30,6 +30,10 @@
                         <label for="viewInput-datepicker-complete">Complete Date</label>
                         <p id="viewInput-datepicker-complete" style="padding-left: 10px"></p>
                     </div>
+                    <div id="performance" style="display: none" class="form-group">
+                        <label for="viewInput-datepicker-complete">Performance</label>
+                        <p id="viewPerformance" style="padding-left: 10px"></p>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
