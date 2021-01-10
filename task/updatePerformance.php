@@ -3,8 +3,8 @@ class updatePerformance{
 
     public function update($conn,$taskId){
         $sql = "SELECT start_date, end_date, complete_date
-                    FROM task
-                    WHERE task_id=$taskId AND user_id=".getUserId();
+                    FROM task";
+                    //WHERE task_id=$taskId AND user_id=".getUserId();
 
         $result = $conn->query($sql);
 
