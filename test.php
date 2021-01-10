@@ -76,8 +76,9 @@ checkLogin();
                 </div>
             </div>
 
-            <?php include("chart/donutCharts.php"); ?>
-
+            <div>
+                <?php include("chart/donutCharts.php"); ?>
+            </div>
         </div>
     </div>
 
