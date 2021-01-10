@@ -16,6 +16,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<br>".print_r($row);
         echo calPerformance($row['start_date'],$row['end_date'],$row['complete_date']);
+        updatePerformance($conn,$row['task_id'],calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
     }
 }
 
