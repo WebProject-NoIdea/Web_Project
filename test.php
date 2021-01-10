@@ -67,6 +67,7 @@ checkLogin();
                     <?php include("chart/donutCharts.php"); ?>
                 </div>
                 <div class="col-md-6">
+
                     <div class="c100 p80 big">
                         <span>80%</span>
                         <div class="slice">
