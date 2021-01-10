@@ -22,9 +22,9 @@
 
         function doughnutChartAddData(data) {
             doughnutChartDataPoints = [
-                { y: data[0]['complete'], name: "Completed", color: "#689F38" },
-                { y: data[0]['in_progress'], name: "In Progress", color: "#E7823A" },
-                { y: data[0]['overdue'], name: "Overdue", color: "#D32F2F" }
+                { y: data.completed, name: "Completed", color: "#689F38" },
+                { y: data.in_progress, name: "In Progress", color: "#E7823A" },
+                { y: data.overdue, name: "Overdue", color: "#D32F2F" }
             ]
             doughnutChart.render();
         }
