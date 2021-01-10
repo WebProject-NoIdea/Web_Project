@@ -2,6 +2,8 @@
 <script>
     window.onload = function () {
 
+        let doughnutChartDataPoints = [];
+
         const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
             animationEnabled: true,
             title: {
@@ -14,14 +16,19 @@
                 indexLabelFontSize: 12,
                 indexLabel: "{name} - #percent%",
                 toolTipContent: "<b>{name}:</b> {y} (#percent%)",
-                dataPoints: [
-                    { y: 10, name: "Completed", color: "#689F38" },
-                    { y: 1, name: "In Progress", color: "#E7823A" },
-                    { y: 1, name: "Overdue", color: "#D32F2F" }
-                ]
+                dataPoints: doughnutChartDataPoints
             }]
         });
-        doughnutChart.render();
 
+        function doughnutChartAddData(data) {
+            doughnutChartDataPoints = [
+                { y: data['complete'], name: "Completed", color: "#689F38" },
+                { y: data['in_progress'], name: "In Progress", color: "#E7823A" },
+                { y: data['overdue'], name: "Overdue", color: "#D32F2F" }
+            ]
+            doughnutChart.render();
+        }
+
+        $.getJSON("http://www.breakvoid.com/Web_Project/chart/statistics.php", doughnutChartAddData);
     }
 </script>
