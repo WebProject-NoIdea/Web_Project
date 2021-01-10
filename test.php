@@ -5,6 +5,6 @@
 <body>
 <?php include("chart/donutCharts.php"); ?>
 
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
 </body>
 </html>
