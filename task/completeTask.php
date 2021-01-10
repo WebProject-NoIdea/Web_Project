@@ -18,6 +18,8 @@ if(isset($_POST['taskId']) AND $_POST['taskId']!=null){
     }else{
         include("updatePerformance.php");
         updatePerformance($conn,$taskId);
+
+        echo "done";
     }
 
     $conn->close();
