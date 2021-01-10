@@ -1,19 +1,22 @@
 <?php
-
-function updatePerformance($conn,$taskId){
-    $sql = "SELECT start_date, end_date, complete_date
+class updatePerformance{
+    public static function update($conn,$taskId){
+        $sql = "SELECT start_date, end_date, complete_date
                     FROM task 
                     WHERE task_id=$taskId AND user_id=".getUserId();
 
-    $result = $conn->query($sql);
+        $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            updateDatabase($conn,$taskId,calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                updateDatabase($conn,$taskId,calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
+            }
         }
+
+
     }
 
-    function updateDatabase($conn,$taskId,$performance){
+    private function updateDatabase($conn,$taskId,$performance){
 
         $sql = "UPDATE task
                 SET performance=$performance
@@ -24,7 +27,7 @@ function updatePerformance($conn,$taskId){
         }
     }
 
-    function calPerformance(String $startDate,String $endDate,String $completeDate){
+    private function calPerformance(String $startDate,String $endDate,String $completeDate){
 
         $timeStartDate  = strtotime($startDate);
         $timeEndDate = strtotime($endDate);
@@ -44,4 +47,5 @@ function updatePerformance($conn,$taskId){
 
         return $performance;
     }
+
 }
