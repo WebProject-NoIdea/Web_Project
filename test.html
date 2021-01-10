@@ -75,6 +75,17 @@
                 name: "Completed",
                 color: "#689F38"
             });
+            doughnutChartDataPoints.push({
+                y: data.in_progress,
+                name: "In Progress",
+                color: "#E7823A"
+            });
+            doughnutChartDataPoints.push({
+                y: data.overdue,
+                name: "Overdue",
+                color: "#D32F2F"
+            });
+
             doughnutChart.render();
         }
 
