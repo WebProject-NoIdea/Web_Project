@@ -40,8 +40,6 @@ checkLogin();
     <!-- Main -->
     <div id="main">
         <div class="inner">
-
-
             <!-- Header -->
             <header id="header">
                 <div class="logo">
@@ -54,7 +52,7 @@ checkLogin();
                     <?php include("chart/donutCharts.php"); ?>
                 </div>
                 <div class="col-md-6">
-
+                    HAHAHA
                 </div>
             </div>
 
