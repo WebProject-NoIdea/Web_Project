@@ -56,7 +56,7 @@ checkLogin();
                                         <div class="banner-caption">
                                             <h4>Hello, welcome to <em>StudLife</em>. </h4>
                                             <span>StudLife Makes Your Student Life Easier</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In eu mi bibendum neque egestas congue quisque egestas diam. Urna duis convallis convallis tellus id interdum velit laoreet. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. </p>
+                                            <p>StudLife is a DashBoard System which designed and developed specially for University Student. StudLife helps student to manage their daily task such as assignment, meeting or even an event. We hope that by using StudLife, you will be able to keep track of your task better and be more productive as a student. </p>
 
                                         </div>
                                     </div>
