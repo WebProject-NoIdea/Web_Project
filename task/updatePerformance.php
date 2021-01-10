@@ -9,7 +9,7 @@ function updatePerformance($conn,$taskId){
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            updateDatabase($conn,$row['task_id'],calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
+            updateDatabase($conn,$taskId,calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
         }
     }
 
