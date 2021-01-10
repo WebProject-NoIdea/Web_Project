@@ -1,4 +1,4 @@
-<div id="doughnutChartContainer" style="height: 370px; width: 80%;"></div>
+<div id="doughnutChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
     window.onload = function () {
 
@@ -16,6 +16,8 @@
                 indexLabelFontSize: 16,
                 indexLabel: "{name} #percent%",
                 toolTipContent: "<b>{name}:</b> {y} (#percent%)",
+                legendMarkerType: "square",
+                showInLegend: true,
                 dataPoints: doughnutChartDataPoints
             }]
         });
