@@ -15,7 +15,7 @@
                 indexLabel: "{name} - #percent%",
                 toolTipContent: "<b>{name}:</b> {y} (#percent%)",
                 dataPoints: [
-                    { y: 0, name: "Completed", color: "#689F38" },
+                    { y: 10, name: "Completed", color: "#689F38" },
                     { y: 0, name: "In Progress", color: "#E7823A" },
                     { y: 0, name: "Overdue", color: "#D32F2F" }
                 ]
