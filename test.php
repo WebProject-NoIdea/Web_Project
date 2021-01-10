@@ -62,11 +62,10 @@ checkLogin();
 
             <div class="row">
                 <div class="col-md-6">
-                    <h1>History</h1>
                     <?php include("chart/donutCharts.php"); ?>
                 </div>
                 <div class="col-md-6">
-                    <h1>History</h1>
+
                 </div>
             </div>
 

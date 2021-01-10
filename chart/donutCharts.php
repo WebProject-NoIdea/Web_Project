@@ -1,6 +1,5 @@
 <div id="doughnutChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
-    window.onload = function () {
 
         let doughnutChartDataPoints = [];
 
@@ -43,5 +42,5 @@
         }
 
         $.getJSON("chart/statistics.php", doughnutChartAddData);
-    }
+
 </script>
