@@ -1,9 +1,15 @@
 <?php
 class updatePerformance{
+
+    function __construct() {
+        include("../session.php");
+        checkLogin();
+    }
+
     public function update($conn,$taskId){
         $sql = "SELECT start_date, end_date, complete_date
-                    FROM task";
-                   // WHERE task_id=$taskId AND user_id=".getUserId();
+                    FROM task
+                    WHERE task_id=$taskId AND user_id=".getUserId();
 
         $result = $conn->query($sql);
 
@@ -12,8 +18,6 @@ class updatePerformance{
                 $this->updateDatabase($conn,$taskId,$this->calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
             }
         }
-
-
     }
 
     private function updateDatabase($conn,$taskId,$performance){
