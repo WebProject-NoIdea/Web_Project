@@ -13,10 +13,9 @@ $sql = "SELECT
 
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo print_r($row);
-    }
+
+while ($row = $result->fetch_assoc()) {
+    echo json_encode($row);
 }
 
 $conn->close();
