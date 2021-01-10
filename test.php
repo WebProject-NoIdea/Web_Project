@@ -1,8 +1,10 @@
-<?php
-echo date('h:i:s') . "<br>";
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<?php include("chart/donutCharts.php"); ?>
 
-
-
-//start again
-echo date('h:i:s');
-?>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
