@@ -7,7 +7,7 @@
         const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
             animationEnabled: true,
             title: {
-                text: "This Week",
+                text: "Total",
                 horizontalAlign: "left"
             },
             data: [{
