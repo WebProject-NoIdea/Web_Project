@@ -1,6 +1,6 @@
 <?php
 class updatePerformance{
-    public static function update($conn,$taskId){
+    public function update($conn,$taskId){
         $sql = "SELECT start_date, end_date, complete_date
                     FROM task 
                     WHERE task_id=$taskId AND user_id=".getUserId();
@@ -9,7 +9,7 @@ class updatePerformance{
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                updateDatabase($conn,$taskId,calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
+                $this->updateDatabase($conn,$taskId,$this->calPerformance($row['start_date'],$row['end_date'],$row['complete_date']));
             }
         }
 
