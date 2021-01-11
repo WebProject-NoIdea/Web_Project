@@ -68,14 +68,9 @@ checkLogin();
                 </div>
                 <div class="col-md-6">
                     <div style="height: 370px; width: 100%;">
-                        <div class="c100 p80 big">
-                            <span>80%</span>
-                            <div class="slice">
-                                <div class="bar"></div>
-                                <div class="fill"></div>
-                            </div>
-                        </div>
+                        <div class="counter" data-cp-percentage="10" data-cp-color="#00bfeb"></div>
                         <h5>Average Performance</h5>
+
                     </div>
 
                 </div>
@@ -89,6 +84,7 @@ checkLogin();
 
 </div>
 
+<script type="text/javascript" src="assets/js/circle.js"></script>
 <script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
