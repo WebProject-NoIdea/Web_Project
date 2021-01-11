@@ -58,11 +58,11 @@ checkLogin();
             </div>
 
             <div class="row">
-                <div class="col-md-6" style="padding-bottom: 20px;">
+                <div class="col-md-6" style="padding-bottom: 50px;">
                     <?php include("chart/donutChart.php"); ?>
                 </div>
 
-                <div class="col-md-6" style="height: 400px;">
+                <div class="col-md-6" style="padding-bottom: 50px;">
                     <?php include("chart/performanceChart.php"); ?>
                 </div>
             </div>
