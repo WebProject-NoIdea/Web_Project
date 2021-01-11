@@ -13,7 +13,7 @@
 
         <script src="vendor/jquery/2.2.4/jquery.min.js"></script>
         <script src="vendor/moment/2.13.0/moment.js"></script>
-        <link href="vendor/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
@@ -106,9 +106,16 @@
                                                 }
                                         </script>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" style="height: 370px;">
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                                <div class="counter" data-cp-percentage="75" data-cp-color="#00bfeb" style="margin: 0"></div>
+                                        </div>
+                                        <div >
+                                                <div style="position: absolute; left: 50%; transform: translate(-50%); bottom: 0;width: 300px;">
+                                                        <h4 style="text-align: center;">Average Performance</h4>
+                                                </div>
 
-                                        <div class="counter" data-cp-percentage="10" data-cp-color="#00bfeb"></div>
+                                        </div>
 
 
                                 </div>
@@ -118,17 +125,14 @@
                 </div>
         </div>
 
-        <?php include('sidebar.php');?>
 
 </div>
 
 <script type="text/javascript" src="assets/js/circle.js"></script>
 <script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/transition.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
