@@ -11,10 +11,6 @@
 
         const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
             animationEnabled: true,
-            title: {
-                text: "Total",
-                horizontalAlign: "left"
-            },
             data: [{
                 type: "doughnut",
                 startAngle: 60, //innerRadius: 60,

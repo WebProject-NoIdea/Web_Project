@@ -75,6 +75,7 @@ checkLogin();
                             <div class="fill"></div>
                         </div>
                     </div>
+                    <h3>Average Performance</h3>
                 </div>
             </div>
 
