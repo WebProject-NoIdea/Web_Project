@@ -1,193 +1,134 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
-<link rel="stylesheet" href="assets/css/circle.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="vendor/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>StudLife: Home</title>
+
+        <script src="vendor/jquery/2.2.4/jquery.min.js"></script>
+        <script src="vendor/moment/2.13.0/moment.js"></script>
+        <link href="vendor/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/templatemo-style.css">
+        <link rel="stylesheet" href="assets/css/owl.css">
+
+        <link rel="stylesheet" href="assets/css/circle.css">
+
 </head>
-<body>
+
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+                <div class="inner">
 
 
+                        <!-- Header -->
+                        <header id="header">
+                                <div class="logo">
+                                        <a href="home.php">StudLife</a>
+                                </div>
+                        </header>
 
-        <div class="counter" data-cp-percentage="10" data-cp-color="#00bfeb"></div>
+                        <div class="page-heading">
+                                <div class="container-fluid">
+                                        <div class="row">
+                                                <div class="col-md-10">
+                                                        <h1>History</h1>
+                                                        <p><strong>Activities</strong> that has been completed.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col-md-6">
+                                        <div id="doughnutChartContainer" style="height: 370px; width: 100%;"></div>
+                                        <script>
+
+                                                window.onload = function(){
+                                                        showDoughnutChart("all");
+                                                }
+
+                                                function showDoughnutChart(type) {
+
+                                                        let doughnutChartDataPoints = [];
+
+                                                        const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
+                                                                animationEnabled: true,
+                                                                data: [{
+                                                                        type: "doughnut",
+                                                                        startAngle: 60, //innerRadius: 60,
+                                                                        indexLabelFontSize: 12,
+                                                                        indexLabel: "{name} #percent%",
+                                                                        toolTipContent: "<b>{name}:</b> {y} (#percent%)",
+                                                                        legendMarkerType: "square",
+                                                                        showInLegend: true,
+                                                                        dataPoints: doughnutChartDataPoints
+                                                                }]
+                                                        });
+
+                                                        function doughnutChartAddData() {
+                                                                doughnutChartDataPoints.push({
+                                                                        y: 5,
+                                                                        name: "Completed",
+                                                                        color: "#689F38"
+                                                                });
+                                                                doughnutChartDataPoints.push({
+                                                                        y:2,
+                                                                        name: "In Progress",
+                                                                        color: "#E7823A"
+                                                                });
+                                                                doughnutChartDataPoints.push({
+                                                                        y: 2,
+                                                                        name: "Overdue",
+                                                                        color: "#D32F2F"
+                                                                });
+
+                                                                doughnutChart.render();
+                                                        }
+
+                                                        doughnutChartAddData();
+                                                }
+                                        </script>
+                                </div>
+                                <div class="col-md-6">
+
+                                        <div class="counter" data-cp-percentage="10" data-cp-color="#00bfeb"></div>
 
 
-        <script type="text/javascript" src="assets/js/circle.js"></script>
+                                </div>
+                        </div>
 
 
+                </div>
+        </div>
+
+        <?php include('sidebar.php');?>
+
+</div>
+
+<script type="text/javascript" src="assets/js/circle.js"></script>
+<script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/transition.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/custom.js"></script>
 
 </body>
 </html>
-<!--
-<!DOCTYPE HTML>
-<html>
-<head>
-    <script>
-        window.onload = function () {
-
-            var totalVisitors = 883000;
-            var visitorsData = {
-                "New vs Returning Visitors": [{
-                    click: visitorsChartDrilldownHandler,
-                    cursor: "pointer",
-                    explodeOnClick: false,
-                    innerRadius: "60%",
-                    legendMarkerType: "square",
-                    name: "New vs Returning Visitors",
-                    radius: "100%",
-                    showInLegend: true,
-                    startAngle: 90,
-                    type: "doughnut",
-                    dataPoints: [
-                        { y: 363040, name: "Completed", color: "#689F38" },
-                        { y: 519960, name: "In progress", color: "#E7823A" },
-                        { y: 363040, name: "Overdue", color: "#F44336" }
-                    ]
-                }],
-                "New Visitors": [{
-                    color: "#E7823A",
-                    name: "New Visitors",
-                    type: "column",
-                    dataPoints: [
-                        { x: new Date("1 Jan 2015"), y: 33000 },
-                        { x: new Date("1 Feb 2015"), y: 35960 },
-                        { x: new Date("1 Mar 2015"), y: 42160 },
-                        { x: new Date("1 Apr 2015"), y: 42240 },
-                        { x: new Date("1 May 2015"), y: 43200 },
-                        { x: new Date("1 Jun 2015"), y: 40600 },
-                        { x: new Date("1 Jul 2015"), y: 42560 },
-                        { x: new Date("1 Aug 2015"), y: 44280 },
-                        { x: new Date("1 Sep 2015"), y: 44800 },
-                        { x: new Date("1 Oct 2015"), y: 48720 },
-                        { x: new Date("1 Nov 2015"), y: 50840 },
-                        { x: new Date("1 Dec 2015"), y: 51600 }
-                    ]
-                }],
-                "Returning Visitors": [{
-                    color: "#546BC1",
-                    name: "Returning Visitors",
-                    type: "column",
-                    dataPoints: [
-                        { x: new Date("1 Jan 2015"), y: 22000 },
-                        { x: new Date("1 Feb 2015"), y: 26040 },
-                        { x: new Date("1 Mar 2015"), y: 25840 },
-                        { x: new Date("1 Apr 2015"), y: 23760 },
-                        { x: new Date("1 May 2015"), y: 28800 },
-                        { x: new Date("1 Jun 2015"), y: 29400 },
-                        { x: new Date("1 Jul 2015"), y: 33440 },
-                        { x: new Date("1 Aug 2015"), y: 37720 },
-                        { x: new Date("1 Sep 2015"), y: 35200 },
-                        { x: new Date("1 Oct 2015"), y: 35280 },
-                        { x: new Date("1 Nov 2015"), y: 31160 },
-                        { x: new Date("1 Dec 2015"), y: 34400 }
-                    ]
-                }],
-                "Returning Visitors 2": [{
-                    color: "#546BC1",
-                    name: "Returning Visitors",
-                    type: "column",
-                    dataPoints: [
-                        { x: new Date("1 Jan 2015"), y: 22000 },
-                        { x: new Date("1 Feb 2015"), y: 26040 },
-                        { x: new Date("1 Mar 2015"), y: 25840 },
-                        { x: new Date("1 Apr 2015"), y: 23760 },
-                        { x: new Date("1 May 2015"), y: 28800 },
-                        { x: new Date("1 Jun 2015"), y: 29400 },
-                        { x: new Date("1 Jul 2015"), y: 33440 },
-                        { x: new Date("1 Aug 2015"), y: 37720 },
-                        { x: new Date("1 Sep 2015"), y: 35200 },
-                        { x: new Date("1 Oct 2015"), y: 35280 },
-                        { x: new Date("1 Nov 2015"), y: 31160 },
-                        { x: new Date("1 Dec 2015"), y: 34400 }
-                    ]
-                }]
-            };
-
-            const newVSReturningVisitorsOptions = {
-                animationEnabled: true,
-                theme: "light2",
-                title: {
-                    text: "New VS Returning Visitors"
-                },
-                subtitles: [{
-                    text: "Click on Any Segment to Drilldown",
-                    backgroundColor: "#2eacd1",
-                    fontSize: 16,
-                    fontColor: "white",
-                    padding: 5
-                }],
-                legend: {
-                    fontFamily: "calibri",
-                    fontSize: 14,
-                    itemTextFormatter: function (e) {
-                        return e.dataPoint.name + ": " + Math.round(e.dataPoint.y / totalVisitors * 100) + "%";
-                    }
-                },
-                data: []
-            };
-
-            const visitorsDrilldownedChartOptions = {
-                animationEnabled: true,
-                theme: "light2",
-                axisX: {
-                    labelFontColor: "#717171",
-                    lineColor: "#a2a2a2",
-                    tickColor: "#a2a2a2"
-                },
-                axisY: {
-                    gridThickness: 0,
-                    includeZero: false,
-                    labelFontColor: "#717171",
-                    lineColor: "#a2a2a2",
-                    tickColor: "#a2a2a2",
-                    lineThickness: 1
-                },
-                data: []
-            };
-
-            let chart = new CanvasJS.Chart("chartContainer", newVSReturningVisitorsOptions);
-            chart.options.data = visitorsData["New vs Returning Visitors"];
-            chart.render();
-
-            function visitorsChartDrilldownHandler(e) {
-                chart = new CanvasJS.Chart("chartContainer", visitorsDrilldownedChartOptions);
-                chart.options.data = visitorsData[e.dataPoint.name];
-                chart.options.title = { text: e.dataPoint.name }
-                chart.render();
-                $("#backButton").toggleClass("invisible");
-            }
-
-            $("#backButton").click(function() {
-                $(this).toggleClass("invisible");
-                chart = new CanvasJS.Chart("chartContainer", newVSReturningVisitorsOptions);
-                chart.options.data = visitorsData["New vs Returning Visitors"];
-                chart.render();
-            });
-
-        }
-    </script>
-    <style>
-        #backButton {
-            border-radius: 4px;
-            padding: 8px;
-            border: none;
-            font-size: 16px;
-            background-color: #2eacd1;
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-        .invisible {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
-<button class="btn invisible" id="backButton">< Back</button>
-<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-</body>
-</html>-->
