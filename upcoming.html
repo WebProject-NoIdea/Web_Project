@@ -1,429 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+  <style>
+    .flex-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+    }
 
-  <head>
+    .single-chart {
+      width: 33%;
+      justify-content: space-around ;
+    }
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/font-awesome/4.7.0/css/font-awesome.min.css">
+    .circular-chart {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      max-height: 250px;
+    }
 
-    <title>StudLife: Upcoming</title>
+    .circle-bg {
+      fill: none;
+      stroke: #eee;
+      stroke-width: 3.8;
+    }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    .circle {
+      fill: none;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      animation: progress 1s ease-out forwards;
+    }
 
-<!--
-Ramayana CSS Template
-https://templatemo.com/tm-529-ramayana
--->
+    @keyframes progress {
+      0% {
+        stroke-dasharray: 0 100;
+      }
+    }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    .circular-chart.orange .circle {
+      stroke: #ff9f00;
+    }
 
-  </head>
+    .circular-chart.green .circle {
+      stroke: #4CC790;
+    }
 
-<body class="is-preload">
+    .circular-chart.blue .circle {
+      stroke: #3c9ee5;
+    }
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+    .percentage {
+      fill: #666;
+      font-family: sans-serif;
+      font-size: 0.5em;
+      text-anchor: middle;
+    }
+  </style>
+</head>
+<body>
+<div class="flex-wrapper">
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart orange">
+      <path class="circle-bg"
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path class="circle"
+            stroke-dasharray="50, 100"
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <text x="18" y="20.35" class="percentage">50%</text>
+    </svg>
+  </div>
 
-      <!-- Main -->
-        <div id="main">
-          <div class="inner">
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart green">
+      <path class="circle-bg"
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path class="circle"
+            stroke-dasharray="60.5, 100"
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <text x="18" y="20.35" class="percentage">60%</text>
+    </svg>
+  </div>
 
-            <!-- Header -->
-            <header id="header">
-              <div class="logo">
-                <a href="index.php">StudLife</a>
-              </div>
-            </header>
-
-            <!-- Page Heading -->
-            <div class="page-heading">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h1>Upcoming event</h1>
-                    <p><strong>Activities</strong> that need to be done .</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Tables -->
-            <section class="tables">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="section-heading">
-                      <h2>Weekly</h2>
-                    </div>
-                    <div class="default-table">
-                      <table>
-                        <thead>
-                        <tr>
-                          <th>No.</th>
-                          <th>Task</th>
-                          <th>Description</th>
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                          <td>#1</td>
-                          <td> Do registration screen</td>
-                          <td>page for registration</td>
-                          <td>
-                            <button class="btn"><i class="fa fa-trash"></i></button>
-                            <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                          </td>
-                          <br>
-
-
-                        </tr>
-                        <tr>
-                          <td>#2</td>
-                          <td>Assignment research</td>
-                          <td>Assignment due date 15/12/2020</td>
-                          <td>
-                            <button class="btn"><i class="fa fa-trash"></i></button>
-                            <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                          </td>
-                          <br>
-
-
-                        </tr>
-                        <tr>
-                          <td>#3</td>
-                          <td></td>
-                          <td></td>
-                          <td>
-                            <button class="btn"><i class="fa fa-trash"></i></button>
-                            <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                          </td>
-                          <br>
-
-
-                        </tr>
-                        <tr>
-                          <td>#4</td>
-                          <td></td>
-                          <td></td>
-                          <td>
-                            <button class="btn"><i class="fa fa-trash"></i></button>
-                            <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                          </td>
-                          <br>
-
-                        </tr>
-                        <tr>
-                          <td>#5</td>
-                          <td></td>
-                          <td></td>
-                          <td>
-                            <button class="btn"><i class="fa fa-trash"></i></button>
-                            <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                          </td>
-                          <br>
-
-                        </tr>
-                        </tbody>
-                      </table>
-                      <ul class="table-pagination">
-                        <li><a href="#">Previous</a></li>
-                        <li><a href="#">1</a></li>
-                        <li class="active"><a href="#">2</a></li>
-                        <li><a href="#">...</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">Next</a></li>
-                      </ul>
-                    </div>
-
-
-                    <div class="container-fluid">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="section-heading">
-                            <h2>Monthly</h2>
-                          </div>
-                          <div class="default-table">
-                            <table>
-                              <thead>
-                              <tr>
-                                <th>No.</th>
-                                <th>Task</th>
-                                <th>Description</th>
-                              </tr>
-                              </thead>
-                              <tbody>
-                              <tr>
-                                <td>#10</td>
-                                <td>Discussion</td>
-                                <td>about progress activity</td>
-                                <td>
-                                  <button class="btn"><i class="fa fa-trash"></i></button>
-                                  <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                </td>
-                                <br>
-                              </tr>
-                              <tr>
-                                <td>#11</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                  <button class="btn"><i class="fa fa-trash"></i></button>
-                                  <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                </td>
-                                <br>
-                              </tr>
-                              <tr>
-                                <td>#12</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                  <button class="btn"><i class="fa fa-trash"></i></button>
-                                  <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                </td>
-                                <br>
-                              </tr>
-                              <tr>
-                                <td>#13</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                  <button class="btn"><i class="fa fa-trash"></i></button>
-                                  <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                </td>
-                                <br>
-                              </tr>
-                              <tr>
-                                <td>#14</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                  <button class="btn"><i class="fa fa-trash"></i></button>
-                                  <button class="btn"><i class="fa fa-pencil"></i></button>
-
-                                </td>
-                                <br>
-                              </tr>
-                              </tbody>
-                            </table>
-                            <ul class="table-pagination">
-                              <li><a href="#">Previous</a></li>
-                              <li><a href="#">1</a></li>
-                              <li class="active"><a href="#">2</a></li>
-                              <li><a href="#">...</a></li>
-                              <li><a href="#">8</a></li>
-                              <li><a href="#">9</a></li>
-                              <li><a href="#">Next</a></li>
-                            </ul>
-                          </div>
-
-            </section>
-
-
-            <section class="tables">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="section-heading">
-          <h2>Long-term activities</h2>
-        </div>
-        <div class="default-table">
-          <table>
-            <thead>
-              <tr>
-                <th>No.</th>
-                <th>Task</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>#</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn"><i class="fa fa-trash"></i></button>
-                  <button class="btn"><i class="fa fa-pencil"></i></button>
-          
-                    </td><br>
-              </tr>
-              <tr>
-                <td>#</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn"><i class="fa fa-trash"></i></button>
-                  <button class="btn"><i class="fa fa-pencil"></i></button>
-          
-                    </td><br>
-              </tr>
-              <tr>
-                <td>#</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn"><i class="fa fa-trash"></i></button>
-                  <button class="btn"><i class="fa fa-pencil"></i></button>
-          
-                    </td><br>
-              </tr>
-              <tr>
-                <td>#</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn"><i class="fa fa-trash"></i></button>
-                  <button class="btn"><i class="fa fa-pencil"></i></button>
-          
-                    </td><br>
-              </tr>
-              <tr>
-                <td>#</td>
-                <td></td>
-                <td></td>
-                <td>
-                  <button class="btn"><i class="fa fa-trash"></i></button>
-                  <button class="btn"><i class="fa fa-pencil"></i></button>
-          
-                    </td><br>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="table-pagination">
-            <li><a href="#">Previous</a></li>
-            <li><a href="#">1</a></li>
-            <li class="active"><a href="#">2</a></li>
-            <li><a href="#">...</a></li>
-            <li><a href="#">8</a></li>
-            <li><a href="#">9</a></li>
-            <li><a href="#">Next</a></li>
-          </ul>
-        </div>
-            
-            </section>
-
-          </div>
-        </div>
-
-      <!-- Sidebar -->
-        <div id="sidebar">
-
-          <div class="inner">
-
-            <!-- Search Box -->
-            <section id="search" class="alt">
-              <form method="get" action="#">
-                <input type="text" name="search" id="search" placeholder="Search..." />
-              </form>
-            </section>
-              
-            <!-- Menu -->
-            <nav id="menu">
-              <ul>
-                <li><a href="index.php">Homepage</a></li>
-                <li><a href="today.html">Today</a></li>
-                <li><a href="upcoming.html">Upcoming</a></li>
-                <li>
-                  <span class="opener"><i class = "fa fa-calendar"></i>  Task</span>
-                  <ul>
-                    <li><a href="#">Today</a></li>
-                    <li><a href="#">This Week</a></li>
-                    <li><a href="#">This Month</a></li>
-                    <li><a href="#">Upcoming</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <span class="opener"><i class = "fa fa-bookmark"></i>  Work Label</span>
-                  <ul>
-                    <li><a href="#">Oppointments</a></li>
-                    <li><a href="#">Phone Call</a></li>
-                    <li><a href="#">Meeting</a></li>
-                    <li><a href="#">+</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <span class="opener"><i class = "fa fa-bookmark-o"></i>  Leisure Label</span>
-                  <ul>
-                    <li><a href="#">Entertaiment</a></li>
-                    <li><a href="#">Holiday</a></li>
-                    <li><a href="#">+</a></li>
-                    
-                  </ul>
-                </li>
-                <!-- <li><a href="https://www.google.com">External Link</a></li> -->
-                <li><a href="#">Sign Out</a></li>
-              </ul>
-            </nav>
-
-            <!-- Featured Posts 
-            <div class="featured-posts">
-              <div class="heading">
-                <h2>Featured Posts</h2>
-              </div>
-              <div class="owl-carousel owl-theme">
-                <a href="#">
-                  <div class="featured-item">
-                    <img src="assets/images/featured_post_01.jpg" alt="featured one">
-                    <p>Aliquam egestas convallis eros sed gravida. Curabitur consequat sit.</p>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="featured-item">
-                    <img src="assets/images/featured_post_01.jpg" alt="featured two">
-                    <p>Donec a scelerisque massa. Aliquam non iaculis quam. Duis arcu turpis.</p>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="featured-item">
-                    <img src="assets/images/featured_post_01.jpg" alt="featured three">
-                    <p>Suspendisse ac convallis urna, vitae luctus ante. Donec sit amet.</p>
-                  </div>
-                </a>
-              </div>
-            </div>-->
-
-            <!-- Footer -->
-            <footer id="footer">
-              <p class="setting">
-              <i class = "fa fa-cog"></i>  <a rel="Setting" href="setting.html">Setting</a></p>
-            </footer>
-            
-          </div>
-        </div>
-
-    </div>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/transition.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/custom.js"></script>
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart blue">
+      <path class="circle-bg"
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path class="circle"
+            stroke-dasharray="90, 100"
+            d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <text x="18" y="20.35" class="percentage">90%</text>
+    </svg>
+  </div>
+</div>
 </body>
-
-
-  </body>
-
 </html>
