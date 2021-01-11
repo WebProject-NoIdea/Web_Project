@@ -67,11 +67,9 @@ checkLogin();
                     <?php include("chart/donutCharts.php"); ?>
                 </div>
                 <div class="col-md-6">
-                    <div style="height: 370px; width: 100%;">
-                        <div class="counter" data-cp-percentage="10" data-cp-color="#00bfeb"></div>
-                        <h5>Average Performance</h5>
 
-                    </div>
+                        <div class="counter" data-cp-percentage="10" data-cp-color="#00bfeb"></div>
+
 
                 </div>
             </div>
