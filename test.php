@@ -58,7 +58,7 @@ checkLogin();
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" style="padding-bottom: 20px;">
                     <?php include("chart/donutChart.php"); ?>
                 </div>
 
