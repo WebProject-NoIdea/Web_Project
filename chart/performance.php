@@ -17,9 +17,10 @@ class performance
             'avgPerformancePerDay' => $this->avgPerformancePerDay()
         ];
 
+        $this->conn->close();
+
         header('Content-type: text/javascript');
         echo json_encode($jsonData, JSON_PRETTY_PRINT);
-        $this->conn->close();
     }
 
     private function avgPerformance(){
