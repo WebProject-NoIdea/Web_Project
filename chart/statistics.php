@@ -13,8 +13,8 @@ $sql = "SELECT
 
 $result = $conn->query($sql);
 
-while ($row = $result->fetch_assoc()) {
-    echo json_encode($row);
-}
+$row = $result->fetch_assoc();
+
+echo json_encode($row);
 
 $conn->close();
