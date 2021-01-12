@@ -13,7 +13,7 @@ class performance
     public function run()
     {
         echo $this->avgPerformance();
-        echo $this->avgPerformancePerDay();
+        echo print_r($this->avgPerformancePerDay());
         $this->conn->close();
     }
 
@@ -38,9 +38,7 @@ class performance
 
         $result = $this->conn->query($sql);
 
-        $row = $result->fetch_assoc();
-
-        return json_encode(round($row["avgPerformance"],2));
+        return $result->fetch_assoc();
     }
 }
 
