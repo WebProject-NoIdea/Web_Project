@@ -153,7 +153,7 @@ function taskTable($id,$conn){
                                         <li class="active"><a id="<?php echo $id; ?>_btn3">3</a></li>
                                         <li onclick="<?php echo $id; ?>_next(1)"><a id="<?php echo $id; ?>_btn4">4</a></li>
                                         <li onclick="<?php echo $id; ?>_next(2)"><a id="<?php echo $id; ?>_btn5">5</a></li>
-                                        <li id="<?php echo $id; ?>_moreBtn"><a>...</a></li>
+                                        <li><a id="<?php echo $id; ?>_moreBtn">...</a></li>
                                         <li onclick="<?php echo $id; ?>_next(1)" id="<?php echo $id; ?>_nextBtn"><a>Next</a></li>
                                     </ul>
 
