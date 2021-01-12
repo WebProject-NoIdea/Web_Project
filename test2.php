@@ -3,8 +3,6 @@ class test2{
 
     public function __construct()
     {
-        include("session.php");
-        checkLogin();
     }
 
     public function run(){
