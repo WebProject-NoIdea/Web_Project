@@ -1,17 +1,29 @@
 <?php
+class performance
+{
+    private $conn;
 
-include("../session.php");
-checkLogin();
+    public function __construct()
+    {
+        include("../session.php");
+        $this->conn = include('../dbConnect.php');
+        checkLogin();
+    }
 
-$conn = include('../dbConnect.php');
-
-$sql = "SELECT AVG(performance) AS avgPerformance
+    public function run()
+    {
+        $sql = "SELECT AVG(performance) AS avgPerformance
          FROM task WHERE user_id=" . getUserId();
 
-$result = $conn->query($sql);
+        $result = $this->conn->query($sql);
 
-while ($row = $result->fetch_assoc()) {
-    echo json_encode(round($row["avgPerformance"],2));
+        while ($row = $result->fetch_assoc()) {
+            echo json_encode(round($row["avgPerformance"],2));
+        }
+
+        $this->conn->close();
+    }
 }
 
-$conn->close();
+(new performance())->run();
+
