@@ -12,16 +12,19 @@ class performance
 
     public function run()
     {
+        echo $this->avgPerformance();
+        $this->conn->close();
+    }
+
+    private function avgPerformance(){
         $sql = "SELECT AVG(performance) AS avgPerformance
          FROM task WHERE user_id=" . getUserId();
 
         $result = $this->conn->query($sql);
 
-        while ($row = $result->fetch_assoc()) {
-            echo json_encode(round($row["avgPerformance"],2));
-        }
+        $row = $result->fetch_assoc();
 
-        $this->conn->close();
+        return json_encode(round($row["avgPerformance"],2));
     }
 }
 
