@@ -18,7 +18,7 @@ class performance
 
     private function avgPerformance(){
         $sql = "SELECT AVG(performance) AS avgPerformance
-         FROM task WHERE user_id=" . getUserId();
+         FROM task WHERE complete_date != '0000-00-00 00:00:00' AND user_id=" . getUserId();
 
         $result = $this->conn->query($sql);
 
