@@ -66,8 +66,6 @@
             <text id="percentage" x="18" y="20.35" class="percentage">50%</text>
         </svg>
     </div>
-    <div style="position: absolute; left: 50%; transform: translate(-50%); bottom: 0;width: 300px;">
-        <h4 style="text-align: center;">Average Performance</h4>
-    </div>
+    <h4 style="text-align: center;">Average Performance</h4>
 </div>
 
