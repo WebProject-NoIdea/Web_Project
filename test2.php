@@ -8,7 +8,7 @@ class test2{
     }
 
     public function run(){
-        echo "AHHAHA";
+        echo getUserId();
     }
 }
 
