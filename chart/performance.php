@@ -40,9 +40,11 @@ class performance
 
         $arrayData = array();
 
-        $result->fetch_all(MYSQLI_ASSOC);
+        while ($row = $result->fetch_assoc()) {
+            array_push($arrayData, $row);
+        }
 
-        return json_encode($result);
+        return json_encode($arrayData);
     }
 }
 
