@@ -5,5 +5,6 @@ class test2{
     {
         include("session.php");
         checkLogin();
+        echo "AHHAHA";
     }
 }
