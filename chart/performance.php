@@ -6,12 +6,13 @@ class performance
     public function __construct()
     {
         include("../session.php");
-        $this->conn = include('../dbConnect.php');
         checkLogin();
     }
 
     public function run()
     {
+        $this->conn = include('../dbConnect.php');
+
         $jsonData = [
             'avgPerformance' => $this->avgPerformance(),
             'avgPerformancePerDay' => $this->avgPerformancePerDay()
