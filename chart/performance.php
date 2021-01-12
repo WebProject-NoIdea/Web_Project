@@ -25,7 +25,7 @@ class performance
     }
 
     private function avgPerformance(){
-        $sql = "SELECT AVG(performance) AS avgPerformance
+        $sql = "SELECT ROUND(AVG(performance),2) AS avgPerformance
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' AND user_id=" .getUserId();
 
@@ -33,11 +33,11 @@ class performance
 
         $row = $result->fetch_assoc();
 
-        return json_encode(round($row["avgPerformance"],2));
+        return $row["avgPerformance"];
     }
 
     private function avgPerformancePerDay(){
-        $sql = "SELECT DATE(complete_date) AS date, AVG(performance) AS avgPerformance 
+        $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' AND user_id=".getUserId()."
                 GROUP BY DATE(complete_date) 
