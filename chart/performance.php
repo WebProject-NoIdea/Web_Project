@@ -44,7 +44,7 @@ class performance
             array_push($arrayData, $row);
         }
 
-        return json_encode($arrayData);
+        return json_encode(['avgPerformancePerDay' => $result]);
     }
 }
 
