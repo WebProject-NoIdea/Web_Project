@@ -12,6 +12,7 @@ class performance
 
     public function run()
     {
+        header('Content-type: text/javascript');
         echo json_encode(['avgPerformance' => $this->avgPerformance(),'avgPerformancePerDay' => $this->avgPerformancePerDay()], JSON_PRETTY_PRINT);
         $this->conn->close();
     }
