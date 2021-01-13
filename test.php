@@ -66,12 +66,26 @@ checkLogin();
                     <?php include("chart/performanceChart.php"); ?>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6" style="padding-bottom: 50px;">
+                    <?php include("chart/performanceByDayChart.php"); ?>
+                </div>
+            </div>
         </div>
     </div>
 
     <?php include('sidebar.php');?>
 
 </div>
+
+<script>
+
+    window.onload = function(){
+        showDoughnutChart("all");
+        showPerformanceByDayChart();
+    }
+
+</script>
 
 <script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
 <script src="assets/js/browser.min.js"></script>

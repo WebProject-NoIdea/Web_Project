@@ -1,48 +1,35 @@
 <div id="doughnutChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
+    function showPerformanceByDayChart() {
 
-    window.onload = function(){
-        showDoughnutChart("all");
-    }
+        let performanceByDayChartDataPoints = [];
 
-    function showPerformanceByDayChart(type) {
-
-        let doughnutChartDataPoints = [];
-
-        const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
+        const performanceByDayChart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
+            theme: "light2",
+            title: {
+                text: "Simple Line Chart"
+            },
             data: [{
-                type: "doughnut",
-                startAngle: 60, //innerRadius: 60,
+                type: "line",
                 indexLabelFontSize: 16,
-                indexLabel: "#percent%",
-                toolTipContent: "<b>{name}:</b> {y} (#percent%)",
-                legendMarkerType: "square",
-                showInLegend: true,
-                dataPoints: doughnutChartDataPoints
+                dataPoints: [
+                    {y: 450},
+                    {y: 414},
+                    {y: 520, indexLabel: "\u2191 highest", markerColor: "red", markerType: "triangle"},
+                    {y: 460},
+                    {y: 450},
+                    {y: 500},
+                    {y: 480},
+                    {y: 480},
+                    {y: 410, indexLabel: "\u2193 lowest", markerColor: "DarkSlateGrey", markerType: "cross"},
+                    {y: 500},
+                    {y: 480},
+                    {y: 510}
+                ]
             }]
         });
 
-        function doughnutChartAddData(data) {
-            doughnutChartDataPoints.push({
-                y: parseInt(data.completed),
-                name: "Completed",
-                color: "#00e600"
-            });
-            doughnutChartDataPoints.push({
-                y: parseInt(data.in_progress),
-                name: "In Progress",
-                color: "#ff9f00"
-            });
-            doughnutChartDataPoints.push({
-                y: parseInt(data.overdue),
-                name: "Overdue",
-                color: "#ff0000"
-            });
-
-            doughnutChart.render();
-        }
-
-        $.getJSON("chart/statistics.php", doughnutChartAddData);
+        performanceByDayChart.render();
     }
 </script>
