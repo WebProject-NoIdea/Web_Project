@@ -15,8 +15,8 @@
     });
 
     $("#performanceByDayChartDatepicker").on("dp.change", function (e) {
-        const date = new Date(e.date);
-        showPerformanceByDayChart(date.getFullYear(),date.getMonth()+1);
+        const performanceByDayChartDate = new Date(e.date);
+        showPerformanceByDayChart(performanceByDayChartDate.getFullYear(),performanceByDayChartDate.getMonth()+1);
     });
 
     $.getJSON('chart/earliestDate.php', function(data) {

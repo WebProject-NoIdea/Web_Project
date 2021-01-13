@@ -13,8 +13,8 @@
         });
 
         $("#statisticsByDayChartDatepicker").on("dp.change", function (e) {
-            const date = new Date(e.date);
-            showStatisticsByDayChart(date.getFullYear(),date.getMonth()+1);
+            const statisticsByDayChartDate = new Date(e.date);
+            showStatisticsByDayChart(statisticsByDayChartDate.getFullYear(),statisticsByDayChartDate.getMonth()+1);
         });
 
         $.getJSON('chart/earliestDate.php', function(data) {
