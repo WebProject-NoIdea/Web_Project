@@ -21,17 +21,12 @@
 
             const avgPerformancePerDay = data.avgPerformancePerDay
 
-
-
-            performanceByDayChartDataPoints.push({
-                x: new Date(2021,0,2),
-                y: 0
-            });
-
-            performanceByDayChartDataPoints.push({
-                x: new Date(2021,0,3),
-                y: 0
-            });
+            for (let i = 0; i < avgPerformancePerDay.length; i++) {
+                performanceByDayChartDataPoints.push({
+                    x: new Date(avgPerformancePerDay[i].date),
+                    y: parseFloat(avgPerformancePerDay[i].avgPerformance)
+                });
+            }
 
             performanceByDayChart.render();
         }
