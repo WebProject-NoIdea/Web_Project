@@ -58,8 +58,8 @@
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
             />
-            <path class="circle" style="stroke: #4CC790; "
-                  stroke-dasharray="20, 100"
+            <path class="circle" style="stroke: #4CC790;stroke-dasharray: 20, 100 "
+
                   d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
