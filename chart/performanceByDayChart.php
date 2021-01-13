@@ -1,5 +1,5 @@
 <h3>Average Performance</h3>
-<h4 style="padding-left:10px; padding-bottom: 30px;">2021 January</h4>
+<h4 id="performanceByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
 <div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
     function showPerformanceByDayChart(year,month) {
@@ -31,6 +31,8 @@
                     y: parseFloat(avgPerformancePerDay[i].avgPerformance)
                 });
             }
+
+            document.getElementById("performanceByDayChartTitle").innerHTML = "2021 January";
 
             performanceByDayChart.render();
         }
