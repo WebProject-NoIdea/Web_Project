@@ -38,8 +38,8 @@ class performance
 
     private function avgPerformancePerDay(): array
     {
-        $year = 2021;
-        $month = 1;
+        $year = $_GET['year'];
+        $month = $_GET['month'];
 
         $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
