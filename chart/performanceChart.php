@@ -70,5 +70,6 @@
 </div>
 <script>
     document.getElementById("percentage").innerHTML = "60%";
+    document.getElementsByClassName("circle").style.strokeDasharray = "50, 100";
 </script>
 
