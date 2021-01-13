@@ -1,8 +1,25 @@
 <h3>Statistics</h3>
-<h4 id="statisticsByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
+<h4 id="statisticsByDayChartTitle" style="padding-left:10px;"></h4>
+<div id="statisticsByDayChartDatepicker"></div>
 <div id="statisticsByDayChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
     function showStatisticsByDayChart(year,month) {
+
+        $('#statisticsByDayChartDatepicker').datetimepicker({
+            format:'Y MMMM',
+            maxDate:new Date(),
+            inline: true,
+            sideBySide: true
+        });
+
+        $("#statisticsByDayChartDatepicker").on("dp.change", function (e) {
+            const date = new Date(e.date);
+            showStatisticsByDayChart(date.getFullYear(),date.getMonth()+1);
+        });
+
+        $.getJSON('chart/earliestDate.php', function(data) {
+            $("#statisticsByDayChartDatepicker").data("DateTimePicker").minDate(new Date(data.start_date));
+        });
 
         const monthNames = ["January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
