@@ -18,6 +18,9 @@
             axisY: {
                 title: "No of Task",
             },
+            toolTip: {
+                shared: true
+            },
             data: [{
                     name: "Completed",
                     type: "line",
@@ -70,6 +73,11 @@
 
             document.getElementById("statisticsByDayChartTitle").innerHTML = year+" "+monthNames[month-1];
 
+            statisticsByDayChart.render();
+        }
+
+        function toogleDataSeries(e){
+            e.dataSeries.visible = !(typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible);
             statisticsByDayChart.render();
         }
 
