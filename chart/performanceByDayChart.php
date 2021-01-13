@@ -20,7 +20,7 @@
     });
 
     $.getJSON('chart/earliestDate.php', function(data) {
-        $("#performanceByDayChartDatepicker").data("DateTimePicker").minDate(data.start_date);
+        $("#performanceByDayChartDatepicker").data("DateTimePicker").minDate(new Date(data.start_date));
     });
 
     function showPerformanceByDayChart(year,month) {
