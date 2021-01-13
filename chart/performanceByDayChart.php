@@ -14,12 +14,12 @@
             }]
         });
 
+        const year = 2021;
+        const month = 0+1;
+
         function performanceByDayChartAddData(data) {
 
             const avgPerformancePerDay = data.avgPerformancePerDay;
-
-            const year = 2021;
-            const month = 0+1;
 
             performanceByDayChartDataPoints.push({
                 x: new Date(year, month-1, 1),
@@ -43,6 +43,8 @@
             performanceByDayChart.render();
         }
 
-        $.getJSON("chart/performance.php?year=".year."&month=".month, performanceByDayChartAddData);
+
+
+        $.getJSON("chart/performance.php?year="+year+"&month=" +month, performanceByDayChartAddData);
     }
 </script>
