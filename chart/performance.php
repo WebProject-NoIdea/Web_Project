@@ -42,7 +42,7 @@ class performance
         return $row["avgPerformance"];
     }
 
-    private function avgPerformancePerDay($year,$month): array
+  /*  private function avgPerformancePerDay($year,$month): array
     {
         $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
@@ -59,6 +59,32 @@ class performance
 
         while ($row = $result->fetch_assoc()) {
             array_push($arrayData, $row);
+        }
+
+        return $arrayData;
+    }*/
+
+    private function avgPerformancePerDay($year,$month): array
+    {
+        $arrayData = array();
+
+        $lastDate = date("t",strtotime($year."-".$month));
+
+        for($i=1; $i<=$lastDate; $i++) {
+
+            $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
+                FROM task 
+                WHERE complete_date != '0000-00-00 00:00:00' 
+                  AND user_id=" . getUserId() . " 
+                  AND complete_date created_at between '$year-$month-1' and '$year-$month-$i';
+                GROUP BY DATE(complete_date) 
+                ORDER BY complete_date";
+
+            $result = $this->conn->query($sql);
+
+            while ($row = $result->fetch_assoc()) {
+                array_push($arrayData, $row);
+            }
         }
 
         return $arrayData;
