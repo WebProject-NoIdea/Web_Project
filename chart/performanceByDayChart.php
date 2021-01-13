@@ -14,6 +14,7 @@
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker12').datetimepicker({
+                format:'Y MMMM',
                 inline: true,
                 sideBySide: true
             });
