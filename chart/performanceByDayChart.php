@@ -1,7 +1,11 @@
 <h3>Average Performance</h3>
+
+<h4 id="performanceByDayChartTitle" style="padding-left:10px;"></h4>
 <div id="performanceByDayChartDatepicker"></div>
 
-<script type="text/javascript">
+<div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
+
+<script>
     $(function () {
         $('#performanceByDayChartDatepicker').datetimepicker({
             format:'Y MMMM',
@@ -9,11 +13,7 @@
             sideBySide: true
         });
     });
-</script>
-<h4 id="performanceByDayChartTitle" style="padding-left:10px;"></h4>
 
-<div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
-<script>
     function showPerformanceByDayChart(year,month) {
 
         const monthNames = ["January", "February", "March", "April", "May", "June",
