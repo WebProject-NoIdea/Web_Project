@@ -59,7 +59,7 @@
 
     function updatePerformanceChart(data) {
 
-        let avgPerformance = data.avgPerformance;
+        const avgPerformance = data.avgPerformance;
 
         document.getElementById("percentage").innerHTML = avgPerformance+"%";
         document.getElementById("circle").style.stroke = "#ff9f00";
