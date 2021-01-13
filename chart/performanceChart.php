@@ -62,8 +62,8 @@
 
         const avgPerformance = data.avgPerformance;
 
-        document.getElementById("percentage1").innerHTML = parseInt(avgPerformance)+"%";
-        document.getElementById("percentage2").innerHTML = parseFloat(avgPerformance).toFixed(2);
+        document.getElementById("percentage1").innerHTML = parseInt(avgPerformance)+"&nbsp;%";
+        document.getElementById("percentage2").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+parseFloat(avgPerformance).toFixed(2);
         document.getElementById("circle").style.stroke = "#ff9f00";
         document.getElementById("circle").style.strokeDasharray = (avgPerformance/2)+", 100";
 
