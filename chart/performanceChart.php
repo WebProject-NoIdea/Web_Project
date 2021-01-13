@@ -59,6 +59,9 @@
 
     function updatePerformanceChart(data) {
 
+        const year = 2021;
+        const month = 1;
+
         const avgPerformance = data.avgPerformance;
 
         document.getElementById("percentage").innerHTML = parseInt(avgPerformance)+"%";
@@ -73,8 +76,7 @@
 
         document.getElementById("circle").style.strokeDasharray = (avgPerformance/2)+", 100";
 
+        $.getJSON("chart/performance.php?year="+year+"&month="+month, updatePerformanceChart);
     }
-
-    $.getJSON("chart/performance.php", updatePerformanceChart);
 </script>
 

@@ -2,6 +2,9 @@
 <script>
     function showPerformanceByDayChart() {
 
+        const year = 2021;
+        const month = 1;
+
         let performanceByDayChartDataPoints = [];
 
         const performanceByDayChart = new CanvasJS.Chart("performanceByDayChartContainer", {
@@ -13,9 +16,6 @@
                 dataPoints: performanceByDayChartDataPoints
             }]
         });
-
-        const year = 2021;
-        const month = 1;
 
         function performanceByDayChartAddData(data) {
 
@@ -29,13 +29,9 @@
                 });
             }
 
-
-
             performanceByDayChart.render();
         }
 
-
-
-        $.getJSON("chart/performance.php?year="+year+"&month=" +month, performanceByDayChartAddData);
+        $.getJSON("chart/performance.php?year="+year+"&month="+month, performanceByDayChartAddData);
     }
 </script>
