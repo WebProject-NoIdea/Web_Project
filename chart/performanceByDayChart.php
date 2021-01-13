@@ -1,9 +1,6 @@
 <div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
-    function showPerformanceByDayChart() {
-
-        const year = 2021;
-        const month = 2;
+    function showPerformanceByDayChart(year,month) {
 
         let performanceByDayChartDataPoints = [];
 
@@ -20,7 +17,6 @@
         function performanceByDayChartAddData(data) {
 
             const avgPerformancePerDay = data.avgPerformancePerDay;
-
 
             for (let i = 0; i < avgPerformancePerDay.length; i++) {
                 performanceByDayChartDataPoints.push({

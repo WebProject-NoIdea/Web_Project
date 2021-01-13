@@ -82,7 +82,8 @@ checkLogin();
 
     window.onload = function(){
         showDoughnutChart("all");
-        showPerformanceByDayChart();
+        showPerformanceChart(2021,1)
+        showPerformanceByDayChart(2021,1);
     }
 
 </script>

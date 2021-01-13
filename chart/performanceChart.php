@@ -57,28 +57,26 @@
 </div>
 <script>
 
-    function updatePerformanceChart(data) {
+    function showPerformanceChart(year,month) {
+        function updatePerformanceChart(data) {
 
-        const avgPerformance = data.avgPerformance;
+            const avgPerformance = data.avgPerformance;
 
-        document.getElementById("percentage").innerHTML = parseInt(avgPerformance)+"%";
+            document.getElementById("percentage").innerHTML = parseInt(avgPerformance) + "%";
 
-        if(avgPerformance>=100){
-            document.getElementById("circle").style.stroke = "#00e600";
-        }else if(avgPerformance>=60){
-            document.getElementById("circle").style.stroke = "#ff9f00";
-        }else {
-            document.getElementById("circle").style.stroke = "#ff0000";
+            if (avgPerformance >= 100) {
+                document.getElementById("circle").style.stroke = "#00e600";
+            } else if (avgPerformance >= 60) {
+                document.getElementById("circle").style.stroke = "#ff9f00";
+            } else {
+                document.getElementById("circle").style.stroke = "#ff0000";
+            }
+
+            document.getElementById("circle").style.strokeDasharray = (avgPerformance / 2) + ", 100";
+
         }
 
-        document.getElementById("circle").style.strokeDasharray = (avgPerformance/2)+", 100";
-
+        $.getJSON("chart/performance.php?year=" + year + "&month=" + month, updatePerformanceChart);
     }
-
-
-    const year = 2021;
-    const month = 1;
-
-    $.getJSON("chart/performance.php?year="+year+"&month="+month, updatePerformanceChart);
 </script>
 
