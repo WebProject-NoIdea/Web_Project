@@ -19,10 +19,12 @@
 
         function performanceByDayChartAddData(data) {
 
-            for (let i = 0; i < data.length; i++) {
+            const avgPerformancePerDay = data.avgPerformancePerDay
+
+            for (let i = 0; i < avgPerformancePerDay.length; i++) {
                 performanceByDayChartDataPoints.push({
-                    x: new Date(data[i].date),
-                    y: data[i].avgPerformance
+                    x: new Date(avgPerformancePerDay[i].date),
+                    y: avgPerformancePerDay[i].avgPerformance
                 });
             }
 
