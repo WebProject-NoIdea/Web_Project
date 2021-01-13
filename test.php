@@ -49,6 +49,7 @@ checkLogin();
                     <div class="row">
                         <div class="col-md-10">
                             <h1>Performance</h1>
+                            <h4 id="statisticsByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
                         </div>
                     </div>
                 </div>
