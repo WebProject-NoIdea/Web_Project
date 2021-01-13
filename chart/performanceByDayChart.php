@@ -3,7 +3,7 @@
     function showPerformanceByDayChart() {
 
         const year = 2021;
-        const month = 1;
+        const month = 2;
 
         let performanceByDayChartDataPoints = [];
 
