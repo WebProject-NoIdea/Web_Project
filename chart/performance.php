@@ -13,9 +13,12 @@ class performance
     {
         $this->conn = include('../dbConnect.php');
 
+        $year = $_GET['year'];
+        $month = $_GET['month'];
+
         $jsonData = [
-            'avgPerformance' => $this->avgPerformance(),
-            'avgPerformancePerDay' => $this->avgPerformancePerDay()
+            'avgPerformance' => $this->avgPerformance($year,$month),
+            'avgPerformancePerDay' => $this->avgPerformancePerDay($year,$month)
         ];
 
         $this->conn->close();
@@ -24,10 +27,13 @@ class performance
         echo json_encode($jsonData, JSON_PRETTY_PRINT);
     }
 
-    private function avgPerformance(){
+    private function avgPerformance($year,$month){
         $sql = "SELECT ROUND(AVG(performance),2) AS avgPerformance
                 FROM task 
-                WHERE complete_date != '0000-00-00 00:00:00' AND user_id=" .getUserId();
+                WHERE complete_date != '0000-00-00 00:00:00' 
+                  AND user_id=" .getUserId()."
+                  AND MONTH(complete_date) = $month 
+                  AND YEAR(complete_date) = $year";
 
         $result = $this->conn->query($sql);
 
@@ -36,14 +42,14 @@ class performance
         return $row["avgPerformance"];
     }
 
-    private function avgPerformancePerDay(): array
+    private function avgPerformancePerDay($year,$month): array
     {
-        $year = $_GET['year'];
-        $month = $_GET['month'];
-
         $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
-                WHERE complete_date != '0000-00-00 00:00:00' AND user_id=".getUserId()." AND MONTH(complete_date) = $month  AND YEAR(complete_date) = $year
+                WHERE complete_date != '0000-00-00 00:00:00' 
+                  AND user_id=".getUserId()." 
+                  AND MONTH(complete_date) = $month 
+                  AND YEAR(complete_date) = $year
                 GROUP BY DATE(complete_date) 
                 ORDER BY complete_date";
 
