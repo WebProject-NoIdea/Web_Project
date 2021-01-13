@@ -58,8 +58,7 @@
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
             />
-            <path class="circle" style="stroke: #4CC790;stroke-dasharray: 20 100 "
-
+            <path id="circle" class="circle"
                   d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -71,6 +70,7 @@
 </div>
 <script>
     document.getElementById("percentage").innerHTML = "60%";
-    document.getElementsByClassName("circle").style.stroke = "#4CC790";
+    document.getElementById("circle").style.stroke = "#4CC790";
+    document.getElementById("circle").style.strokeDasharray = "20, 100";
 </script>
 
