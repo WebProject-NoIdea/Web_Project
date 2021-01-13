@@ -48,8 +48,7 @@ checkLogin();
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-10">
-                            <h1>History</h1>
-                            <p><strong>Activities</strong> that has been completed.</p>
+                            <h1>Performance</h1>
                         </div>
                     </div>
                 </div>
