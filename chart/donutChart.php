@@ -20,17 +20,17 @@
 
         function doughnutChartAddData(data) {
             doughnutChartDataPoints.push({
-                y: parseInt(data.completed),
+                y: parseInt(data.statistics.completed),
                 name: "Completed",
                 color: "#00e600"
             });
             doughnutChartDataPoints.push({
-                y: parseInt(data.in_progress),
+                y: parseInt(data.statistics.in_progress),
                 name: "In Progress",
                 color: "#ff9f00"
             });
             doughnutChartDataPoints.push({
-                y: parseInt(data.overdue),
+                y: parseInt(data.statistics.overdue),
                 name: "Overdue",
                 color: "#ff0000"
             });
