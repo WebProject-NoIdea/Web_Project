@@ -12,7 +12,8 @@
                 title: "Average Performance",
             },
             data: [{
-                type: "line",
+                type: "spline",
+                markerSize: 0,
                 indexLabelFontSize: 16,
                 dataPoints: performanceByDayChartDataPoints
             }]
