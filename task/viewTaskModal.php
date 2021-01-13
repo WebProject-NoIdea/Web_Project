@@ -52,6 +52,8 @@
                     if(row['tableType']==="history"){
                         document.getElementById("viewInput-datepicker-complete").innerText = row['complete_date'];
                         document.getElementById("completeDate").style.display = "block";
+                        document.getElementById("viewPerformance").innerText = row['performance'];
+                        document.getElementById("performance").style.display = "block";
                     }
 
 
