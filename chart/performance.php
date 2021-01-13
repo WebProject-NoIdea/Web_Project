@@ -18,7 +18,7 @@ class performance
 
         $jsonData = [
             'avgPerformance' => $this->avgPerformance($year,$month),
-            'avgPerformancePerDay' => $this->avgPerformancePerDay($year,$month)
+            //'avgPerformancePerDay' => $this->avgPerformancePerDay($year,$month)
         ];
 
         $this->conn->close();
