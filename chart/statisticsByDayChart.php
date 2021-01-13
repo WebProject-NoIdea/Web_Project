@@ -17,19 +17,21 @@
                 title: "Task",
             },
             data: [{
+                    name: "Completed",
                     type: "line",
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
                 }],
                 [{
+                    name: "Overdue",
                     type: "line",
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
                 }],
                 [{
-                    type: "line",
+                    type: "In Progress",
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
