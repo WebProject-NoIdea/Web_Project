@@ -65,7 +65,7 @@ class statistics
                         '$endDate' AS date,
                         COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date<=end_date THEN 1 END) AS completed,
                         COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date>end_date THEN 1 END) AS overdue,
-                        COUNT(tasl_id) AS in_progress
+                        COUNT(task_id) AS in_progress
                      FROM task 
                      WHERE user_id=".getUserId()." 
                         AND complete_date between '$startDate' AND '$endDate'";
