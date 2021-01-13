@@ -15,7 +15,7 @@
 
         $("#performanceByDayChartDatepicker").on("dp.change", function (e) {
             const date = new Date(e.date);
-            document.getElementById("performanceByDayChartTitle").innerHTML = date.getMonth().toString();
+            showPerformanceByDayChart(date.getFullYear(),date.getMonth()+1);
         });
 
     function showPerformanceByDayChart(year,month) {
