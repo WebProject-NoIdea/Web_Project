@@ -22,8 +22,6 @@ checkLogin();
     <link href="vendor/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
-
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
