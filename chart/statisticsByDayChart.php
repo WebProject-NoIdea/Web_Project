@@ -32,7 +32,7 @@
             for (let i = 0; i < statisticsPerDay.length; i++) {
                 statisticsByDayChartDataPoints.push({
                     x: new Date(statisticsPerDay[i].date),
-                    y: parseFloat(statisticsPerDay[i].avgstatistics)
+                    y: parseFloat(statisticsPerDay[i].completed)
                 });
             }
 

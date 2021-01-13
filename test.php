@@ -69,6 +69,11 @@ checkLogin();
                     <?php include("chart/performanceByDayChart.php"); ?>
                 </div>
             </div>
+            <div class="row">
+                <div class="col" style="padding-bottom: 50px;">
+                    <?php include("chart/statisticsByDayChart.php"); ?>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -86,6 +91,7 @@ checkLogin();
         showDoughnutChart(year,month);
         showPerformanceChart(year,month)
         showPerformanceByDayChart(year,month);
+        showStatisticsByDayChart(year,month);
     }
 
 </script>
