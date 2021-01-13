@@ -71,9 +71,16 @@ class performance
         $startDate = date("Y-m-d",strtotime($year."-".$month));
         $lastDate = date("t",$startDate);
 
+        date_default_timezone_set("Asia/Kuala_Lumpur");
+        $today = date("Y-m-d");
+
         for($i=0; $i<$lastDate; $i++) {
 
             $endDate = date('Y-m-d', strtotime($startDate. " + $i days"));
+
+            if($endDate>$today){
+                break;
+            }
 
             $sql = "SELECT '$endDate' AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
