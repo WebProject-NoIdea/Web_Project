@@ -55,15 +55,6 @@ checkLogin();
                 </div>
             </div>
 
-            <p id="demo"></p>
-            <p id="demo2"></p>
-            <script>
-                var today = new Date();
-                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-                document.getElementById("demo").innerHTML = date;
-                document.getElementById("demo2").innerHTML = today;
-            </script>
-
             <div class="row">
                 <div class="col-md-6" style="padding-bottom: 50px;">
                     <?php include("chart/donutChart.php"); ?>
@@ -87,10 +78,14 @@ checkLogin();
 
 <script>
 
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+
     window.onload = function(){
         showDoughnutChart("all");
-        showPerformanceChart(2021,1)
-        showPerformanceByDayChart(2021,1);
+        showPerformanceChart(year,month)
+        showPerformanceByDayChart(year,month);
     }
 
 </script>
