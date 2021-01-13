@@ -18,7 +18,7 @@ class performance
 
         $jsonData = [
             'avgPerformance' => $this->avgPerformance($year,$month),
-            //'avgPerformancePerDay' => $this->avgPerformancePerDay($year,$month)
+            'avgPerformancePerDay' => $this->avgPerformancePerDay($year,$month)
         ];
 
         $this->conn->close();
@@ -68,15 +68,16 @@ class performance
     {
         $arrayData = array();
 
-        $lastDate = date("t",strtotime($year."-".$month));
+        $date = date("Y-m-d",strtotime($year."-".$month));
+        $lastDate = date("t",$date);
 
-        for($i=1; $i<=$lastDate; $i++) {
+        for($i=0; $i<$lastDate; $i++) {
 
             $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' 
                   AND user_id=" . getUserId() . " 
-                  AND complete_date created_at between '$year-$month-1' and '$year-$month-$i';
+                  AND complete_date created_at between '$date' and '".date('Y-m-d', strtotime($date. ' + '.$i.' days'))."';
                 GROUP BY DATE(complete_date) 
                 ORDER BY complete_date";
 
