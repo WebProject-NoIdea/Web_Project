@@ -17,11 +17,23 @@
                 title: "Task",
             },
             data: [{
-                type: "line",
-                markerSize: 0,
-                indexLabelFontSize: 16,
-                dataPoints: statisticsByDayChartDataPoints
-            }]
+                    type: "line",
+                    markerSize: 0,
+                    indexLabelFontSize: 16,
+                    dataPoints: statisticsByDayChartDataPoints
+                }],
+                [{
+                    type: "line",
+                    markerSize: 0,
+                    indexLabelFontSize: 16,
+                    dataPoints: statisticsByDayChartDataPoints
+                }],
+                [{
+                    type: "line",
+                    markerSize: 0,
+                    indexLabelFontSize: 16,
+                    dataPoints: statisticsByDayChartDataPoints
+                }],
         });
 
         function statisticsByDayChartAddData(data) {
