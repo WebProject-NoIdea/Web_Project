@@ -1,8 +1,4 @@
 <h3>Average Performance</h3>
-
-<h4 id="performanceByDayChartTitle" style="padding-left:10px;">2021 January</h4>
-
-
 <div id="performanceByDayChartDatepicker"></div>
 
 <script type="text/javascript">
@@ -14,7 +10,7 @@
         });
     });
 </script>
-
+<h4 id="performanceByDayChartTitle" style="padding-left:10px;"></h4>
 
 <div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
