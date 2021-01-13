@@ -49,7 +49,7 @@ checkLogin();
                     <div class="row">
                         <div class="col-md-10">
                             <h1>Performance</h1>
-                            <h4 id="statisticsByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
+                            <h4 id="homeTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
                         </div>
                     </div>
                 </div>
@@ -88,6 +88,13 @@ checkLogin();
     const month = today.getMonth() + 1;
 
     window.onload = function(){
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        document.getElementById("homeTitle").innerHTML = year+" "+monthNames[month-1];
+
         showDoughnutChart(year,month);
         showPerformanceChart(year,month)
         showPerformanceByDayChart(year,month);
