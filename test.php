@@ -81,7 +81,7 @@ checkLogin();
     window.onload = function(){
         showDoughnutChart("all");
         showPerformanceChart(2021,1)
-        showPerformanceByDayChart(2021,1);
+        showPerformanceByDayChart(2020,12);
     }
 
 </script>
