@@ -85,6 +85,10 @@ class performance
             $result = $this->conn->query($sql);
 
             while ($row = $result->fetch_assoc()) {
+
+                if($row["avgPerformance"]==null){
+                    $row["avgPerformance"] = 0;
+                }
                 array_push($arrayData, $row);
             }
         }
