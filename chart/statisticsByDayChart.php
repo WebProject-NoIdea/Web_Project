@@ -22,6 +22,7 @@
                     name: "Completed",
                     type: "line",
                     showInLegend: true,
+                    color: "#00e600",
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPointsCompleted
@@ -29,6 +30,7 @@
                 {
                     name: "Overdue",
                     type: "line",
+                    color: "#ff0000",
                     showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
@@ -37,6 +39,7 @@
                 {
                     name: "In Progress",
                     type: "line",
+                    color: "#ff9f00",
                     showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
