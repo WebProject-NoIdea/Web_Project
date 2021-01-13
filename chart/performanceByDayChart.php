@@ -1,12 +1,14 @@
 <h3>Average Performance</h3>
-<div class="row">
-    <div class="col">
-        <h4 id="performanceByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
-    </div>
-    <div class="col">
-        <button>Change</button>
-    </div>
-</div>
+<table>
+    <tr>
+        <td>
+            <h4 id="performanceByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
+        </td>
+        <td>
+            <button>Change</button>
+        </td>
+    </tr>
+</table>
 
 <script>
     // Linked date and time picker
