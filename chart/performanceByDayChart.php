@@ -8,6 +8,9 @@
         const performanceByDayChart = new CanvasJS.Chart("performanceByDayChartContainer", {
             animationEnabled: true,
             theme: "light2",
+            axisY: {
+                title: "Average Performance",
+            },
             data: [{
                 type: "line",
                 indexLabelFontSize: 16,
