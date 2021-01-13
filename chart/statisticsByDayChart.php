@@ -14,8 +14,7 @@
             animationEnabled: true,
             theme: "light2",
             axisY: {
-                title: "",
-                maximum: 200,
+                title: "Task",
             },
             data: [{
                 type: "line",
