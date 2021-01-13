@@ -6,13 +6,13 @@
 <div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
 
 <script>
-    $(function () {
+
         $('#performanceByDayChartDatepicker').datetimepicker({
             format:'Y MMMM',
             inline: true,
             sideBySide: true
         });
-    });
+
 
     function showPerformanceByDayChart(year,month) {
 
