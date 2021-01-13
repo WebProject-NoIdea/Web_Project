@@ -5,7 +5,7 @@
         showDoughnutChart("all");
     }
 
-    function showDoughnutChart(type) {
+    function showPerformanceByDayChart(type) {
 
         let doughnutChartDataPoints = [];
 

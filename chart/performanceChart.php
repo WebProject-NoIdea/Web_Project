@@ -37,7 +37,7 @@
         text-anchor: middle;
     }
 </style>
-<div style="height: 400px;">
+<div style="height: 370px;">
     <div class="single-chart">
         <svg viewBox="0 0 36 36" class="circular-chart">
             <path class="circle-bg"
