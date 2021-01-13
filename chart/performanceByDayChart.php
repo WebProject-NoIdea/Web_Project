@@ -28,6 +28,6 @@
             performanceByDayChart.render();
         }
 
-        $.getJSON("chart/performance.php?year=2021&month=1", performanceByDayChartAddData);
+        $.getJSON("chart/performance.php?year=2021&month=2", performanceByDayChartAddData);
     }
 </script>
