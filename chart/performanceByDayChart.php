@@ -1,4 +1,5 @@
-<h3 style="padding-bottom: 30px">Average Performance 2021 January</h3>
+<h3>Average Performance</h3>
+<h4 style="padding-left:10px; padding-bottom: 30px;">2021 January</h4>
 <div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
     function showPerformanceByDayChart(year,month) {
