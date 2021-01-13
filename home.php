@@ -91,7 +91,7 @@ checkLogin();
                 // Linked date and time picker
                 // start date date and time picker
                 $('#datepicker-start').datetimepicker({
-                    format:'Y MMM',
+                    format:'Y MM',
                     widgetPositioning:{
                         horizontal: 'auto',
                         vertical: 'bottom'
