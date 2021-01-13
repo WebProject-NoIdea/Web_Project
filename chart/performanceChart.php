@@ -63,7 +63,7 @@
 
         document.getElementById("percentage").innerHTML = avgPerformance+"%";
         document.getElementById("circle").style.stroke = "#ff9f00";
-        document.getElementById("circle").style.strokeDasharray = "20, 100";
+        document.getElementById("circle").style.strokeDasharray = avgPerformance+", 100";
 
     }
 
