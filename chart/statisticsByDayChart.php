@@ -16,7 +16,7 @@
             animationEnabled: true,
             theme: "light2",
             axisY: {
-                title: "No Of Task",
+                title: "No of Task",
             },
             data: [{
                     name: "Completed",
