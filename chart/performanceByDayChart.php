@@ -1,13 +1,12 @@
 <h3>Average Performance</h3>
 <h4 id="performanceByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
 
-<div class="form-group col-sm-3">
-    <label class="control-label" for="performanceByDayChartInput">Start Date</label>
-    <div class="input-group" id="performanceByDayChartDatepicker">
-        <input type="text" class="form-control" name="startDate" id="performanceByDayChartInput" autocomplete="off" required>
-        <span class="input-group-addon">
-            <span class="glyphicon glyphicon-calendar"></span>
-        </span>
+<div class="row">
+    <div class="col">
+        <h4 id="statisticsByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;">2021 January</h4>
+    </div>
+    <div class="col">
+        <button>Change</button>
     </div>
 </div>
 
