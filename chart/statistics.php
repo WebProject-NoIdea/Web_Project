@@ -35,8 +35,8 @@ class statistics
                     COUNT(CASE WHEN complete_date = '0000-00-00 00:00:00' THEN 1 END) AS in_progress
                  FROM task 
                  WHERE user_id=".getUserId()."
-                    AND MONTH(complete_date) = $month
-                    AND YEAR(complete_date) = $year";
+                    AND MONTH(complete_date) = '$month'
+                    AND YEAR(complete_date) = '$year'";
 
         $result = $this->conn->query($sql);
 
