@@ -68,6 +68,7 @@
                         // Start date picke on chagne event [select maxmimum date for start date datepicker]
                         $("#datepicker-end").on("dp.change", function (e) {
                             const datepickerEnd = new Date(e.date);
+                            datepickerEnd.setMinutes(d.getMinutes() - 1);
                             $('#datepicker-start').data("DateTimePicker").maxDate(datepickerEnd);
                         });
                     </script>
