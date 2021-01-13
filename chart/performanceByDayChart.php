@@ -5,16 +5,16 @@
 
 <div id="performanceByDayChartDatepicker"></div>
 
-    <script type="text/javascript">
-        $(function () {
-            $('#performanceByDayChartDatepicker').datetimepicker({
-                format:'Y MMMM',
-                inline: true,
-                sideBySide: true
-            });
+<script type="text/javascript">
+    $(function () {
+        $('#performanceByDayChartDatepicker').datetimepicker({
+            format:'Y MMMM',
+            inline: true,
+            sideBySide: true
         });
-    </script>
-</div>
+    });
+</script>
+
 
 <div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
