@@ -1,14 +1,7 @@
 <h3>Average Performance</h3>
-<table>
-    <tr>
-        <td>
-            <h4 id="performanceByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
-        </td>
-        <td>
-            <button id="performanceByDayChartDatepicker">Change</button>
-        </td>
-    </tr>
-</table>
+
+<h4 id="performanceByDayChartTitle" style="padding-left:10px;display: inline-block;">2021 January</h4>
+<button>Change</button>
 
 <script>
     // Linked date and time picker
