@@ -7,17 +7,21 @@
 
 <script>
 
-        $('#performanceByDayChartDatepicker').datetimepicker({
-            format:'Y MMMM',
-            maxDate:new Date(),
-            inline: true,
-            sideBySide: true
-        });
+    $('#performanceByDayChartDatepicker').datetimepicker({
+        format:'Y MMMM',
+        maxDate:new Date(),
+        inline: true,
+        sideBySide: true
+    });
 
-        $("#performanceByDayChartDatepicker").on("dp.change", function (e) {
-            const date = new Date(e.date);
-            showPerformanceByDayChart(date.getFullYear(),date.getMonth()+1);
-        });
+    $("#performanceByDayChartDatepicker").on("dp.change", function (e) {
+        const date = new Date(e.date);
+        showPerformanceByDayChart(date.getFullYear(),date.getMonth()+1);
+    });
+
+    $.getJSON('chart/earliestDate.php', function(data) {
+        $("#performanceByDayChartDatepicker").data("DateTimePicker").minDate(data.start_date);
+    });
 
     function showPerformanceByDayChart(year,month) {
 
