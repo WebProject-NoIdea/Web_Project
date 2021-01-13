@@ -15,7 +15,7 @@
                 type: "doughnut",
                 startAngle: 60, //innerRadius: 60,
                 indexLabelFontSize: 16,
-                indexLabel: "{name} #percent%",
+                indexLabel: "#percent%",
                 toolTipContent: "<b>{name}:</b> {y} (#percent%)",
                 legendMarkerType: "square",
                 showInLegend: true,
