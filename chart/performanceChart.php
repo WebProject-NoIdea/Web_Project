@@ -30,15 +30,16 @@
         }
     }
 
-    .circular-chart.orange .circle {
-        stroke: #ff9f00;
-    }
 
     .circular-chart.green .circle {
         stroke: #4CC790;
     }
 
-    .circular-chart.blue .circle {
+    .circular-chart.orange .circle {
+        stroke: #ff9f00;
+    }
+
+    .circular-chart.red .circle {
         stroke: #3c9ee5;
     }
 
@@ -70,6 +71,6 @@
 </div>
 <script>
     document.getElementById("percentage").innerHTML = "60%";
-    document.getElementsByClassName("circle").style.strokeDasharray = "50, 100";
+    document.getElementsByClassName("circle").setAttribute('style', 'fill: green');
 </script>
 
