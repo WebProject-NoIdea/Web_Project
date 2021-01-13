@@ -76,11 +76,6 @@
             statisticsByDayChart.render();
         }
 
-        function toogleDataSeries(e){
-            e.dataSeries.visible = !(typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible);
-            statisticsByDayChart.render();
-        }
-
         $.getJSON("chart/statistics.php?year="+year+"&month="+month, statisticsByDayChartAddData);
     }
 </script>
