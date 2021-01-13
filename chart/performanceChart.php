@@ -30,19 +30,6 @@
         }
     }
 
-
-    .circular-chart.green .circle {
-        stroke: #4CC790;
-    }
-
-    .circular-chart.orange .circle {
-        stroke: #ff9f00;
-    }
-
-    .circular-chart.red .circle {
-        stroke: #3c9ee5;
-    }
-
     .percentage {
         fill: #666;
         font-family: sans-serif;
@@ -69,8 +56,17 @@
     <h4 style="text-align: center;">Average Performance</h4>
 </div>
 <script>
-    document.getElementById("percentage").innerHTML = "60%";
-    document.getElementById("circle").style.stroke = "#4CC790";
-    document.getElementById("circle").style.strokeDasharray = "20, 100";
+
+    function updatePerformanceChart(data) {
+
+        const $avgPerformance = data.avgPerformance;
+
+        document.getElementById("percentage").innerHTML = $avgPerformance+"%";
+        document.getElementById("circle").style.stroke = "#ff9f00";
+        document.getElementById("circle").style.strokeDasharray = "20, 100";
+
+    }
+
+    $.getJSON("chart/performance.php", updatePerformanceChart);
 </script>
 
