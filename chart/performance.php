@@ -73,7 +73,7 @@ class performance
 
         for($i=0; $i<$lastDate; $i++) {
 
-            $endDate = date('Y-m-d', strtotime($startDate. ' + '.$i.' days'));
+            $endDate = date('Y-m-d', strtotime($startDate. " + $i days"));
 
             $sql = "SELECT ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
