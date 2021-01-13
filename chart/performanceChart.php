@@ -22,6 +22,7 @@
         stroke-width: 2.8;
         stroke-linecap: round;
         animation: progress 1s ease-out forwards;
+        stroke-dasharray= "10, 100";
     }
 
     @keyframes progress {
@@ -59,7 +60,7 @@
           a 15.9155 15.9155 0 0 1 0 -31.831"
             />
             <path class="circle"
-                  stroke-dasharray="0, 100"
+
                   d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -71,6 +72,5 @@
 </div>
 <script>
     document.getElementById("percentage").innerHTML = "60%";
-    document.getElementsByClassName("circle").setAttribute('style', 'fill: green');
 </script>
 
