@@ -9,6 +9,7 @@
 
         $('#performanceByDayChartDatepicker').datetimepicker({
             format:'Y MMMM',
+            maxDate:new Date(),
             inline: true,
             sideBySide: true
         });
