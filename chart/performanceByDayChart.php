@@ -14,7 +14,8 @@
         });
 
         $("#performanceByDayChartDatepicker").on("dp.change", function (e) {
-            document.getElementById("performanceByDayChartTitle").innerHTML = e.date.getMonth();
+            const date = new Date(e.date);
+            document.getElementById("performanceByDayChartTitle").innerHTML = date.getMonth().toString();
         });
 
     function showPerformanceByDayChart(year,month) {
