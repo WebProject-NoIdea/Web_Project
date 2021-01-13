@@ -61,7 +61,8 @@
 
                         // start date picke on chagne event [select minimun date for end date datepicker]
                         $("#datepicker-start").on("dp.change", function (e) {
-                            $('#datepicker-end').data("DateTimePicker").minDate(new Date(e.date).getMinutes()+1);
+                            const datepickerStart = new Date(e.date).getMinutes()+1;
+                            $('#datepicker-end').data("DateTimePicker").minDate(datepickerStart);
                         });
                         // Start date picke on chagne event [select maxmimum date for start date datepicker]
                         $("#datepicker-end").on("dp.change", function (e) {
