@@ -1,5 +1,5 @@
-<h2>Performance 2021 January</h2>
-<div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
+<h3>Performance 2021 January</h3>
+<div id="performanceByDayChartContainer" style="height: 330px; width: 100%;"></div>
 <script>
     function showPerformanceByDayChart(year,month) {
 
