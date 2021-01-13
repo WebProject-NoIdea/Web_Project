@@ -7,9 +7,6 @@
         const performanceByDayChart = new CanvasJS.Chart("performanceByDayChartContainer", {
             animationEnabled: true,
             theme: "light2",
-            title: {
-                text: "Simple Line Chart"
-            },
             data: [{
                 type: "line",
                 indexLabelFontSize: 16,
