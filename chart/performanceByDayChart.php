@@ -28,6 +28,16 @@
                 });
             }
 
+            performanceByDayChartDataPoints.push({
+                x: new Date(2021,1,2),
+                y: 0
+            });
+
+            performanceByDayChartDataPoints.push({
+                x: new Date(2021,1,3),
+                y: 0
+            });
+
             performanceByDayChart.render();
         }
 
