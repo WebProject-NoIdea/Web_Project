@@ -1,10 +1,10 @@
-<div id="doughnutChartContainer" style="height: 370px; width: 100%;"></div>
+<div id="performanceByDayChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
     function showPerformanceByDayChart() {
 
         let performanceByDayChartDataPoints = [];
 
-        const performanceByDayChart = new CanvasJS.Chart("chartContainer", {
+        const performanceByDayChart = new CanvasJS.Chart("performanceByDayChartContainer", {
             animationEnabled: true,
             theme: "light2",
             title: {
