@@ -18,7 +18,7 @@
                 maximum: 200,
             },
             data: [{
-                type: "spline",
+                type: "line",
                 markerSize: 0,
                 indexLabelFontSize: 16,
                 dataPoints: performanceByDayChartDataPoints
