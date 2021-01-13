@@ -29,12 +29,12 @@
             }
 
             performanceByDayChartDataPoints.push({
-                x: new Date(2021,1,2),
+                x: new Date(2021,0,2),
                 y: 0
             });
 
             performanceByDayChartDataPoints.push({
-                x: new Date(2021,1,3),
+                x: new Date(2021,0,3),
                 y: 0
             });
 
