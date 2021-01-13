@@ -90,7 +90,7 @@ checkLogin();
         showDoughnutChart(year,month);
         showPerformanceChart(year,month)
         showPerformanceByDayChart(year,month);
-        showStatisticsByDayChart(2020,12);
+        showStatisticsByDayChart(year,month);
     }
 
 </script>
