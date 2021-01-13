@@ -1,7 +1,7 @@
 <h3>Average Performance</h3>
 
 <h4 id="performanceByDayChartTitle" style="padding-left:10px;display: inline-block;">2021 January</h4>
-<button id="performanceByDayChartDatepicker">Change</button>
+<button class="btn small" id="performanceByDayChartDatepicker">Change</button>
 
 <script>
     // Linked date and time picker
