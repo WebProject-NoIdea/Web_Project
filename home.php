@@ -21,6 +21,8 @@ checkLogin();
     <script src="vendor/moment/2.13.0/moment.js"></script>
     <link href="vendor/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="vendor/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+    <script src="vendor/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
