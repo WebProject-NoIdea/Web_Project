@@ -19,6 +19,7 @@
             data: [{
                     name: "Completed",
                     type: "line",
+                    axisYType: "secondary",
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
@@ -26,12 +27,15 @@
                 [{
                     name: "Overdue",
                     type: "line",
+                    axisYType: "secondary",
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
                 }],
                 [{
-                    type: "In Progress",
+                    name: "In Progress",
+                    type: "line",
+                    axisYType: "secondary",
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
