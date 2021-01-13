@@ -38,9 +38,12 @@ class performance
 
     private function avgPerformancePerDay(): array
     {
+        $year = 2020;
+        $month = 12;
+
         $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
-                WHERE complete_date != '0000-00-00 00:00:00' AND user_id=".getUserId()."
+                WHERE complete_date != '0000-00-00 00:00:00' AND user_id=".getUserId()." AND MONTH(complete_date) = $month  AND YEAR(complete_date) = $year
                 GROUP BY DATE(complete_date) 
                 ORDER BY complete_date";
 
