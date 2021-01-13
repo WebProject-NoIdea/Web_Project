@@ -63,12 +63,13 @@ class statistics
 
             $sql = "SELECT 
                         '$endDate' AS date,
-                        COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date<=end_date THEN 1 END) AS completed,
-                        COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date>end_date THEN 1 END) AS overdue,
-                        COUNT(CASE WHEN complete_date = '0000-00-00 00:00:00'  OR (complete_date != '0000-00-00 00:00:00' AND start_date<complete_date AND complete_date<'$endDate' ) THEN 1 END) AS in_progress
+                        COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date<=end_date AND DATE(complete_date)<='$endDate' THEN 1 END) AS completed,
+                        COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date>end_date AND DATE(complete_date)<='$endDate' THEN 1 END) AS overdue,
+                        COUNT(CASE WHEN complete_date = '0000-00-00 00:00:00'  OR DATE(complete_date)>'$endDate' THEN 1 END) AS in_progress
                      FROM task 
                      WHERE user_id=".getUserId()." 
-                        AND complete_date between '$startDate' AND '$endDate'";
+                        AND start_date<='$endDate' 
+                        AND (complete_date='0000-00-00 00:00:00' OR complete_date>='$startDate')";
 
             $result = $this->conn->query($sql);
 
