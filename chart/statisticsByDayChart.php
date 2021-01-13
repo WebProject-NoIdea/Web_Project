@@ -8,7 +8,9 @@
             "July", "August", "September", "October", "November", "December"
         ];
 
-        let statisticsByDayChartDataPoints = [];
+        let statisticsByDayChartDataPointsCompleted = [];
+        let statisticsByDayChartDataPointsOverdue = [];
+        let statisticsByDayChartDataPointsInProgress = [];
 
         const statisticsByDayChart = new CanvasJS.Chart("statisticsByDayChartContainer", {
             animationEnabled: true,
@@ -22,7 +24,7 @@
                     showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
-                    dataPoints: statisticsByDayChartDataPoints
+                    dataPoints: statisticsByDayChartDataPointsCompleted
                 },
                 {
                     name: "Overdue",
@@ -30,7 +32,7 @@
                     showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
-                    dataPoints: statisticsByDayChartDataPoints
+                    dataPoints: statisticsByDayChartDataPointsOverdue
                 },
                 {
                     name: "In Progress",
@@ -38,7 +40,7 @@
                     showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
-                    dataPoints: statisticsByDayChartDataPoints
+                    dataPoints: statisticsByDayChartDataPointsInProgress
                 }],
         });
 
@@ -47,9 +49,19 @@
             const statisticsPerDay = data.statisticsPerDay;
 
             for (let i = 0; i < statisticsPerDay.length; i++) {
-                statisticsByDayChartDataPoints.push({
+                statisticsByDayChartDataPointsCompleted.push({
                     x: new Date(statisticsPerDay[i].date),
                     y: parseFloat(statisticsPerDay[i].completed)
+                });
+
+                statisticsByDayChartDataPointsOverdue.push({
+                    x: new Date(statisticsPerDay[i].date),
+                    y: parseFloat(statisticsPerDay[i].overdue)
+                });
+
+                statisticsByDayChartDataPointsInProgress.push({
+                    x: new Date(statisticsPerDay[i].date),
+                    y: parseFloat(statisticsPerDay[i].in_progress)
                 });
             }
 
