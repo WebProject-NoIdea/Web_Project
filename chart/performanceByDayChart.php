@@ -5,7 +5,7 @@
             <h4 id="performanceByDayChartTitle" style="padding-left:10px; padding-bottom: 30px;"></h4>
         </td>
         <td>
-            <button>Change</button>
+            <button id="performanceByDayChartDatepicker">Change</button>
         </td>
     </tr>
 </table>
