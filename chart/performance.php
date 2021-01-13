@@ -86,7 +86,7 @@ class performance
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' 
                   AND user_id=" . getUserId() . " 
-                  AND complete_date between '$startDate' AND '$endDate'";
+                  AND DATE(complete_date) between '$startDate' AND '$endDate'";
 
             $result = $this->conn->query($sql);
 

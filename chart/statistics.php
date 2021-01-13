@@ -68,8 +68,8 @@ class statistics
                         COUNT(CASE WHEN complete_date = '0000-00-00 00:00:00'  OR DATE(complete_date)>'$endDate' THEN 1 END) AS in_progress
                      FROM task 
                      WHERE user_id=".getUserId()." 
-                        AND start_date<='$endDate' 
-                        AND (complete_date='0000-00-00 00:00:00' OR complete_date>='$startDate')";
+                        AND DATE(start_date)<='$endDate' 
+                        AND (complete_date='0000-00-00 00:00:00' OR DATE(complete_date)>='$startDate')";
 
             $result = $this->conn->query($sql);
 
