@@ -63,10 +63,10 @@
 
         document.getElementById("percentage").innerHTML = $avgPerformance+"%";
         document.getElementById("circle").style.stroke = "#ff9f00";
-        document.getElementById("circle").style.strokeDasharray = "20, 100";
+        document.getElementById("circle").style.strokeDasharray = $avgPerformance+", 100";
 
     }
 
-    $.getJSON("chart/performance.php", updatePerformanceChart);
+    $.getJSON("chart/performance.php", updatePerformanceChart());
 </script>
 
