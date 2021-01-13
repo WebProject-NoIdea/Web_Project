@@ -74,6 +74,28 @@ checkLogin();
                     <?php include("chart/statisticsByDayChart.php"); ?>
                 </div>
             </div>
+
+            <div class="form-group col-sm-6">
+                <label class="control-label" for="input-datepicker-start">Start Date</label>
+                <div class="input-group" id="datepicker-start">
+                    <input type="text" class="form-control" name="startDate" id="input-datepicker-start" autocomplete="off" required>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+
+            <script>
+                // Linked date and time picker
+                // start date date and time picker
+                $('#datepicker-start').datetimepicker({
+                    format:'ddd, DD MMM Y hh:mm A',
+                    widgetPositioning:{
+                        horizontal: 'auto',
+                        vertical: 'bottom'
+                    }
+                });
+            </script>
         </div>
     </div>
 

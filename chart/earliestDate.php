@@ -1,7 +1,6 @@
 <?php
 class earliestDate
 {
-
     public function __construct()
     {
         include("../session.php");
