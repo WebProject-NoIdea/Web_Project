@@ -49,7 +49,9 @@
                             }
                         }).on("dp.change", function (e) {
                             // start date picke on chagne event [select minimun date for end date datepicker]
-                            $("#editDatepicker-end").data("DateTimePicker").minDate(e.date);
+                            const editDatepickerStart = new Date(e.date);
+                            editDatepickerStart.setMinutes(editDatepickerStart.getMinutes() + 1);
+                            $("#editDatepicker-end").data("DateTimePicker").minDate(editDatepickerStart);
                         });
 
                         // End date date and time picker
@@ -62,7 +64,9 @@
                             }
                         }).on("dp.change", function (e) {
                             // Start date picke on chagne event [select maxmimum date for start date datepicker]
-                            $("#editDatepicker-start").data("DateTimePicker").maxDate(e.date);
+                            const editDatepickerEnd = new Date(e.date);
+                            editDatepickerEnd.setMinutes(editDatepickerEnd.getMinutes() - 1);
+                            $("#editDatepicker-start").data("DateTimePicker").maxDate(editDatepickerEnd);
                         });
 
 
