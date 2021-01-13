@@ -79,8 +79,7 @@ class performance
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' 
                   AND user_id=" . getUserId() . " 
-                  AND complete_date created_at between '$startDate' AND '$endDate';
-                GROUP BY DATE(complete_date) 
+                  AND complete_date between '$startDate' AND '$endDate'
                 ORDER BY complete_date";
 
             $result = $this->conn->query($sql);
