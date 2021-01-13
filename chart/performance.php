@@ -36,7 +36,8 @@ class performance
         return $row["avgPerformance"];
     }
 
-    private function avgPerformancePerDay(){
+    private function avgPerformancePerDay(): array
+    {
         $sql = "SELECT DATE(complete_date) AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' AND user_id=".getUserId()."

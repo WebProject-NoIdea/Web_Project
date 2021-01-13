@@ -68,4 +68,7 @@
     </div>
     <h4 style="text-align: center;">Average Performance</h4>
 </div>
+<script>
+    document.getElementById("percentage").innerText = 60%;
+</script>
 
