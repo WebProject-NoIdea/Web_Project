@@ -38,6 +38,6 @@
             doughnutChart.render();
         }
 
-        $.getJSON("chart/statistics.php", doughnutChartAddData);
+        $.getJSON("chart/statistics.php?year=" + year + "&month=" + month, doughnutChartAddData);
     }
 </script>
