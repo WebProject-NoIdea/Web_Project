@@ -67,6 +67,6 @@
 
     }
 
-    $.getJSON("chart/performance.php", updatePerformanceChart());
+    $.getJSON("chart/performance.php", updatePerformanceChart);
 </script>
 
