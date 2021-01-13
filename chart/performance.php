@@ -75,7 +75,7 @@ class performance
 
             $endDate = date('Y-m-d', strtotime($startDate. " + $i days"));
 
-            $sql = "SELECT ROUND(AVG(performance),2) AS avgPerformance 
+            $sql = "SELECT $endDate AS date, ROUND(AVG(performance),2) AS avgPerformance 
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' 
                   AND user_id=" . getUserId() . " 
