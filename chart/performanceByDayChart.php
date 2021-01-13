@@ -10,6 +10,7 @@
             theme: "light2",
             axisY: {
                 title: "Average Performance",
+                maximum: 200,
             },
             data: [{
                 type: "line",
