@@ -63,7 +63,7 @@
 
         document.getElementById("percentage").innerHTML = parseInt(avgPerformance)+"%";
 
-        if(avgPerformance+50>=100){
+        if(200>=100){
             document.getElementById("circle").style.stroke = "#00ff00";
         }else if(avgPerformance>=60){
             document.getElementById("circle").style.stroke = "#ff9f00";
