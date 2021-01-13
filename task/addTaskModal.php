@@ -66,7 +66,8 @@
                         });
                         // Start date picke on chagne event [select maxmimum date for start date datepicker]
                         $("#datepicker-end").on("dp.change", function (e) {
-                            $('#datepicker-start').data("DateTimePicker").maxDate(e.date);
+                            const datepickerEnd = new Date(e.date);
+                            $('#datepicker-start').data("DateTimePicker").maxDate(datepickerEnd);
                         });
                     </script>
 
