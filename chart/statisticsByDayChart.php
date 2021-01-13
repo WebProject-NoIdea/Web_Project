@@ -19,7 +19,7 @@
             data: [{
                     name: "Completed",
                     type: "line",
-
+                    showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
@@ -27,7 +27,7 @@
                 {
                     name: "Overdue",
                     type: "line",
-
+                    showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
@@ -35,7 +35,7 @@
                 {
                     name: "In Progress",
                     type: "line",
-
+                    showInLegend: true,
                     markerSize: 0,
                     indexLabelFontSize: 16,
                     dataPoints: statisticsByDayChartDataPoints
