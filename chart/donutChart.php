@@ -1,6 +1,6 @@
 <div id="doughnutChartContainer" style="height: 370px; width: 100%;"></div>
 <script>
-    function showDoughnutChart(type) {
+    function showDoughnutChart(year,month) {
 
         let doughnutChartDataPoints = [];
 

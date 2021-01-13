@@ -83,7 +83,7 @@ checkLogin();
     const month = today.getMonth() + 1;
 
     window.onload = function(){
-        showDoughnutChart("all");
+        showDoughnutChart(year,month);
         showPerformanceChart(year,month)
         showPerformanceByDayChart(year,month);
     }
