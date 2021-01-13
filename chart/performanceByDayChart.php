@@ -43,6 +43,6 @@
             performanceByDayChart.render();
         }
 
-        $.getJSON("chart/performance.php?year=2020&month=12", performanceByDayChartAddData);
+        $.getJSON("chart/performance.php?year=".year."&month=".month, performanceByDayChartAddData);
     }
 </script>
