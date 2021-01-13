@@ -71,6 +71,6 @@
 </div>
 <script>
     document.getElementById("percentage").innerHTML = "60%";
-    document.getElementById("circular-chart").style.stroke = "#4CC790";
+    document.getElementsByClassName("circular-chart").style.stroke = "#4CC790";
 </script>
 
