@@ -24,7 +24,7 @@
             for (let i = 0; i < avgPerformancePerDay.length; i++) {
                 performanceByDayChartDataPoints.push({
                     x: new Date(avgPerformancePerDay[i].date),
-                    y: avgPerformancePerDay[i].avgPerformance
+                    y: 20
                 });
             }
 
