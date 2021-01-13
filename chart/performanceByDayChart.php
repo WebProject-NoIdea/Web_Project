@@ -13,6 +13,9 @@
             sideBySide: true
         });
 
+        $("#performanceByDayChartDatepicker").on("dp.change", function (e) {
+            document.getElementById("performanceByDayChartTitle").innerHTML = e.date;
+        });
 
     function showPerformanceByDayChart(year,month) {
 
