@@ -4,6 +4,10 @@
 <script>
     function showPerformanceByDayChart(year,month) {
 
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
         let performanceByDayChartDataPoints = [];
 
         const performanceByDayChart = new CanvasJS.Chart("performanceByDayChartContainer", {
@@ -32,7 +36,7 @@
                 });
             }
 
-            document.getElementById("performanceByDayChartTitle").innerHTML = "2021 January";
+            document.getElementById("performanceByDayChartTitle").innerHTML = year+" "+monthNames[month-1];
 
             performanceByDayChart.render();
         }
