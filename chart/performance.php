@@ -32,8 +32,8 @@ class performance
                 FROM task 
                 WHERE complete_date != '0000-00-00 00:00:00' 
                   AND user_id=" .getUserId()."
-                  AND MONTH(complete_date) = $month 
-                  AND YEAR(complete_date) = $year";
+                  AND MONTH(complete_date) = '$month' 
+                  AND YEAR(complete_date) = '$year'";
 
         $result = $this->conn->query($sql);
 
