@@ -31,13 +31,17 @@ class statistics
     {
         $startDate = date("Y-m-d", strtotime($year . "-" . $month));
 
+        date_default_timezone_set("Asia/Kuala_Lumpur");
+        $today = date("Y-m-d");
+
         $sql = "SELECT 
                     COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date<=end_date THEN 1 END) AS completed,
                     COUNT(CASE WHEN complete_date != '0000-00-00 00:00:00' AND complete_date>end_date THEN 1 END) AS overdue,
                     COUNT(CASE WHEN complete_date = '0000-00-00 00:00:00' THEN 1 END) AS in_progress
                  FROM task 
                  WHERE user_id=".getUserId()."
-                    AND DATE(start_date) >= '$startDate'";
+                    AND DATE(start_date)<='$today'
+                    AND (complete_date='0000-00-00 00:00:00' OR DATE(complete_date)>='$startDate')";
 
         $result = $this->conn->query($sql);
 
