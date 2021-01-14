@@ -92,6 +92,11 @@ checkLogin();
                 </div>
             </section>
 
+            <?php
+                include("task/viewTaskModal.php");
+                include("task/editTaskModal.php");
+            ?>
+
         </div>
     </div>
 
@@ -109,7 +114,7 @@ checkLogin();
         $.getJSON("task/getTask.php?type=history", function (data){
             data.forEach(function (item) {
                 const row = `<tr>
-                                    <td>#${i}</td>
+                                    <td onclick="view(item)">#${i}</td>
                                     <td>${item.task}</td>
                                     <td>${item.description}</td>
                                     <td>${item.complete_date}</td>
