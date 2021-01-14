@@ -114,7 +114,7 @@ function encrypt(String $password){
                 <label>
                   Password<span class="req">*</span>
                 </label>
-                <input type="password" name="loginPassword" required autocomplete="off"/>
+                <input type="password" name="loginPassword" minlength="8" required autocomplete="off"/>
               </div>
 
               <p class="forgot"><a href="#">Forgot Password?</a></p>
