@@ -45,7 +45,7 @@
                         <div class="form-group col-sm-6">
                             <label class="control-label" for="editInput-datepicker-complete">Complete Date</label>
                             <div class="input-group" id="editDatepicker-complete">
-                                <input type="text" class="form-control" name="completeDate" id="editInput-datepicker-complete" autocomplete="off">
+                                <input type="text" class="form-control" name="completeDate" id="editInput-datepicker-complete" autocomplete="off" required>
                                 <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -117,6 +117,7 @@
                     document.getElementById("editTaskId").value = row['task_id'];
                     $("#editDatepicker-end").data("DateTimePicker").minDate(row['start_date']);
                     $("#editDatepicker-start").data("DateTimePicker").maxDate(row['end_date']);
+                    document.getElementById("editInput-datepicker-complete").disabled = true;
 
                     if(row['tableType']==="history"){
                         document.getElementById("editInput-datepicker-complete").value = row['complete_date'];
