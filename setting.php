@@ -2,6 +2,24 @@
 
 include("session.php");
 checkLogin();
+
+
+$conn = include('dbConnect.php');
+
+$sql = "SELECT firstname, lastname FROM user WHERE user_id=".getUserId();
+
+$result = $conn->query($sql);
+
+$name = "";
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $name = $row['lastname']." ".$row['firstname'];
+    }
+}
+
+$conn->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +76,7 @@ checkLogin();
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-10">
-                            <h1><?php echo username(); ?></h1>
+                            <h1><?php echo $name; ?></h1>
 
                         </div>
                     </div>
