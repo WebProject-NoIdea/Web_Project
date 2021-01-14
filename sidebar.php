@@ -55,7 +55,7 @@ if( $array[count($array)-2]!="Web_Project"){
         <!-- Footer -->
         <footer id="footer">
             <p class="setting">
-                <i class = "fa fa-cog"></i>  <a rel="Setting" href="setting.php">Setting</a></p>
+                <i class = "fa fa-cog"></i>  <a rel="Setting" href="<?php echo $urlExt; ?>setting.php">Setting</a></p>
         </footer>
     </div>
 </div>
