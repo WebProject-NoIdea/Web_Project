@@ -138,7 +138,7 @@ $conn->close();
                 </div>
             </div>
 
-            <section class="tables">
+            <section class="tables" style="padding-top: 20px">
                 <div class="row">
                     <div class="col-md-6">
                         <br><h3>Change Name</h3><br>
