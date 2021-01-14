@@ -157,15 +157,15 @@ $conn->close();
                     <form action="" method="post">
                         <div class="form-group">
                             <label for="oldPassword">Old Password</label>
-                            <input type="password" class="form-control" name="oldPassword" id="oldPassword" placeholder="Old Password" required>
+                            <input type="password" class="form-control" name="oldPassword" id="oldPassword" placeholder="Old Password" minlength="8" required>
                         </div>
                         <div class="form-group">
                             <label for="newPassword1">New Password</label>
-                            <input type="password" class="form-control" name="newPassword1" id="newPassword1" placeholder="New Password" required>
+                            <input type="password" class="form-control" name="newPassword1" id="newPassword1" placeholder="New Password" minlength="8" required>
                         </div>
                         <div class="form-group">
                             <label for="newPassword2">Confirm New Password</label>
-                            <input type="password" class="form-control" name="newPassword2" id="newPassword2" placeholder="Confirm New Password" required>
+                            <input type="password" class="form-control" name="newPassword2" id="newPassword2" placeholder="Confirm New Password" minlength="8"  required>
                         </div>
                         <button type="submit" name="changePassword" class="btn btn-primary">Change Password</button>
                     </form>
