@@ -38,6 +38,17 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group col-sm-6">
+                        <label class="control-label" for="editInput-datepicker-complete">Complete Date</label>
+                        <div class="input-group" id="editDatepicker-complete">
+                            <input type="text" class="form-control" name="completeDate" id="editInput-datepicker-complete" autocomplete="off" required>
+                            <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                        </div>
+                    </div>
+
                     <script>
                         // Linked date and time picker
                         // start date date and time picker
