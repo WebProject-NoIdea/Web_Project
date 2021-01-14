@@ -18,8 +18,44 @@ if(isset($_POST['changeName'])){
     }
 
     $conn->close();
+
+}else if(isset($_POST['changePassword'])){
+
+    $password = encrypt($_POST['oldPassword']);
+    $newPassword1 = encrypt($_POST['newPassword1']);
+    $newPassword2 = encrypt($_POST['newPassword2']);
+
+    if($newPassword1!=$newPassword2){
+        echo '<script>alert("New password and Confirm new password not same !")</script>';
+    }else{
+
+        $conn = include('dbConnect.php');
+
+        $sql = "SELECT user_id FROM user WHERE user_id=".getUserId()." AND password='$password'";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $sql2 = "UPDATE user SET password = '$newPassword1' WHERE user_id=".getUserId();
+
+            if ($conn->query($sql2) === false) {
+                echo "Error: " . $sql2 . "<br>" . $conn->error;
+            }else{
+                logout();
+            }
+
+        }else{
+            echo '<script>alert("Wrong password !")</script>';
+        }
+
+        $conn->close();
+    }
 }
 
+function encrypt(String $password){
+    $pwd64 = base64_encode($password);
+    return md5($pwd64);
+}
 
 $conn = include('dbConnect.php');
 
