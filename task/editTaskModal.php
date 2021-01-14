@@ -122,6 +122,7 @@
                     if(row['tableType']==="history"){
                         document.getElementById("editInput-datepicker-complete").disabled = false;
                         document.getElementById("editInput-datepicker-complete").value = row['complete_date'];
+                        $("#editDatepicker-complete").data("DateTimePicker").minDate(row['start_date']);
                         document.getElementById("completeDateField").style.display = "block";
                     }
 
