@@ -138,7 +138,8 @@ $conn->close();
                             <button class="btn btn-primary">
                                 <i class="fa fa-plus"></i> Change Name
                             </button>
-                            <button class="btn btn-primary">
+                            <br>
+                            <button class="btn btn-secondary">
                                 <i class="fa fa-plus"></i> Change Password
                             </button>
                         </div>
