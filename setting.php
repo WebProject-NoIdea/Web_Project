@@ -141,7 +141,7 @@ $conn->close();
             <section class="tables" style="padding-top: 20px">
                 <div class="row">
                     <div class="col-md-6">
-                        <br><h3>Change Name</h3><br>
+                        <br><h3><b>Change Name</b></h3><br>
 
                         <form action="" method="post">
                             <div class="form-group">
@@ -156,7 +156,7 @@ $conn->close();
                             <button type="submit" name="changeName" class="btn btn-primary">Change Name</button>
                         </form>
 
-                        <br><br><h3>Change Password</h3><br>
+                        <br><br><h3><b>Change Password</b></h3><br>
 
                         <form action="" method="post">
                             <div class="form-group">
