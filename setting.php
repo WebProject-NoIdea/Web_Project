@@ -86,7 +86,7 @@ $conn->close();
                 <div class="col-md-6">
                     <form action="" method="post">
 
-                        <h2>Change Name</h2>
+                        <br><h3>Change Name</h3><br>
 
                         <div class="form-group">
                             <label for="firstName">First Name</label>
@@ -97,7 +97,7 @@ $conn->close();
                             <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name">
                         </div>
 
-                        <h2>Change Password</h2>
+                        <br><br><h3>Change Password</h3><br>
 
                         <div class="form-group">
                             <label for="oldPassword">Old Password</label>
