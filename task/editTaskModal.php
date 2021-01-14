@@ -120,6 +120,7 @@
                     document.getElementById("editInput-datepicker-complete").disabled = true;
 
                     if(row['tableType']==="history"){
+                        document.getElementById("editInput-datepicker-complete").disabled = true;
                         document.getElementById("editInput-datepicker-complete").value = row['complete_date'];
                         document.getElementById("completeDateField").style.display = "block";
                     }
