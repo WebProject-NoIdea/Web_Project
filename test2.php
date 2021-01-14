@@ -46,28 +46,51 @@ checkLogin();
     <div id="main">
         <div class="inner">
 
-            <div>
-                <!-- Header -->
-                <header id="header">
-                    <div class="logo">
-                        <a href="home.php">StudLife</a>
+
+            <!-- Header -->
+            <header id="header">
+                <div class="logo">
+                    <a href="home.php">StudLife</a>
+                </div>
+            </header>
+
+
+            <div class="page-heading">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h1>History</h1>
+                            <p><strong>Activities</strong> that has been completed.</p>
+                        </div>
                     </div>
-                </header>
+                </div>
+            </div>
 
+            <!-- Tables -->
+            <section class="tables">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
 
-                <div class="page-heading">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-10">
-                                <h1>History</h1>
-                                <p><strong>Activities</strong> that has been completed.</p>
+                            <div class="default-table">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Task</th>
+                                        <th>Description</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-
+            </section>
 
         </div>
     </div>
