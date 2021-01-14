@@ -33,13 +33,16 @@
         ]
 
         buildTable(myArray)
-        buildTable(myArray)
-        buildTable(myArray)
 
+        $.getJSON("getTask.php?type=history", function (data){
+                console.log(data);
+        });
 
         function buildTable(data) {
                 const table = document.getElementById('myTable');
                 table.innerHTML="";
+
+
                 for (let i = 0; i < data.length; i++) {
                         const row = `<tr>
                                             <td>${data[i].name}</td>
