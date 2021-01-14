@@ -82,7 +82,7 @@ checkLogin();
                                         <th></th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="historyTableBody">
 
                                     </tbody>
                                 </table>
@@ -99,6 +99,30 @@ checkLogin();
 
 </div>
 
+<script>
+    function updateTableHistory(){
+
+        const table = document.getElementById('historyTableBody');
+        table.innerHTML="";
+        let i = 1;
+
+        $.getJSON("task/getTask.php?type=history", function (data){
+            data.forEach(function (item) {
+                const row = `<tr>
+                                    <td>${i}</td>
+                                    <td>${item.task}</td>
+                                    <td>${item.description}</td>
+                                    <td>${item.complete_date}</td>
+                              </tr>`;
+                table.innerHTML += row;
+                i++;
+            });
+
+        });
+    }
+
+    updateTableHistory();
+</script>
 
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
