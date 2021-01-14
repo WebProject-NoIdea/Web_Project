@@ -40,7 +40,8 @@
                         </div>
                     </div>
 
-                    <div class="row">
+
+                    <div id="completeDateField" class="row" style="display: none;">
                         <div class="form-group col-sm-6">
                             <label class="control-label" for="editInput-datepicker-complete">Complete Date</label>
                             <div class="input-group" id="editDatepicker-complete">
@@ -113,10 +114,14 @@
                     document.getElementById("editDescription").value = row['description'];
                     document.getElementById("editInput-datepicker-start").value = row['start_date'];
                     document.getElementById("editInput-datepicker-end").value = row['end_date'];
-                    document.getElementById("editInput-datepicker-complete").value = row['complete_date'];
                     document.getElementById("editTaskId").value = row['task_id'];
                     $("#editDatepicker-end").data("DateTimePicker").minDate(row['start_date']);
                     $("#editDatepicker-start").data("DateTimePicker").maxDate(row['end_date']);
+
+                    if(row['tableType']==="history"){
+                        document.getElementById("editInput-datepicker-complete").value = row['complete_date'];
+                        document.getElementById("completeDateField").style.display = "block";
+                    }
 
                     $("#editModal").modal();
                 }
