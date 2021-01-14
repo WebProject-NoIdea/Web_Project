@@ -89,11 +89,11 @@ $conn->close();
                     <form action="" method="post">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name">
+                            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name">
+                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
                         </div>
 
                         <button type="submit" name="changeName" class="btn btn-primary">Change Name</button>
@@ -104,15 +104,15 @@ $conn->close();
                     <form action="" method="post">
                         <div class="form-group">
                             <label for="oldPassword">Old Password</label>
-                            <input type="password" class="form-control" name="oldPassword" id="oldPassword" placeholder="Old Password">
+                            <input type="password" class="form-control" name="oldPassword" id="oldPassword" placeholder="Old Password" required>
                         </div>
                         <div class="form-group">
                             <label for="newPassword1">New Password</label>
-                            <input type="password" class="form-control" name="newPassword1" id="newPassword1" placeholder="New Password">
+                            <input type="password" class="form-control" name="newPassword1" id="newPassword1" placeholder="New Password" required>
                         </div>
                         <div class="form-group">
                             <label for="newPassword2">Confirm New Password</label>
-                            <input type="password" class="form-control" name="newPassword2" id="newPassword2" placeholder="Confirm New Password">
+                            <input type="password" class="form-control" name="newPassword2" id="newPassword2" placeholder="Confirm New Password" required>
                         </div>
                         <button type="submit" name="changePassword" class="btn btn-primary">Change Password</button>
                     </form>
