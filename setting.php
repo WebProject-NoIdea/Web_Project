@@ -142,7 +142,7 @@ $conn->close();
                 </div>
             </div>
 
-            <section class="tables" style="padding-top: 20px">
+            <section id="section" class="tables" style="padding-top: 20px;display: none;">
                 <div class="row">
                     <div class="col-md-6">
 
@@ -195,11 +195,13 @@ $conn->close();
 </div>
 <script>
     function displayChangeNameForm() {
+        document.getElementById("section").style.display = "block";
         document.getElementById("changeNameForm").style.display = "block";
         document.getElementById("changePasswordForm").style.display = "none";
     }
 
     function displayChangePasswordForm(){
+        document.getElementById("section").style.display = "block";
         document.getElementById("changeNameForm").style.display = "none";
         document.getElementById("changePasswordForm").style.display = "block";
     }
