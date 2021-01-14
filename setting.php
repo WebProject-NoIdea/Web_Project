@@ -4,6 +4,23 @@ include("session.php");
 checkLogin();
 
 
+if(isset($_POST['changeName'])){
+
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+
+    $conn = include('dbConnect.php');
+
+    $sql = "UPDATE user SET firstname = '$firstName', lastname = '$lastName' WHERE user_id=".getUserId();
+
+    if ($conn->query($sql) === false) {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+
+
 $conn = include('dbConnect.php');
 
 $sql = "SELECT firstname, lastname FROM user WHERE user_id=".getUserId();
