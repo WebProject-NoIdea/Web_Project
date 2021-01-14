@@ -59,15 +59,17 @@ function encrypt(String $password){
 
 $conn = include('dbConnect.php');
 
-$sql = "SELECT firstname, lastname FROM user WHERE user_id=".getUserId();
+$sql = "SELECT firstname, lastname, email FROM user WHERE user_id=".getUserId();
 
 $result = $conn->query($sql);
 
 $name = "";
+$email = "";
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $name = $row['lastname']." ".$row['firstname'];
+        $email = $row['email'];
     }
 }
 
@@ -130,6 +132,7 @@ $conn->close();
                     <div class="row">
                         <div class="col-md-10">
                             <h1><?php echo $name; ?></h1>
+                            <p><?php echo $email; ?></p>
                         </div>
                     </div>
                 </div>
