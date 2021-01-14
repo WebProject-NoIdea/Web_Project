@@ -58,7 +58,7 @@ checkLogin();
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-10">
-                            <h1>History</h1>
+                            <h1><?php echo username(); ?></h1>
 
                         </div>
                     </div>

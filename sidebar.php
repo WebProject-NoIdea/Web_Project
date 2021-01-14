@@ -1,5 +1,5 @@
 <?php
-function username()
+function username(): string
 {
     $conn = include('dbConnect.php');
 
