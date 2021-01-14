@@ -84,10 +84,9 @@ $conn->close();
 
             <div class="row">
                 <div class="col-md-6">
+                    <br><h3>Change Name</h3><br>
+
                     <form action="" method="post">
-
-                        <br><h3>Change Name</h3><br>
-
                         <div class="form-group">
                             <label for="firstName">First Name</label>
                             <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name">
@@ -97,8 +96,12 @@ $conn->close();
                             <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name">
                         </div>
 
-                        <br><br><h3>Change Password</h3><br>
+                        <button type="submit" name="changeName" class="btn btn-primary">Change Name</button>
+                    </form>
 
+                    <br><br><h3>Change Password</h3><br>
+
+                    <form action="" method="post">
                         <div class="form-group">
                             <label for="oldPassword">Old Password</label>
                             <input type="password" class="form-control" name="oldPassword" id="oldPassword" placeholder="Old Password">
@@ -111,7 +114,7 @@ $conn->close();
                             <label for="newPassword2">Confirm New Password</label>
                             <input type="password" class="form-control" name="newPassword2" id="newPassword2" placeholder="Confirm New Password">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" name="changePassword" class="btn btn-primary">Change Password</button>
                     </form>
                 </div>
             </div>
