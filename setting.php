@@ -145,38 +145,44 @@ $conn->close();
             <section class="tables" style="padding-top: 20px">
                 <div class="row">
                     <div class="col-md-6">
-                        <br><h3><b>Change Name</b></h3><br>
 
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
-                            </div>
+                        <div id="changeNameForm" style="display: none;">
+                            <br><h3><b>Change Name</b></h3><br>
 
-                            <button type="submit" name="changeName" class="btn btn-primary">Change Name</button>
-                        </form>
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+                                </div>
 
-                        <br><br><h3><b>Change Password</b></h3><br>
+                                <button type="submit" name="changeName" class="btn btn-primary">Change Name</button>
+                            </form>
+                        </div>
 
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="oldPassword">Old Password</label>
-                                <input type="password" class="form-control" name="oldPassword" id="oldPassword" placeholder="Old Password" minlength="8" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="newPassword1">New Password</label>
-                                <input type="password" class="form-control" name="newPassword1" id="newPassword1" placeholder="New Password" minlength="8" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="newPassword2">Confirm New Password</label>
-                                <input type="password" class="form-control" name="newPassword2" id="newPassword2" placeholder="Confirm New Password" minlength="8"  required>
-                            </div>
-                            <button type="submit" name="changePassword" class="btn btn-primary">Change Password</button>
-                        </form>
+                        <div id="changePasswordForm" style="display: none;">
+                            <br><br><h3><b>Change Password</b></h3><br>
+
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label for="oldPassword">Old Password</label>
+                                    <input type="password" class="form-control" name="oldPassword" id="oldPassword" placeholder="Old Password" minlength="8" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword1">New Password</label>
+                                    <input type="password" class="form-control" name="newPassword1" id="newPassword1" placeholder="New Password" minlength="8" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword2">Confirm New Password</label>
+                                    <input type="password" class="form-control" name="newPassword2" id="newPassword2" placeholder="Confirm New Password" minlength="8"  required>
+                                </div>
+                                <button type="submit" name="changePassword" class="btn btn-primary">Change Password</button>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -187,6 +193,17 @@ $conn->close();
     <?php include('sidebar.php');?>
 
 </div>
+<script>
+    function displayChangeNameForm() {
+        document.getElementById("changeNameForm").style.display = "block";
+        document.getElementById("changePasswordForm").style.display = "none";
+    }
+
+    function displayChangePasswordForm(){
+        document.getElementById("changeNameForm").style.display = "none";
+        document.getElementById("changePasswordForm").style.display = "block";
+    }
+</script>
 
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
