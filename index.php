@@ -23,6 +23,8 @@ if(isset($_POST['login'])){
             $_SESSION["webProjectUserId"] = $row['user_id'];
             header( "Location: home.php");
         }
+    }else{
+        echo '<script>alert("Wrong email or password !")</script>';
     }
 
     $conn->close();
