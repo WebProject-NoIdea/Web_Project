@@ -134,6 +134,12 @@ $conn->close();
                             <h1><?php echo $name; ?></h1>
                             <p><?php echo $email; ?></p>
                         </div>
+                        <div class="col-md-2">
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary">
+                                <i class="fa fa-plus"></i> Add Task
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
