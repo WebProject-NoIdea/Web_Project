@@ -1,199 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="vendor/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>StudLife: Home</title>
-
-        <script src="vendor/jquery/2.2.4/jquery.min.js"></script>
-        <script src="vendor/moment/2.13.0/moment.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="vendor/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+        th {
+                color: #fff;
+        }
+</style>
 
 
+<table class="table table-striped">
+        <tr class="bg-info">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Birthday</th>
+        </tr>
 
-        <!-- Additional CSS Files -->
-        <link rel="stylesheet" href="assets/css/fontawesome.css">
-        <link rel="stylesheet" href="assets/css/templatemo-style.css">
-        <link rel="stylesheet" href="assets/css/owl.css">
+        <tbody id="myTable">
 
+        </tbody>
+</table>
 
+<script>
+        var myArray = [
+                {'name': 'Michael', 'age': '30', 'birthdate': '11/10/1989'},
+                {'name': 'Mila', 'age': '32', 'birthdate': '10/1/1989'},
+                {'name': 'Paul', 'age': '29', 'birthdate': '10/14/1990'},
+                {'name': 'Dennis', 'age': '25', 'birthdate': '11/29/1993'},
+                {'name': 'Tim', 'age': '27', 'birthdate': '3/12/1991'},
+                {'name': 'Erik', 'age': '24', 'birthdate': '10/31/1995'},
+        ]
 
-</head>
-
-<body class="is-preload">
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-        <!-- Main -->
-        <div id="main">
-                <div class="inner">
-
-
-                        <!-- Header -->
-                        <header id="header">
-                                <div class="logo">
-                                        <a href="home.php">StudLife</a>
-                                </div>
-                        </header>
-
-                        <div class="page-heading">
-                                <div class="container-fluid">
-                                        <div class="row">
-                                                <div class="col-md-10">
-                                                        <h1>History</h1>
-                                                        <p><strong>Activities</strong> that has been completed.</p>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-
-                        <div class="row">
-                                <div class="col-md-6">
-                                        <div id="doughnutChartContainer" style="height: 400px; width: 100%;"></div>
-                                        <script>
-
-                                                window.onload = function(){
-                                                        showDoughnutChart("all");
-                                                }
-
-                                                function showDoughnutChart(type) {
-
-                                                        let doughnutChartDataPoints = [];
-
-                                                        const doughnutChart = new CanvasJS.Chart("doughnutChartContainer", {
-                                                                animationEnabled: true,
-                                                                data: [{
-                                                                        type: "doughnut",
-                                                                        startAngle: 60, //innerRadius: 60,
-                                                                        indexLabelFontSize: 12,
-                                                                        indexLabel: "{name} #percent%",
-                                                                        toolTipContent: "<b>{name}:</b> {y} (#percent%)",
-                                                                        legendMarkerType: "square",
-                                                                        showInLegend: true,
-                                                                        dataPoints: doughnutChartDataPoints
-                                                                }]
-                                                        });
-
-                                                        function doughnutChartAddData() {
-                                                                doughnutChartDataPoints.push({
-                                                                        y: 5,
-                                                                        name: "Completed",
-                                                                        color: "#689F38"
-                                                                });
-                                                                doughnutChartDataPoints.push({
-                                                                        y:2,
-                                                                        name: "In Progress",
-                                                                        color: "#E7823A"
-                                                                });
-                                                                doughnutChartDataPoints.push({
-                                                                        y: 2,
-                                                                        name: "Overdue",
-                                                                        color: "#D32F2F"
-                                                                });
-
-                                                                doughnutChart.render();
-                                                        }
-
-                                                        doughnutChartAddData();
-                                                }
-                                        </script>
-                                </div>
-                                <div class="col-md-6" style="height: 400px;">
-                                        <style>
-
-                                                .single-chart {
-                                                        width: 100%;
-                                                        justify-content: space-around ;
-                                                }
-
-                                                .circular-chart {
-                                                        display: block;
-                                                        margin: 20px;
-                                                        max-height: 300px;
-
-                                                }
-
-                                                .circle-bg {
-                                                        fill: none;
-                                                        stroke: #eee;
-                                                        stroke-width: 3.8;
-                                                }
-
-                                                .circle {
-                                                        fill: none;
-                                                        stroke-width: 2.8;
-                                                        stroke-linecap: round;
-                                                        animation: progress 1s ease-out forwards;
-                                                }
-
-                                                @keyframes progress {
-                                                        0% {
-                                                                stroke-dasharray: 0 100;
-                                                        }
-                                                }
-
-                                                .circular-chart.orange .circle {
-                                                        stroke: #ff9f00;
-                                                }
-
-                                                .circular-chart.green .circle {
-                                                        stroke: #4CC790;
-                                                }
-
-                                                .circular-chart.blue .circle {
-                                                        stroke: #3c9ee5;
-                                                }
-
-                                                .percentage {
-                                                        fill: #666;
-                                                        font-family: sans-serif;
-                                                        font-size: 0.5em;
-                                                        text-anchor: middle;
-                                                }
-                                        </style>
-                                        <div class="single-chart">
-                                                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                                                        <path class="circle-bg"
-                                                              d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                                                        />
-                                                        <path class="circle"
-                                                              stroke-dasharray="50, 100"
-                                                              d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-                                                        />
-                                                        <text x="18" y="20.35" class="percentage">50&nbsp;%</text>
-                                                        <text x="18" y="20.35" class="percentage" style="font-size: 0.15em;">&nbsp;&nbsp;&nbsp;&nbsp;.60</text>
-                                                </svg>
-                                        </div>
-                                        <div style="position: absolute; left: 50%; transform: translate(-50%); bottom: 0;width: 300px;">
-                                                <h4 style="text-align: center;">Average Performance</h4>
-                                        </div>
-                                </div>
-                        </div>
+        buildTable(myArray)
+        buildTable(myArray)
+        buildTable(myArray)
 
 
-                </div>
-        </div>
+        function buildTable(data) {
+                const table = document.getElementById('myTable');
+                table.innerHTML="";
+                for (let i = 0; i < data.length; i++) {
+                        const row = `<tr>
+                                            <td>${data[i].name}</td>
+                                            <td>${data[i].age}</td>
+                                            <td>${data[i].birthdate}</td>
+                                      </tr>`;
+                        table.innerHTML += row
+                }
+        }
 
-
-</div>
-
-
-<script type="text/javascript" src="vendor/canvasjs/canvasjs.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-</body>
-</html>
+</script>
