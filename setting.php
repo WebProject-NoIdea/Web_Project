@@ -135,11 +135,11 @@ $conn->close();
                             <p><?php echo $email; ?></p>
                         </div>
                         <div class="col-md-2">
-                            <button class="btn btn-primary">
+                            <button class="btn btn-primary" style="width: 200px;">
                                 <i class="fa fa-plus"></i> Change Name
                             </button>
                             <br>
-                            <button class="btn btn-secondary">
+                            <button class="btn btn-warning" style="width: 200px;">
                                 <i class="fa fa-plus"></i> Change Password
                             </button>
                         </div>
