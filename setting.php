@@ -135,8 +135,8 @@ $conn->close();
                             <p><?php echo $email; ?></p>
                         </div>
                         <div class="col-md-2">
-                            <button class="btn btn-primary" style="width: 200px;margin-bottom: 10px;">Change Name</button>
-                            <button class="btn btn-warning" style="width: 200px;">Change Password</button>
+                            <button onclick="displayChangeNameForm()" class="btn btn-primary" style="width: 200px;margin-bottom: 10px;">Change Name</button>
+                            <button onclick="displayChangePasswordForm()" class="btn btn-warning" style="width: 200px;">Change Password</button>
                         </div>
                     </div>
                 </div>
