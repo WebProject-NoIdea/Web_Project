@@ -136,7 +136,10 @@ $conn->close();
                         </div>
                         <div class="col-md-2">
                             <button class="btn btn-primary">
-                                <i class="fa fa-plus"></i> Add Task
+                                <i class="fa fa-plus"></i> Change Name
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fa fa-plus"></i> Change Password
                             </button>
                         </div>
                     </div>
